@@ -1,6 +1,6 @@
-# Docker based Quake Live Server Framework
+# Docker-based Quake Live Server Framework
 
-A Docker-based Quake Live decicated server framework with preinstalled Minqlx and full configurability. You can take these files as a base for your own Quake Live servers. This respository will be constantly updated with popular server configurations variables, recommendable workshop maps, factories and minqlx plugins. It aims to colect and provide sensible standards.
+A Docker-based Quake Live server framework with preinstalled Minqlx and full configurability. You can use these files as a base for your own Quake Live servers. This respository will be constantly updated with popular server configurations variables, recommendable workshop maps, factories and minqlx plugins. It aims to collect and provide sensible standards.
 
 ## Overview
 
@@ -94,9 +94,10 @@ In the section `environment` you can set the server name and a password if you l
 
 The section `volumes` is used to set the configuration.
 
-- `access.txt`: Set server moderators, administrator or ban people. There is one file for all servers.
+- `access.txt` (optional): Set server moderators, administrator or ban people. There is one file for all servers.
 - `server.cfg`: This file is for general server configurations.
-- `workshop.txt`: Contains all workshop items your server uses.
+- `mappool.txt` (optional): A list of maps and their game modes.
+- `workshop.txt` (optional): Contains all workshop items your server uses.
 
 The next section tells you which files you should be chosing and how to adjust them.
 
@@ -112,11 +113,15 @@ Do not set one these variables as they are set as part of the wider Docker confi
 
 ### mappool.txt
 
-
+If you want to limit or extend the map pool you can create a `mappool.txt` 
 
 ## Create your own server configuration
 
 To create your own server configuration, copy and paste one of the existing directories and make your adjustments.
+
+## Start the server using Docker
+
+You can start the server by tying `docker-compose up -d` into your terminal. The parameter `-d` puts the process in the background. If you want to see the logs of the servers, type `docker-compose logs -f`. The parameter `-f` means follow and leads to a continuous flow of the log messages. If you want to see what is inside one of your Quake Live servers use `docker-compose exec ql1 bash`, while `ql1` is the name of a Docker container as specified in the `docker-compose.yml` file.
 
 ## Adjust the Dockerfile
 
