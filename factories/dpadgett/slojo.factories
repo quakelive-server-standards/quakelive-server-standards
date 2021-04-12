@@ -1,0 +1,30 @@
+{
+    "id": "slojo",
+    "title": "SloJo",
+    "author": "DankJr",
+    "description": "NuN",
+    "basegt": "ca",
+    "cvars": {
+        "roundlimit": "10",
+	"roundtimelimit": "300",
+        "dmflags": "60",
+		"g_speed":"320",
+    "g_splashdamage_pg":"20",
+	"g_splashdamage_rl":"100",
+	"g_splashdamage_gl":"100",
+	"g_startinghealth": "300",
+	"g_startinghealthbonus": "0",
+	"g_startingarmor": "0",
+	"g_allowKill":"1",
+    "g_infiniteAmmo": "1",
+    "g_damage_g": "100",
+	"g_knockback_g":"1.75",
+	"g_damage_lg": "6",
+	"g_damage_pg": "20",
+	"g_velocity_gl": "800",
+	"g_knockback_pg_self": "2.2",
+	"g_vampiricDamage": "1",
+	"g_startingWeapons": "8447",
+	"g_loadout": "0"
+    }
+}

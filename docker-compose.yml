@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  ql1:
+    image: ql
+    restart: always
+    ports:
+      - '27960:27960/udp'
+      - '27960:27960/tcp'
+      - '28960:28960'
+    environment:
+      - HOSTNAME='QL Server #1'
+      - PASSWORD=''
+    volumes:
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  ql2:
+    image: ql
+    restart: always
+    ports:
+      - '27961:27960/udp'
+      - '27961:27960/tcp'
+      - '28961:28960'
+    environment:
+      - HOSTNAME='QL Server #2'
+      - PASSWORD=''
+    volumes:
+      - './duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+    depends_on: 
+      - redis
+  redis:
+    image: redis
+    restart: always
+    # volumes:
+    #     - /var/ql-redis:/data

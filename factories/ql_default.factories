@@ -1,0 +1,423 @@
+[{
+    "cvars": {
+        "timelimit": "5",
+        "fraglimit": "10",
+        "g_overtime": "0",
+        "g_training": "1",
+        "bot_dynamicSkill": "1",
+        "practiceflags": "0",
+        "bot_startingSkill": "2",
+        "g_allowkill": "0",
+        "g_voteFlags": "2048"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ffa",
+    "id": "_training",
+    "title": "Training"
+}, {
+    "cvars": {
+        "timelimit": "0",
+        "g_overtime": "0",
+        "g_training": "1",
+        "g_infiniteAmmo": "1",
+        "practiceflags": "1",
+        "g_startingweapons": "17",
+        "dmflags": "28",
+        "g_voteFlags": "2048"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ffa",
+    "id": "_rj",
+    "title": "RJ Practice"
+}, {
+    "cvars": {
+        "timelimit": "0",
+        "g_overtime": "0",
+        "g_training": "1",
+        "g_infiniteAmmo": "1",
+        "practiceflags": "1",
+        "g_startingweapons": "1",
+        "dmflags": "28",
+        "g_voteFlags": "2048"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ffa",
+    "id": "_sj",
+    "title": "SJ Practice"
+}, {
+    "cvars": {
+        "g_ammoPack": "1",
+        "g_ammoRespawn": "10",
+        "g_suddenDeathRespawn": "1",
+        "g_startingWeapons": "515",
+        "timelimit": "15",
+        "g_battleSuitDampen": ".33",
+        "g_overtime": "0",
+        "g_runes": "1"
+    },
+    "author": "id Software",
+    "description": "Classic CTF with Grapple and Runes.",
+    "basegt": "ctf",
+    "id": "actf",
+    "title": "Arena CTF"
+}, {
+    "cvars": {
+        "g_startingAmmo_sg": "50",
+        "g_startingAmmo_mg": "100",
+        "g_startingAmmo_lg": "150",
+        "g_startingAmmo_hmg": "150",
+        "dmflags": "28",
+        "g_startingArmor": "100",
+        "g_startingHealthBonus": "0",
+        "g_startingWeapons": "255",
+        "scorelimit": "15",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_startingHealth": "100",
+        "g_startingAmmo_rg": "25",
+        "g_overtime": "0",
+        "g_startingAmmo_gl": "25"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ad",
+    "id": "ad",
+    "title": "Attack & Defend"
+}, {
+    "cvars": {
+        "g_startingAmmo_sg": "50",
+        "g_startingAmmo_mg": "100",
+        "g_startingAmmo_lg": "150",
+        "g_startingAmmo_hmg": "150",
+        "dmflags": "28",
+        "g_startingArmor": "100",
+        "g_startingHealthBonus": "0",
+        "g_startingWeapons": "8447",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_startingHealth": "200",
+        "g_allowKill": "0",
+        "g_startingAmmo_rg": "25",
+        "g_overtime": "0",
+        "g_startingAmmo_gl": "25"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ca",
+    "id": "ca",
+    "title": "Clan Arena"
+}, {
+    "cvars": {
+        "g_ammoPack": "1",
+        "g_ammoRespawn": "10",
+        "g_suddenDeathRespawn": "1",
+        "timelimit": "15",
+        "g_battleSuitDampen": ".33",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ctf",
+    "id": "ctf",
+    "title": "Capture The Flag"
+}, {
+    "cvars": {
+        "g_loadout": "1",
+        "g_spawnItemPowerup": "0",
+        "g_regenHealth": "1250",
+        "g_regenHealthRate": "133",
+        "g_regenArmorRate": "133",
+        "g_startingHealthBonus": "0",
+        "g_startingAmmo_mg": "100",
+        "g_spawnItemHealth": "0",
+        "g_spawnItemAmmo": "0",
+        "g_startingArmor": "100",
+        "g_startingWeapons": "1",
+        "scorelimit": "150",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_spawnItemHoldable": "0",
+        "g_startingAmmo_gl": "25",
+        "g_startingAmmo_hmg": "150",
+        "g_spawnItemWeapons": "0",
+        "g_regenArmor": "1250",
+        "g_regenArmorAfterHealth": "1",
+        "g_overtime": "0",
+        "g_startingAmmo_lg": "150",
+        "g_domCapTime": "4",
+        "g_startingAmmo_sg": "50",
+        "timelimit": "15",
+        "g_startingAmmo_rg": "25",
+        "g_spawnItemArmor": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "dom",
+    "id": "dom",
+    "title": "Domination"
+}, {
+    "cvars": {
+        "timelimit": "10",
+        "g_itemHeight": "15",
+        "g_itemTimers": "0",
+        "pmove_BunnyHop": "0",
+        "pmove_CrouchStepJump": "0",
+        "pmove_JumpTimeDeltaMin": "50",
+        "pmove_WaterSwimScale": "0.5f",
+        "pmove_WaterWadeScale": "0.75f",
+        "fraglimit": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "duel",
+    "id": "duel",
+    "title": "Duel"
+}, {
+    "cvars": {
+        "g_ammoPack": "1",
+        "g_ammoRespawn": "10",
+        "g_throwFlagVelocity": "300",
+        "g_flagBounce": "0.5",
+        "g_flagPhysics": "1",
+        "g_suddenDeathRespawn": "1",
+        "timelimit": "15",
+        "g_battleSuitDampen": ".33",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "oneflag",
+    "id": "oneflag",
+    "title": "1-Flag CTF"
+}, {
+    "cvars": {
+        "timelimit": "15",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ffa",
+    "id": "ffa",
+    "title": "Free For All"
+}, {
+    "cvars": {
+        "g_dropCmds": "6",
+        "g_loadout": "1",
+        "timelimit": "15",
+        "fraglimit": "0",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "ft",
+    "id": "ft",
+    "title": "Freeze Tag"
+}, {
+    "cvars": {
+        "g_ammoPack": "1",
+        "g_ammoRespawn": "10",
+        "capturelimit": "30",
+        "g_suddenDeathRespawn": "1",
+        "timelimit": "15",
+        "g_battleSuitDampen": ".33",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "har",
+    "id": "har",
+    "title": "Harvester"
+}, {
+    "cvars": {
+        "g_startingWeapons": "65",
+        "capturelimit": "5",
+        "g_suddenDeathRespawn": "1",
+        "g_instagib": "1",
+        "g_dropCmds": "1",
+        "timelimit": "15",
+        "dmflags": "28",
+        "g_allowKill": "0",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Railgun and Gauntlet only. One shot, one kill.",
+    "basegt": "ctf",
+    "id": "ictf",
+    "title": "Instagib CTF"
+}, {
+    "cvars": {
+        "g_dropCmds": "0",
+        "dmflags": "28",
+        "g_instagib": "1",
+        "g_startingWeapons": "65",
+        "timelimit": "15",
+        "g_allowKill": "0",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Railgun and Gauntlet only. One shot, one kill.",
+    "basegt": "ffa",
+    "id": "iffa",
+    "title": "Instagib FFA"
+}, {
+    "cvars": {
+        "g_dropCmds": "0",
+        "g_freezeThawTime": "1000",
+        "g_instagib": "1",
+        "g_startingWeapons": "65",
+        "timelimit": "15",
+        "dmflags": "28",
+        "g_allowKill": "0",
+        "fraglimit": "0",
+        "g_overtime": "0"
+    },
+    "author": "id Software",
+    "description": "Railgun and Gauntlet only. One shot, one kill.",
+    "basegt": "ft",
+    "id": "ift",
+    "title": "Instagib Freeze Tag"
+}, {
+    "cvars": {
+        "g_knockback_pg_self": "0",
+        "g_startingAmmo_mg": "100",
+        "g_enemyLocators": "1",
+        "g_startingArmor": "0",
+        "g_rrDeathScorePenalty": "0",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_startingHealth": "150",
+        "g_startingAmmo_gl": "25",
+        "g_teamForceBalance": "0",
+        "g_rrInfected": "1",
+        "g_startingAmmo_hmg": "150",
+        "g_overtime": "0",
+        "g_startingAmmo_lg": "150",
+        "dmflags": "28",
+        "g_startingHealthBonus": "0",
+        "g_startingAmmo_sg": "50",
+        "g_startingWeapons": "7",
+        "g_startingAmmo_rg": "25"
+    },
+    "author": "id Software",
+    "description": "Players who are fragged become infected, and must chase after all remaining players.",
+    "basegt": "rr",
+    "id": "infected",
+    "title": "Infected"
+}, {
+    "cvars": {
+        "g_loadout": "1",
+        "g_quadHogIdle": "30",
+        "timelimit": "10",
+        "fraglimit": "30",
+        "g_overtime": "0",
+        "g_quadHog": "1"
+    },
+    "author": "id Software",
+    "description": "A Quad Damage spawns in the arena. Pick up the Quad, and it becomes you versus the world.",
+    "basegt": "ffa",
+    "id": "quadhog",
+    "title": "Quad Hog"
+}, {
+    "cvars": {
+        "pmove_noPlayerClip": "1",
+        "dmflags": "28",
+        "fraglimit": "0",
+        "g_startingWeapons": "145",
+        "g_allowKill": "1",
+        "g_infiniteAmmo": "1",
+        "g_knockback_pg": "1.25",
+        "g_knockback_rl": "1.10",
+        "g_knockback_z": "40",
+        "g_itemHeight": "35",
+        "g_itemTimers": "0",
+        "g_max_knockback": "160",
+        "g_overtime": "0",
+        "g_respawn_delay_max": "3500",
+        "g_respawn_delay_min": "500",
+        "g_splashradius_pg": "32",
+        "g_startingHealthBonus": "0",
+        "g_velocity_gl": "800",
+        "pmove_AirControl": "1",
+        "pmove_JumpTimeDeltaMin": "50",
+        "pmove_RampJump": "1",
+        "pmove_WeaponRaiseTime": "10",
+        "pmove_WeaponDropTime": "10",
+        "timelimit": "8"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "race",
+    "id": "race",
+    "title": "Race"
+}, {
+    "cvars": {
+        "g_teamForceBalance": "0",
+        "g_startingAmmo_sg": "50",
+        "g_startingAmmo_mg": "100",
+        "g_startingAmmo_lg": "150",
+        "g_startingAmmo_hmg": "150",
+        "dmflags": "28",
+        "g_startingArmor": "100",
+        "g_startingHealthBonus": "0",
+        "g_startingWeapons": "8447",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_startingHealth": "100",
+        "g_startingAmmo_rg": "25",
+        "g_overtime": "0",
+        "g_startingAmmo_gl": "25"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "rr",
+    "id": "rr",
+    "title": "Red Rover"
+}, {
+    "cvars": {
+        "g_loadout": "1",
+        "g_dropCmds": "4",
+        "timelimit": "15",
+        "fraglimit": "150"
+    },
+    "author": "id Software",
+    "description": "Default gametype settings.",
+    "basegt": "tdm",
+    "id": "tdm",
+    "title": "Team Deathmatch"
+}, {
+    "cvars": {
+        "dmflags": "60",
+        "g_startingWeapons": "8447",
+        "g_allowKill": "0",
+        "g_overtime": "0",
+        "g_knockback_pg": "1.25",
+        "g_knockback_rl": "1.10",
+        "g_knockback_z": "40",
+        "g_max_knockback": "160",
+        "g_respawn_delay_max": "3500",
+        "g_respawn_delay_min": "500",
+        "g_splashradius_pg": "32",
+        "g_startingHealthBonus": "0",
+        "g_velocity_gl": "800",
+        "pmove_AirControl": "1",
+        "pmove_JumpTimeDeltaMin": "50",
+        "pmove_RampJump": "1",
+        "pmove_WeaponRaiseTime": "10",
+        "pmove_WeaponDropTime": "10",
+        "weapon_reload_rg": "1250",
+        "weapon_reload_sg": "950",
+        "g_vampiricDamage": "0.75",
+        "g_infiniteAmmo": "1",
+        "g_startingArmor": "0",
+        "g_startingHealth": "300",
+        "g_forceDmgThroughSurface": "1"
+    },
+    "basegt": "ca",
+    "id": "vca",
+    "title": "Vampiric CA",
+    "author": "id Software",
+    "description": "The popular Clan Arena modification with Turbo Physics and Vampiric Damage."
+}]
