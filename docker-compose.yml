@@ -39,5 +39,5 @@ services:
   redis:
     image: redis
     restart: always
-    # volumes:
-    #     - /var/ql-redis:/data
+    volumes:
+      - redis:/data
