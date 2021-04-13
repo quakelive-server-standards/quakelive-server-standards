@@ -29,10 +29,17 @@ RUN set -x \
     && cp minqlx/bin/* ql \
     && cd ql \
     && git clone https://github.com/MinoMino/minqlx-plugins.git \
-    && python3 -m pip install -r minqlx-plugins/requirements.txt \
-    && rm -rf minqlx-plugins
+    && python3 -m pip install -r minqlx-plugins/requirements.txt
+
+ENV STATS_PORT 27960
 
 # set the standard ports here which should not be overwritte by the server.cfg
 # the 'ports' configuration in the Docker compose file is used to redirect these port to another port on the host system (if needed)
 # the hostname and the password are given through environment variables defined in the Docker compose file
-CMD ./ql/run_server_x64_minqlx.sh +set net_strict 1 +set net_port 27960 +set zmq_rcon_port 28960 +set zmq_stats_port 27960 +set sv_hostname ${HOSTNAME} +set g_password ${PASSWORD}
+CMD set -x \
+    && ./ql/run_server_x64_minqlx.sh \
+    +set net_port ${PORT} \
+    +set zmq_rcon_port ${RCON_PORT} \
+    +set zmq_stats_port ${STATS_PORT} \
+    +set sv_hostname ${HOSTNAME} \
+    +set g_password ${PASSWORD}

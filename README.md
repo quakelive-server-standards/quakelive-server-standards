@@ -10,7 +10,12 @@ https://github.com/MinoMino/minqlx-plugins
 
 ## Usage
 
-To use these files create a fork of this repository. Then clone your fork.
+To use these files create a fork of this repository. Then clone your fork. After cloning add the original (upstream) repository to your Git configuration ([GitHub manual](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork)).
+
+```shell
+git remote add upstream https://github.com/Gastmeier/quake-live-server-framework.git
+```
+
 
 Open the `docker-compose.yml` file and adjust two things.
 

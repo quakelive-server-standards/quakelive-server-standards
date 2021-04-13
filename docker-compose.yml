@@ -4,12 +4,11 @@ services:
     image: ql
     restart: always
     ports:
-      - '27960:27960/udp'
-      - '27960:27960/tcp'
-      - '28960:28960'
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
     environment:
       - HOSTNAME='QL Server #1'
-      - PASSWORD=''
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
@@ -22,12 +21,11 @@ services:
     image: ql
     restart: always
     ports:
-      - '27961:27960/udp'
-      - '27961:27960/tcp'
-      - '28961:28960'
+      - '27961:27960/udp' #game port
+      - '27961:27960/tcp' # stats port
+      - '28961:28960' # rcon port
     environment:
       - HOSTNAME='QL Server #2'
-      - PASSWORD=''
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
@@ -40,4 +38,6 @@ services:
     image: redis
     restart: always
     volumes:
-      - redis:/data
+      - redis:/data # uses a Docker volumne by default
+volumes:
+  redis:
