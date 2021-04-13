@@ -1,0 +1,39 @@
+[submodule "minqlx/mino"]
+	path = minqlx/mino
+	url = https://github.com/MinoMino/minqlx-plugins
+[submodule "minqlx/iouonegirl"]
+	path = minqlx/iouonegirl
+	url = https://github.com/dsverdlo/minqlx-plugins
+[submodule "minqlx/mgaertne"]
+	path = minqlx/mgaertne
+	url = https://github.com/mgaertne/minqlx-plugin-tests
+[submodule "minqlx/roasticle"]
+	path = minqlx/roasticle
+	url = https://github.com/roasticle/minqlx-plugins.git
+[submodule "minqlx/ped-ro"]
+	path = minqlx/ped-ro
+	url = https://github.com/ped-ro/minqlx-plugins
+[submodule "minqlx/barelymissed"]
+	path = minqlx/barelymissed
+	url = https://github.com/BarelyMiSSeD/minqlx-plugins
+[submodule "minqlx/x0rnn"]
+	path = minqlx/x0rnn
+	url = https://github.com/x0rnn/minqlx-plugins
+[submodule "minqlx/cstewart90"]
+	path = minqlx/cstewart90
+	url = https://github.com/cstewart90/minqlx-plugins
+[submodule "minqlx/mattized"]
+	path = minqlx/mattized
+	url = https://github.com/Melodeiro/minqlx-plugins_mattiZed
+[submodule "minqlx/admafi"]
+	path = minqlx/admafi
+	url = https://github.com/admafi/Quake-Live-Teamrace
+[submodule "minqlx/em92-kamikaze-clanarena"]
+	path = minqlx/em92-kamikaze-clanarena
+	url = https://github.com/em92/kamikaze-clanarena
+[submodule "minqlx/em92-dynamicip"]
+	path = minqlx/em92-dynamicip
+	url = https://github.com/em92/dynamicip
+[submodule "minqlx/em92-ad_hacks"]
+	path = minqlx/em92-ad_hacks
+	url = https://github.com/em92/ad_hacks

@@ -8,7 +8,7 @@ The following minqlx plugins are installed:
 
 https://github.com/MinoMino/minqlx-plugins
 
-## Installation / Usage
+## Usage
 
 To use these files create a fork of this repository. Then clone your fork.
 
@@ -109,7 +109,7 @@ Server configuration are stored in the `configs` sub directory. There is the def
 
 Either way, you have to adjust the `server.cfg` by setting the following important variables: `qlx_owner`, `sv_tags`, `zmq_rcon_password`. You will find a good description of what each variable does in the file itself.
 
-Do not set one these variables as they are set as part of the wider Docker configuration: `qlx_pluginsPath`, `qlx_database`, `qlx_redisAddress`, `qlx_redisDatabase`, `qlx_redisUnixSocket`, `qlx_redisPassword`, `sv_hostname`, `g_password`, `net_port`, `net_strict`, `zmq_rcon_port`, `g_accessFile`.
+Do not set one these variables as they are set as part of the wider Docker configuration: `qlx_pluginsPath`, `qlx_database`, `qlx_redisAddress`, `qlx_redisDatabase`, `qlx_redisUnixSocket`, `qlx_redisPassword`, `sv_hostname`, `g_password`, `sv_mapPoolFile`, `net_port`, `net_strict`, `zmq_rcon_port`, `g_accessFile`.
 
 ### mappool.txt
 
@@ -122,6 +122,9 @@ To create your own server configuration, copy and paste one of the existing dire
 ## Start the server using Docker
 
 You can start the server by tying `docker-compose up -d` into your terminal. The parameter `-d` puts the process in the background. If you want to see the logs of the servers, type `docker-compose logs -f`. The parameter `-f` means follow and leads to a continuous flow of the log messages. If you want to see what is inside one of your Quake Live servers use `docker-compose exec ql1 bash`, while `ql1` is the name of a Docker container as specified in the `docker-compose.yml` file.
+
+## Update the Docker container
+
 
 ## Adjust the Dockerfile
 

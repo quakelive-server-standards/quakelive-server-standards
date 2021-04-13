@@ -12,8 +12,10 @@ services:
       - PASSWORD=''
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/default_cfg/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/default_cfg/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/default_cfg/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   ql2:
@@ -27,8 +29,11 @@ services:
       - HOSTNAME='QL Server #2'
       - PASSWORD=''
     volumes:
-      - './duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/default_cfg/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/default_cfg/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/default_cfg/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   redis:
