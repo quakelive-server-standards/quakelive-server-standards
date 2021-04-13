@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   ql1:
-    image: ql
+    image: quakeliveserverstandards/quakelive-minqlx
     restart: always
     ports:
       - '27960:27960/udp' # game port
@@ -18,7 +18,7 @@ services:
     depends_on: 
       - redis
   ql2:
-    image: ql
+    image: quakeliveserverstandards/quakelive-minqlx
     restart: always
     ports:
       - '27961:27960/udp' #game port
