@@ -31,11 +31,21 @@ RUN set -x \
     && git clone https://github.com/MinoMino/minqlx-plugins.git \
     && python3 -m pip install -r minqlx-plugins/requirements.txt
 
-COPY ./server.cfg /home/steam/ql/baseq3
+COPY --chown=steam:steam ./server.cfg /home/steam/ql/baseq3
 
+ENV QLX_PLUGINS "plugin_manager, essentials, motd, permission, docs, log, workshop"
+ENV SV_HOSTNAME "Quake Live Standard Server"
+ENV SV_TAGS "ca, ctf, duel, ffa, race, tdm"
+ENV SV_MAPPOOLFILE "mappool.txt"
+ENV SERVERSTARTUP "startRandomMap"
 ENV NET_PORT 27960
+ENV ZMQ_RCON_PASSWORD "ADMINPASSWORD"
 ENV ZMQ_STATS_ENABLE 1
-ENV ZMQ_STATS_PASSWORD quakeliveserverstandards
+ENV ZMQ_STATS_PASSWORD "quakeliveserverstandards"
+ENV G_ACCESSFILE "access.txt"
+ENV SV_FPS 40
+ENV SV_IDLE_EXIT 10
+ENV COM_HUNKMEGS 60
 
 # set the standard ports here which should not be overwritte by the server.cfg
 # the 'ports' configuration in the Docker compose file is used to redirect these port to another port on the host system (if needed)
@@ -47,6 +57,7 @@ CMD set -x \
     && export ZMQ_RCON_PORT=${ZMQ_RCON_PORT:-$(($NET_PORT + 1000))} \
     # start the minqlx extended quake live server
     && ./ql/run_server_x64_minqlx.sh \
+    # +set qlx_plugins "plugin_manager, essentials, motd, permission, docs, log, workshop" +set sv_hostname "QL Server" +set sv_tags "ca, ctf, duel, ffa, race, tdm" +set sv_mapPoolFile "mappool.txt" +set net_port 27960 +set zmq_rcon_port 28960 +set zmq_rcon_password "ADMINPASSWORD" +set zmq_stats_enable 1 +set zmq_stats_port 27960 +set zmq_stats_password "quakeliveserverstandards" +set g_accessFile "access.txt" +set sv_fps 40 +set com_hunkMegs 60
     # only attach the parameter if the environment variable is set
     ${QLX_OWNER:+"+set qlx_owner ${QLX_OWNER}"} \
     ${QLX_PLUGINS:+"+set qlx_plugins ${QLX_PLUGINS}"} \

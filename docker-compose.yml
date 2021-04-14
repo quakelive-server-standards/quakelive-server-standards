@@ -1,14 +1,14 @@
 version: '3.8'
 services:
   ql1:
-    image: quakeliveserverstandards/quakelive-minqlx
+    image: ql
     restart: always
     ports:
       - '27960:27960/udp' # game port
       - '27960:27960/tcp' # stats port
       - '28960:28960' # rcon port
     environment:
-      - SV_HOSTNAME='QL Server #1'
+      - SV_HOSTNAME=QL Standard Server #1
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
@@ -25,7 +25,7 @@ services:
       - '27961:27960/tcp' # stats port
       - '28961:28960' # rcon port
     environment:
-      - SV_HOSTNAME='QL Server #2'
+      - SV_HOSTNAME=QL Standard Server #2
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
