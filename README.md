@@ -118,7 +118,20 @@ Do not set one these variables as they are set as part of the wider Docker confi
 
 ### mappool.txt
 
-If you want to limit or extend the map pool you can create a `mappool.txt` 
+If you want to limit or extend the map pool you can create a `mappool.txt`
+
+### Configuring through command line parameters
+
+We discourage from configuring the server through command line parameters.
+
+If you set `sv_maxClients` the game will tell you `sv_maxClients will be changed to 2 upon restarting.` but it does not work and if you look into the config it nothing has changed.
+If you set `net_port` the game will tell you `net_port will be changed to 5000 upon restarting.` but it does not work and if you look into the config it nothing has changed.
+If you set `zmq_rcon_port` the game will tell you `zmq_rcon_port is write protected.` which seems to mean that this values cannot be set through command line parameters.
+If you set `zmq_stats_port` the game will tell `zmq_stats_port is write protected.` which seems to mean that this values cannot be set through command line parameters.
+Also any minqlx variable cannot be set through the command line.
+Also is it hard to tell if you need quotes `""` around your value or not.
+Also will the `server.cfg` overwrite any value given on the command line which is not good because if you issue the command line paramater you do not know what is inside the `server.cfg`.
+
 
 ## Create your own server configuration
 
