@@ -11,10 +11,10 @@ services:
       - SV_HOSTNAME=QL Standard Server #1
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/default_cfg/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/default_cfg/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/default_cfg/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/base/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/base/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/base/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/base/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   ql2:
@@ -28,10 +28,10 @@ services:
       - SV_HOSTNAME=QL Standard Server #2
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/default_cfg/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/default_cfg/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/default_cfg/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/default_cfg/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/base/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/base/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/base/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/base/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   redis:
