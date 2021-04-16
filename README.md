@@ -116,7 +116,7 @@ Another thing you need to take into consideration is that variables declared in 
 
 ### Volumes
 
-In the `volumes` you can compose a Quake Live server configuration by either using the provided standardized configrations or by creating your own.
+In the `volumes` section you can compose a Quake Live server configuration by either using the provided standardized configrations or by using your own.
 
 ```yml
 volumes:
@@ -130,7 +130,15 @@ volumes:
 
 Here you see a mapping from a file or directory on your computer to a location inside the Quake Live server directory which is inside the Docker service. They will appear to the starting Quake Live dedicated server as a natural part of its file system.
 
-Refer also to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes).
+Also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes).
+
+## The configs directory
+
+### access.txt
+
+### Standardized and experimental Quake Live server configurations
+
+
 
 ## Usage
 
