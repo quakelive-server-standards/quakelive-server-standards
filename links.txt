@@ -27,8 +27,3 @@ https://github.com/em92/ad_hacks/tree/master/minqlx-plugins
 https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=542966946
 https://github.com/GameServerManagers/Game-Server-Configs/blob/master/QuakeLive/server.cfg
 https://gist.github.com/ozh/d63e8d98fb71fd0987f6
-
-# CVARS
-http://www.regurge.at/ql/Lorfa/
-http://www.regurge.at/ql/
-https://www.quakehaus.com/archiv/quakelive/quake3_quakelive_waffenguide.html

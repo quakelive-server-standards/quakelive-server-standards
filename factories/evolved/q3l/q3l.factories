@@ -1,0 +1,12 @@
+{
+    "cvars": {
+        "timelimit": "12",
+        "g_weaponrespawn": "",
+        "cg_hitBeep": "1",
+        "g_splashdamage_gl": "99",
+        "g_velocity_rl": "900",
+        "g_splashdamage_rl": "99",
+        "g_damage_lg": "8",
+        "g_damage_rg": "100"
+    }
+}

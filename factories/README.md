@@ -1,5 +1,7 @@
 # CVAR documentation
 
+[http://www.regurge.at/ql/](http://www.regurge.at/ql/)
+
 ## Round
 
 `fraglimit`
@@ -11,8 +13,6 @@
 `g_respawn_delay_max`
 `g_respawn_delay_min`
 `roundtimelimit`
-`g_timeoutLen`
-`g_timeoutCount`
 
 ## Team
 
@@ -31,8 +31,6 @@
 `g_friendlyFire`
 
 ##### Team Deathmatch
-
-`g_damage_mg_tdm` 4
 
 ##### Domination
 
@@ -76,10 +74,10 @@
 `g_startingHealthBonus`
 
 ##### Ammo
+
 `g_spawnItemAmmo`
 `g_ammoRespawn`
 `g_ammoPack`
-
 
 ##### Regeneration
 
@@ -129,6 +127,7 @@
 
 `g_startingAmmo_mg` 100
 `g_damage_mg` 5
+`g_damage_mg_tdm` 4
 `weapon_reload_mg` 100
 
 ##### Shotgun
@@ -138,6 +137,17 @@
 `g_knockback_sg` 1
 `g_startingAmmo_sg`
 `weapon_reload_sg` 1000
+`cg_trueShotgun` ?
+
+##### Grenade Launcher
+
+`g_velocity_gl` 700
+`g_damage_gl` 100
+`g_splashdamage_gl` 100
+`g_splashradius_gl` 150
+`g_knockback_gl` 1.10
+`weapon_reload_gl` 800
+`g_startingAmmo_gl`
 
 ##### Lightning gun
 
@@ -187,16 +197,6 @@
 `g_knockback_rg` 0.85
 `weapon_reload_rg` 1500
 `g_startingAmmo_rg`
-
-##### Grenade Launcher
-
-`g_velocity_gl` 700
-`g_damage_gl` 100
-`g_splashdamage_gl` 100
-`g_splashradius_gl` 150
-`g_knockback_gl` 1.10
-`weapon_reload_gl` 800
-`g_startingAmmo_gl`
 
 ##### BFG
 
@@ -256,3 +256,5 @@
 `g_teamForceBalance`
 `g_voteFlags`
 `g_allowvotemidgame`
+`g_timeoutLen`
+`g_timeoutCount`
