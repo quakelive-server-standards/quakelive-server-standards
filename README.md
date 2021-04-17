@@ -1,15 +1,17 @@
 # Docker-based Quake Live Server Framework
 
-A Docker-based Quake Live server framework with preinstalled Minqlx and full configurability. You can use these files as a base for your own Quake Live servers. This respository will be constantly updated with popular server configurations variables, recommendable workshop maps, factories and minqlx plugins. It aims to collect and provide sensible standards.
+A Docker-based Quake Live server framework with preinstalled minqlx and full configurability. You can use these files as a base for your own Quake Live servers. This respository will be constantly updated with popular server configurations variables, recommendable workshop maps, factories and minqlx plugins. It aims to collect and provide sensible standards.
+
+accessible
 
 ## Overview
 
 In the root directory there are two files which are your basic work horses.
 
-- `docker-compose.yml`: Defines your Quake Live servers and there configuration.
-- `rcon.sh`: Starts a rcon terminal into one of your Quake Live servers.
+- `docker-compose.yml`: Defines your Quake Live servers and sets their configurations.
+- `rcon.sh`: Starts an rcon terminal into one of your Quake Live servers.
 
-The directory `configs` contains standardized server configuration which you can apply for your servers. There are configurations for `duel`, `ca`, `ffa` and so on. They offer basic and community proven settings but also progressed and experimental variations which are there to evolve the game.
+The directory `configs` contains standard and evolved server configurations you can apply to your servers. A standard configuration is one which configuration values were debated and agreeded upon by the community. There is one for every basic game mode `ca`, `ctf`, `duel`, `ffa`, `race` and `tdm`. An evolved configuration bases on a standard one but introduces new settings. If one of them seems to be more fun to you then try it out.
 
 A configuration does not only consist of a `server.cfg` and a `mappool.txt`, but also items that can be found in the following directories.
 
@@ -132,13 +134,27 @@ Here you see a mapping from a file or directory on your computer to a location i
 
 Also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes).
 
-## The configs directory
+### The configs directory
 
-### access.txt
+#### access.txt
 
-### Standardized and experimental Quake Live server configurations
+#### Standardized and experimental Quake Live server configurations
 
+## Create your own Quake Live server configuration
 
+`untouched-server.cfg`
+
+### Factories (Game modes)
+
+### Minqlx Plugins
+
+### Workshop
+
+## Contribute
+
+### Discuss standards
+
+### Contribute configs, factories, minqlx plugins and workshop sets
 
 ## Usage
 
