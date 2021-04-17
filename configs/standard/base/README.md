@@ -18,14 +18,6 @@ If somebody uses this configuration it should have a name which references its t
 
 If somebody uses this configuration it should have a name which references its type. This cvar is commented out so that it can be set in the `docker-compose.yml` of this framework. You find the default in the Docker file `docker/base/Dockerfile`.
 
-##### ZeroMQ Stats
-
-`set zmq_stats_enable "1"` - Enable ZeroMQ stats
-`set zmq_stats_port "27960"` - ZeroMQ stats port (TCP).
-`set zmq_stats_password "quakeliveserverstandards"` - ZeroMQ stats password.
-
-Website like QLStats are vital for the Quake Live scene. Every server therefor should have sending stats enabled to help to evolve the community.
-
 ##### Allow voting
 
 `set g_allowVote "1"` - Allow Voting.
@@ -43,6 +35,13 @@ To prevent a player with a faster machine to dictate the next map it is useful t
 `set g_voteLimit "10"` - Limit users to X votes per map.
 
 A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
+
+##### ZeroMQ Stats
+
+`set zmq_stats_enable "1"` - Enable ZeroMQ stats
+`set zmq_stats_password "quakeliveserverstandards"` - ZeroMQ stats password.
+
+Website like QLStats are vital for the Quake Live scene. Every server therefor should have sending stats enabled to help to evolve the community.
 
 ### minqlx plugins
 
@@ -90,23 +89,41 @@ No changes were made to the original Quake Live version which is empty.
 
 The following variables must not be changed beacause the framework expects them to be like they are set.
 
+##### Network IP
+
+`set net_ip ""` - Blank will bind to all interfaces.
+
+The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
+
 ##### Server Port
 
 `set net_port "27960"` -  Server port (UDP).
 
 The Quake Live server runs inside a Docker container. The Docker container exposes its own port but only to other Docker container inside that Docker network. To be able to access a Docker container inside that Docker network you have to define an additional external port. The Docker engine then will map that external port to a Docker containers internal port. Thus the Docker containers which running the Quake Live servers can all expose the same port and thus the Quake Live servers all can run on the same standard port 27960.
 
-##### Strict network
+##### Enable maintenance remote (rcon) connection
 
-`set net_strict "1"` -  Quit out immediately if we can't bind the IP and port.
+`set zmq_rcon_enable "1"` - Enable rcon.
 
-The Docker engine will restart a Docker container if it went offline. So if there was anything wrong with the Quake Live server it should crash.
+This Quake Live server framework comes with a configured and working rcon client. It is a feature of this framework and this must not be changed.
 
-##### ZMQ rcon port
+##### Maintencance remote connection (rcon) IP address
+
+`set zmq_rcon_ip ""` - Which IP to bind to. Blank will bind to all interfaces.
+
+The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
+
+##### Maintenance remote connection (rcon) port
 
 `set zmq_rcon_port "28960"` - Rcon port.
 
 Same reason like `net_port`.
+
+##### ZMQ stats IP address
+
+`set zmq_stats_ip ""` - Which IP to bind to. Blank will bind to all interfaces.
+
+The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
 
 ##### ZMQ stats port
 
