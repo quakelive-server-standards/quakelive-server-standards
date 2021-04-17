@@ -37,7 +37,7 @@ If you want to see the logs of your servers use `docker-compose logs -f` while t
 
 To maintain a server you use `./rcon.sh 127.0.0.1:27960 rconpassword` to start an rcon terminal into one of your running servers. Replace the ip address `127.0.0.1` with the one pointing to your Quake Live servers, chose the corresponding port and set the password that you have configured.
 
-## Configuring your Quake Live severs
+## Configuring your Quake Live servers
 
 There are two places you need to take into consideration when configuring your Quake Live servers.
 
@@ -63,10 +63,10 @@ services:
       - G_PASSWORD=secret
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   redis:
@@ -124,10 +124,10 @@ In the `volumes` section you can compose a Quake Live server configuration by ei
 volumes:
 # file_on_your_computer:file_inside_the_docker_service
   - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-  - './configs/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-  - './configs/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-  - './configs/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-  - './configs/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+  - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
+  - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+  - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+  - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
 ```
 
 Here you see a mapping from a file or directory on your computer to a location inside the Quake Live server directory which is inside the Docker service. They will appear to the starting Quake Live dedicated server as a natural part of its file system.

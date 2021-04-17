@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  ql1:
+  ca:
     image: quakeliveserverstandards/quakelive-base
     restart: always
     ports:
@@ -8,16 +8,16 @@ services:
       - '27960:27960/tcp' # stats port
       - '28960:28960' # rcon port
     environment:
-      - SV_HOSTNAME=QL Standard Server #1
+      - SV_HOSTNAME=QL Standard CA Server #1
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/base/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/base/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/base/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/base/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/standard/ca/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/ca/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/ca/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/ca/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  ql2:
+  ctf:
     image: quakeliveserverstandards/quakelive-base
     restart: always
     ports:
@@ -25,13 +25,101 @@ services:
       - '27961:27960/tcp' # stats port
       - '28961:28960' # rcon port
     environment:
-      - SV_HOSTNAME=QL Standard Server #2
+      - SV_HOSTNAME=QL Standard CTF Server #1
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/base/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/base/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/base/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/base/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './configs/standard/ctf/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/ctf/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/ctf/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/ctf/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - redis:/data # uses a Docker volumne by default
+  duel:
+    image: quakeliveserverstandards/quakelive-base
+    restart: always
+    ports:
+      - '27961:27960/udp' #game port
+      - '27961:27960/tcp' # stats port
+      - '28961:28960' # rcon port
+    environment:
+      - SV_HOSTNAME=QL Standard Duel Server #1
+    volumes:
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - redis:/data # uses a Docker volumne by default
+  ffa:
+    image: quakeliveserverstandards/quakelive-base
+    restart: always
+    ports:
+      - '27961:27960/udp' #game port
+      - '27961:27960/tcp' # stats port
+      - '28961:28960' # rcon port
+    environment:
+      - SV_HOSTNAME=QL Standard FFA Server #1
+    volumes:
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/ffa/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/ffa/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/ffa/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/ffa/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - redis:/data # uses a Docker volumne by default
+  race:
+    image: quakeliveserverstandards/quakelive-base
+    restart: always
+    ports:
+      - '27961:27960/udp' #game port
+      - '27961:27960/tcp' # stats port
+      - '28961:28960' # rcon port
+    environment:
+      - SV_HOSTNAME=QL Standard Race Server #1
+    volumes:
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/race/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/race/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/race/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/race/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - redis:/data # uses a Docker volumne by default
+  tdm:
+    image: quakeliveserverstandards/quakelive-base
+    restart: always
+    ports:
+      - '27961:27960/udp' #game port
+      - '27961:27960/tcp' # stats port
+      - '28961:28960' # rcon port
+    environment:
+      - SV_HOSTNAME=QL Standard TDM Server #1
+    volumes:
+      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/tdm/minqlx-plugins:/home/steam/ql/minqlx-plugins'
+      - './configs/standard/tdm/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './configs/standard/tdm/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './configs/standard/tdm/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
   redis:
