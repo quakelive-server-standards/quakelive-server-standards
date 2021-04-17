@@ -146,7 +146,7 @@ Also refer to the [Docker documentation](https://docs.docker.com/compose/compose
 
 ### Factories (Game modes)
 
-### Minqlx Plugins
+### minqlx Plugins
 
 ### Workshop
 
@@ -154,7 +154,13 @@ Also refer to the [Docker documentation](https://docs.docker.com/compose/compose
 
 ### Discuss standards
 
-### Contribute configs, factories, minqlx plugins and workshop sets
+### Contribute configs
+
+### Contribute factories
+
+### Contribute minqlx plugins
+
+### Contribute workshop
 
 ## Usage
 
