@@ -2,4 +2,4 @@
 
 ## TODO
 
-# weapon pickup ammo amount
+weapon pickup ammo amount
