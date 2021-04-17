@@ -2,46 +2,46 @@
 
 ## minqlx
 
-### mino/plugin_manager.py
+##### mino/plugin_manager.py
 
 Adds commands to load, reload and unload plugins at run-time.
 
-### mino/docs.py
+##### mino/docs.py
 
-### mino/raw.py
+##### mino/raw.py
 
 ## Server
 
-### mino/irc.py
+##### mino/irc.py
 
-### mino/log.py
+##### mino/log.py
 
-### mino/motd.py
+##### mino/motd.py
 
-### mino/solorace.py
+##### mino/solorace.py
 
-### mino/workshop.py
+##### mino/workshop.py
 
 ## Players
 
-### mino/ban.py
+##### mino/ban.py
 
-### mino/clan.py
+##### mino/clan.py
 
-### mino/irc.py
+##### mino/irc.py
 
-### mino/permission.py
+##### mino/permission.py
 
-### mino/names.py
+##### mino/names.py
 
-### mino/silence.py
+##### mino/silence.py
 
 ## Voting
 
-### mino/balance.py
+##### mino/balance.py
 
-### mino/essentials.py
+##### mino/essentials.py
 
 ## Teams
 
-### mino/essentials.py
+##### mino/essentials.py
