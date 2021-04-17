@@ -46,21 +46,31 @@ A player who just does not stop to vote can be annoying. But a server which prev
 
 ### minqlx plugins
 
+##### Docs
+
 `docs.py` - A plugin that generates a command list of all the plugins currently loaded, in the form of a Markdown file.
 
 It is in general useful for any server configuration.
+
+##### Motd
 
 `motd.py` - Adds commands to set a message of the day.
 
 It is in general useful for any server configuration.
 
+##### Permission
+
 `permission.py` - Adds commands to set player permissions.
 
 It is in general useful for any server configuration.
 
+##### Plugin manager
+
 `plugin_manager.py` - Adds commands to load, reload and unload plugins at run-time.
 
 It is in general useful for any server configuration.
+
+#### Workshop
 
 `workshop.py` - A plugin that allows the use of custom workshop items that the server might not reference by default, and thus not have the client download them automatically.
 
@@ -80,25 +90,71 @@ No changes were made to the original Quake Live version which is empty.
 
 The following variables must not be changed beacause the framework expects them to be like they are set.
 
+##### Server Port
+
 `set net_port "27960"` -  Server port (UDP).
 
 The Quake Live server runs inside a Docker container. The Docker container exposes its own port but only to other Docker container inside that Docker network. To be able to access a Docker container inside that Docker network you have to define an additional external port. The Docker engine then will map that external port to a Docker containers internal port. Thus the Docker containers which running the Quake Live servers can all expose the same port and thus the Quake Live servers all can run on the same standard port 27960.
+
+##### Strict network
 
 `set net_strict "1"` -  Quit out immediately if we can't bind the IP and port.
 
 The Docker engine will restart a Docker container if it went offline. So if there was anything wrong with the Quake Live server it should crash.
 
+##### ZMQ rcon port
+
 `set zmq_rcon_port "28960"` - Rcon port.
 
 Same reason like `net_port`.
+
+##### ZMQ stats port
 
 `set zmq_stats_port "27960"` - ZeroMQ stats port (TCP).
 
 Same reason like `net_port`.
 
+##### Access file
+
 `set g_accessFile "access.txt"` - Used to determine which 64-bit Steam IDs have admin access, or are banned.
 
 This file is mounted into the specific Docker container as denoted in the Quake Live servers Docker Compose file. It needs to have a standard location and name so that it is consistent all over the board.
+
+##### minqlx plugin directory
+
+`set qlx_pluginsPath "minqlx-plugins"` - The path (either relative or absolute) to the directory with the plugins.
+
+The minqlx plugins are mounted into the Docker image via the Docker Compose file. It needs to have a standard location to that it is consistent all over the board.
+
+##### minqlx Redis database name
+
+`set qlx_database "Redis"` - The default database to use. You should not change this unless you know what you're doing.
+
+The Redis database is part of the Docker services and configured to work with the Quake Live server Docker containers. It needs to have this value which must not change.
+
+##### minqlx Redis address
+
+`set qlx_redisAddress "redis"` - The address to the Redis database. Can be a path if qlx_redisUnixSocket is "1".
+
+The Redis database is part of the Docker network were it has this address. It must not be changed.
+
+##### minqlx Redis database number
+
+`set qlx_redisDatabase 0` - The Redis database number.
+
+The Redis database is part of the Docker services and configured to work with the Quake Live server Docker containers. It needs to have this value which must not change.
+
+##### minqlx Redis socket
+
+`qlx_redisUnixSocket 0` - A boolean that determines whether or not qlx_redisAddress is a path to a UNIX socket.
+
+The redis database is part of the Docker network. It is not a Unix socket. This value must not change.
+
+##### minqlx Redis password
+
+`set qlx_redisPassword` - The password to the Redis server, if any.
+
+The Redis database is part of the Docker services and configured to work with the Quake Live server Docker containers. It needs to have this value which must not change.
 
 ### Variables that were commented out
 
