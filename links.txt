@@ -5,24 +5,6 @@ https://gist.github.com/cstewart90
 https://github.com/dpadgett/ql-docker
 https://github.com/tynor88/docker-quakelive-server
 
-# Minqlx
-https://github.com/MinoMino/minqlx
-https://github.com/MinoMino/minqlx-plugins
-https://github.com/MinoMino/minqlx/wiki/Useful-Plugins
-https://github.com/dsverdlo/minqlx-plugins
-https://github.com/tjone270/Quake-Live/tree/master/minqlx-plugins
-https://github.com/mgaertne/minqlx-plugin-tests/tree/master/src/main/python
-https://github.com/roasticle/minqlx-plugins
-https://github.com/ped-ro/minqlx-plugins
-https://github.com/BarelyMiSSeD/minqlx-plugins
-https://github.com/x0rnn/minqlx-plugins
-https://github.com/cstewart90/minqlx-plugins
-https://github.com/Melodeiro/minqlx-plugins_mattiZed
-https://github.com/admafi/Quake-Live-Teamrace/tree/master/minqlx-plugins
-https://github.com/em92/dynamicip
-https://github.com/em92/kamikaze-clanarena
-https://github.com/em92/ad_hacks/tree/master/minqlx-plugins
-
 # Server config
 https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=542966946
 https://github.com/GameServerManagers/Game-Server-Configs/blob/master/QuakeLive/server.cfg
