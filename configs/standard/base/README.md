@@ -51,6 +51,12 @@ Website like QLStats are vital for the Quake Live scene. Every server therefor s
 
 It is in general useful for any server configuration.
 
+##### Log
+
+`log.py` - A plugin that logs chat and commands. All logs go to fs_homepath/chatlogs.
+
+It is in general useful for any server configuration.
+
 ##### Motd
 
 `motd.py` - Adds commands to set a message of the day.
