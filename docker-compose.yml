@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  ca:
+  ca1:
     image: quakeliveserverstandards/quakelive-base
     restart: always
     ports:
@@ -17,7 +17,7 @@ services:
       - './configs/standard/ca/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  ctf:
+  ctf1:
     image: quakeliveserverstandards/quakelive-base
     restart: always
     ports:
@@ -34,20 +34,16 @@ services:
       - './configs/standard/ctf/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  redis:
-    image: redis
-    restart: always
-    volumes:
-      - redis:/data # uses a Docker volumne by default
-  duel:
+  duel1:
     image: quakeliveserverstandards/quakelive-base
     restart: always
     ports:
       - '27961:27960/udp' #game port
       - '27961:27960/tcp' # stats port
-      - '28961:28960' # rcon port
+      - '28961:28960/tcp' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard Duel Server #1
+      - G_PASSWORD=1234
     volumes:
       - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
@@ -56,11 +52,6 @@ services:
       - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  redis:
-    image: redis
-    restart: always
-    volumes:
-      - redis:/data # uses a Docker volumne by default
   ffa:
     image: quakeliveserverstandards/quakelive-base
     restart: always
@@ -78,11 +69,6 @@ services:
       - './configs/standard/ffa/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  redis:
-    image: redis
-    restart: always
-    volumes:
-      - redis:/data # uses a Docker volumne by default
   race:
     image: quakeliveserverstandards/quakelive-base
     restart: always
@@ -100,11 +86,6 @@ services:
       - './configs/standard/race/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
-  redis:
-    image: redis
-    restart: always
-    volumes:
-      - redis:/data # uses a Docker volumne by default
   tdm:
     image: quakeliveserverstandards/quakelive-base
     restart: always
@@ -122,10 +103,15 @@ services:
       - './configs/standard/tdm/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
     depends_on: 
       - redis
+
+# Redis database needed by minqlx
   redis:
     image: redis
     restart: always
     volumes:
       - redis:/data # uses a Docker volumne by default
+
+# Docker volumne containing the data of the Redis database
+# You can safely delete the redis service without losing data
 volumes:
   redis:
