@@ -1,4 +1,4 @@
-# Base
+# Standard base config
 
 This is the base configuration which serves as a starting point for any new configuration. It contains the smallest common denominator for any Quake Live server configuration.
 
