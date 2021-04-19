@@ -36,12 +36,17 @@ To prevent a player with a faster machine to dictate the next map it is useful t
 
 A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
 
+##### ZMQ rcon (remote connection)
+
+`set zmq_rcon_enable "1"` - Enable rcon.
+
+Website like QLStats are vital for the Quake Live scene. Every server therefor should have receiving commands enabled to help the community evolve. For easy access the password is a standard one.
+
 ##### ZeroMQ Stats
 
 `set zmq_stats_enable "1"` - Enable ZeroMQ stats
-`set zmq_stats_password "quakeliveserverstandards"` - ZeroMQ stats password.
 
-Website like QLStats are vital for the Quake Live scene. Every server therefor should have sending stats enabled to help to evolve the community.
+Website like QLStats are vital for the Quake Live scene. Every server therefor should have sending stats enabled to help the community evolve.
 
 ### minqlx plugins
 
@@ -107,19 +112,13 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 The Quake Live server runs inside a Docker container. The Docker container exposes its own port but only to other Docker container inside that Docker network. To be able to access a Docker container inside that Docker network you have to define an additional external port. The Docker engine then will map that external port to a Docker containers internal port. Thus the Docker containers which running the Quake Live servers can all expose the same port and thus the Quake Live servers all can run on the same standard port 27960.
 
-##### Enable maintenance remote (rcon) connection
-
-`set zmq_rcon_enable "1"` - Enable rcon.
-
-This Quake Live server framework comes with a configured and working rcon client. It is a feature of this framework and this must not be changed.
-
-##### Maintencance remote connection (rcon) IP address
+##### ZMQ rcon IP address
 
 `set zmq_rcon_ip ""` - Which IP to bind to. Blank will bind to all interfaces.
 
 The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
 
-##### Maintenance remote connection (rcon) port
+##### ZMQ rcon port
 
 `set zmq_rcon_port "28960"` - Rcon port.
 
