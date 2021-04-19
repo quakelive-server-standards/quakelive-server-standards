@@ -33,8 +33,8 @@ http://ws.q3df.org/map/pro-q3tourney2/
 
 #### Blood Covenant
 
-Steam: 4 out of 5 (81 votes)
-Steam: 4 out of 5 (44 votes)
+Steam: 4 out of 5 (81 votes)  
+Steam: 4 out of 5 (44 votes)  
 
 "QC map ported to QL with some additional fixes, and more fixes." Steam
 
