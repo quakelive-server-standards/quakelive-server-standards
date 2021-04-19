@@ -1,6 +1,6 @@
 # Steam Workshop duel maps
 
-#### Monsoon
+### Monsoon
 
 "Lukin's Monsoon (xtn remix) ported to the new version of ql, still a few texture bugs but much better compared to the previous version. PLAY IT WITH RAMPJUMP AND CROUCHSLIDE ENABLED :)" Steam
 
@@ -9,7 +9,7 @@ http://ws.q3df.org/map/monsoon/
 
 ![Map image](images/monsoon.jpeg)
 
-#### Beatbox
+### Beatbox
 
 lvlworld: 4.1 out of 5 (243 votes)
 
@@ -22,7 +22,7 @@ LiveView: https://lvlworld.com/liveView/media/107
 
 ![Map image](images/beatbox.jpeg)
 
-#### The Proving Grounds II
+### The Proving Grounds II
 
 The Proving Grounds II (pro-q3tourney2) - converted, remixed and optimized for Quake Live.
 
@@ -31,7 +31,7 @@ http://ws.q3df.org/map/pro-q3tourney2/
 
 ![Map image](images/pro-q3tourney2.jpeg)
 
-#### Blood Covenant
+### Blood Covenant
 
 Steam: 4 out of 5 (81 votes)  
 Steam: 4 out of 5 (44 votes)  
@@ -45,7 +45,7 @@ http://ws.q3df.org/map/bloodcovenant/
 
 ![Map image](images/bloodcovenant.jpeg)
 
-#### Eldister
+### Eldister
 
 "Eldister - remake of 'Elder' with 'Sinister' theme.
 Fully rebuild from scratch (brushwork, texturing, clipping, lighting and VIS).
@@ -58,7 +58,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2020820722
 
 ![Map image](images/eldister.jpeg)
 
-#### Totally Lost
+### Totally Lost
 
 "Totally Lost (pro-nodm9) - converted from Q3A and optimized for Quake Live.
 
@@ -69,7 +69,7 @@ http://ws.q3df.org/map/nodm9/
 
 ![Map image](images/totallylost.jpeg)
 
-#### The Rage
+### The Rage
 
 4.3 out of 5 (25 votes)
 
@@ -85,7 +85,7 @@ Live View: https://lvlworld.com/liveView/media/1955
 
 ![Map image](images/therage.jpeg)
 
-#### Aggressor
+### Aggressor
 
 "All Credits go to Tyrann who created the remake for Quake 3 and Yves Allaire aka evil lair for his texture set. I made reconversion to QL" Steam
 
@@ -94,13 +94,13 @@ http://ws.q3df.org/map/aggressor
 
 ![Map image](images/aggressor.jpeg)
 
-#### Cage
+### Cage
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=540937824  
 
 ![Map image](images/cage.jpeg)
 
-#### Sinister (2012)
+### Sinister (2012)
 
 "The first version of "Sinister" out of 2012 (Premium pak 14)." Steam
 
@@ -108,7 +108,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=648343575
 
 ![Map image](images/sinister2012.jpeg)
 
-#### gomdm3
+### gomdm3
 
 "A ported version of the quake 1 map 'Imaginations from the other side' (gomdm3)" Steam
 
@@ -116,7 +116,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2439697217
 
 ![Map image](images/gomdm3.jpeg)
 
-#### Bastet
+### Bastet
 
 "There is no shrine,
 no trace of temple rites,
@@ -132,7 +132,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2099209867
 
 ![Map image](images/bastet.jpeg)
 
-#### Harder Than Hate
+### Harder Than Hate
 
 lvlworld: 3.7 out of 5 (18 votes)
 
@@ -145,7 +145,7 @@ Live View: https://lvlworld.com/liveView/review/1275
 
 ![Map image](images/harderthanhate.jpeg)
 
-#### Si'Metrik
+### Si'Metrik
 
 4.1 out of 5 (177 votes)
 
@@ -158,7 +158,7 @@ Live View: https://lvlworld.com/liveView/review/607
 
 ![Map image](images/simetrik.jpeg)
 
-#### Aero Blood Run
+### Aero Blood Run
 
 3.7 out of 5 (8 votes)
 
@@ -172,7 +172,7 @@ Live View: https://lvlworld.com/liveView/review/2229
 
 ![Map image](images/oxodm2.jpeg)
 
-#### 5quid
+### 5quid
 
 4.1 out of 5 (39 votes)
 
@@ -188,7 +188,7 @@ Live View: https://lvlworld.com/liveView/review/1606
 
 ![Map image](images/5quid.jpeg)
 
-#### Subversive Tendencies
+### Subversive Tendencies
 
 3.9 out of 5 (24 votes)
 
@@ -201,7 +201,7 @@ Live View: https://lvlworld.com/liveView/review/944
 
 ![Map image](images/subversivetendencies.jpeg)
 
-#### Catharsis (Alpha 1)
+### Catharsis (Alpha 1)
 
 "Small-to-medium sized duel-oriented arena, based on an old Warsow map of mine. Armor setup is 1 RA, 1 MH, 1 YA, and 2 GA's. Lacks a railgun. Most notably includes the key and lock mechanic, a really cool concept that I feel deserves some more serious consideration." Steam
 
@@ -209,7 +209,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1209601964
 
 ![Map image](images/catharsis_a1.jpeg)
 
-#### Khaooohs
+### Khaooohs
 
 4.1 out of 5 (146 votes)
 
@@ -222,7 +222,7 @@ Live View: https://lvlworld.com/liveView/review/49
 
 ![Map image](images/kaos.jpeg)
 
-#### Nemesis
+### Nemesis
 
 "The Map has its unique style with lots of cool angles and jumps. Its gotten the Size of Sinister or Furius hights. I thought a lot about Item Placement and Balance aswell. I hope you enjoy :)" Steam
 
@@ -230,7 +230,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=774562650
 
 ![Map image](images/nemesis.jpeg)
 
-#### Kora
+### Kora
 
 4.6 out of 5 (14 votes)
 
@@ -246,7 +246,7 @@ Live View: https://lvlworld.com/liveView/review/2306
 
 ![Map image](images/kora.jpeg)
 
-#### Kamasutra
+### Kamasutra
 
 3.9 out of 5 (87 votes)
 
@@ -265,13 +265,13 @@ Live View: https://lvlworld.com/liveView/review/2058
 
 ![Map image](images/kamasutra.jpeg)
 
-#### Placebo Effect
+### Placebo Effect
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=641459594  
 
 ![Map image](images/placeboeffect.jpeg)
 
-#### Reloaded
+### Reloaded
 
 4 out of 5 (54 votes)
 
@@ -284,7 +284,7 @@ Live View: https://lvlworld.com/liveView/review/585
 
 ![Map image](images/reloaded.jpeg)
 
-#### Stranglehold
+### Stranglehold
 
 4 out of 5 (37 votes)
 
@@ -298,7 +298,7 @@ Live View: https://lvlworld.com/liveView/review/1160
 
 ![Map image](images/stranglehold.jpeg)
 
-#### Saint Tourney 1
+### Saint Tourney 1
 
 4.2 out of 5 (16 votes)
 
@@ -313,7 +313,7 @@ Live View: https://lvlworld.com/liveView/review/1693
 
 ![Map image](images/sainttoureny1.jpeg)
 
-#### Still Alive
+### Still Alive
 
 3.8 out of 5 (29 votes)
 
@@ -327,19 +327,19 @@ Live View https://lvlworld.com/liveView/media/2009
 
 ![Map image](images/stillalive.jpeg)
 
-#### Swift
+### Swift
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351050532  
 
 ![Map image](images/swift.jpeg)
 
-#### Blue Monk
+### Blue Monk
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351045272  
 
 ![Map image](images/bluemonk.jpeg)
 
-#### Blood Run tribute
+### Blood Run tribute
 
 3.8 out of 5 (28 votes)
 
@@ -358,13 +358,13 @@ Live View: https://lvlworld.com/liveView/review/2028
 
 ![Map image](images/bloodruntribute.jpeg)
 
-#### Diabotical: Frontier
+### Diabotical: Frontier
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2056321023  
 
 ![Map image](images/frontier.jpeg)
 
-#### Earth Core Program
+### Earth Core Program
 
 "Earth Core Program is a map that was an entire decade in the making, with Fjoggs having started work in 2004 and coming back to it on-and-off over the years before finally polishing and releasing the final version in 2014. Does it make the cut after all this time?
 The texture set is none other than Lunaran's Quake 2-style waste pack and I think it may be one of, if not the best-looking map using it. The geometry is interesting and meshes well with the textures, with lots of great trim work as well as rooftop structures and rocky terrain to give the impression of a much larger environment. The lighting is drop-dead gorgeous too, with amazing contrast between dark and bright areas and absolutely delicious complementary color design schemes with cool, eerie blue lights being set up alongside warm, inviting golden lights. All of this is set beneath a foreboding starry sky by Ikka.
@@ -380,12 +380,12 @@ https://lvlworld.com/liveView/review/2425
 
 ![Map image](images/earthcoreprogram.jpeg)
 
-#### megadm4_09
+### megadm4_09
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=579717457 - Map number 9  
 https://www.youtube.com/watch?v=yl69wqaIbaM  
 
-#### Story to tell
+### Story to tell
 
 4.5 out of 5 (25 votes)
 
@@ -400,7 +400,7 @@ Live View: https://lvlworld.com/liveView/review/1832
 
 ![Map image](images/necro6.jpeg)
 
-#### Never Enough
+### Never Enough
 
 4.2 out of 5 (29 votes)
 
@@ -416,14 +416,14 @@ Live View: https://lvlworld.com/liveView/review/1613
 
 ![Map image](images/neverenough.jpeg)
 
-#### The Chastity Belt Duel
+### The Chastity Belt Duel
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=579717457 - Map number 12  
 https://ws.q3df.org/map/ospdm8a/  
 
 ![Map image](images/thechasitybeltduel.jpeg)
 
-#### Lithium Flower ver.2
+### Lithium Flower ver.2
 
 4 out of 5 (22 votes)
 
@@ -438,11 +438,11 @@ Live View: https://lvlworld.com/liveView/review/1904
 
 ![Map image](images/lithiumflower.jpeg)
 
-#### Proving Grounds
+### Proving Grounds
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=579717457 - Map number 19  
 
-#### Last Trip
+### Last Trip
 
 4.5 out of 5 (20 votes)
 
@@ -456,7 +456,7 @@ Live View: https://lvlworld.com/liveView/review/1913
 
 ![Map image](images/lasttrip.jpeg)
 
-#### KARIN
+### KARIN
 
 4.4 out of 5 (41 votes)
 
@@ -471,7 +471,7 @@ Live View: https://lvlworld.com/liveView/review/1941
 
 ![Map image](images/karin.jpeg)
 
-#### Adelline
+### Adelline
 
 4.3 out of 5 (23 votes)
 
