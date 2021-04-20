@@ -1,3 +1,0 @@
-# specify 1 workshop item id per line, ex:
-# 494372396
-# 441344649

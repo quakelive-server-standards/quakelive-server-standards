@@ -32,7 +32,7 @@ RUN set -x \
     && python3 -m pip install -r minqlx-plugins/requirements.txt
 
 # copy the standard server.cfg into the image
-COPY --chown=steam:steam configs/base/server.cfg /users/steam/ql/baseq3/
+COPY --chown=steam:steam configs/standard/server.cfg /users/steam/ql/baseq3/
 
 # set standard values which will be overriden by environment variables with higher precedence
 ENV SV_HOSTNAME "Quake Live Standard Server"
