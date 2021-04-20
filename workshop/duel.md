@@ -33,14 +33,14 @@ http://ws.q3df.org/map/pro-q3tourney2/
 
 ### Blood Covenant
 
-Steam: 4 out of 5 (81 votes)  
+(Steam: 4 out of 5 (81 votes))  
 Steam: 4 out of 5 (44 votes)  
 
 "QC map ported to QL with some additional fixes, and more fixes." Steam
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=1403618971  
+(https://steamcommunity.com/sharedfiles/filedetails/?id=1403618971)  
 https://steamcommunity.com/sharedfiles/filedetails/?id=1691279416  
-http://ws.q3df.org/map/blood_covenant/  
+(http://ws.q3df.org/map/blood_covenant/)  
 http://ws.q3df.org/map/bloodcovenant/  
 
 ![Map image](_images/bloodcovenant.jpeg)
@@ -196,7 +196,7 @@ Live View: https://lvlworld.com/liveView/review/1606
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1706161905  
 https://ws.q3df.org/map/teqtrny3/  
-https://lvlworld.com/review/id:944 
+https://lvlworld.com/review/id:944  
 Live View: https://lvlworld.com/liveView/review/944  
 
 ![Map image](_images/subversivetendencies.jpeg)
@@ -291,7 +291,7 @@ Live View: https://lvlworld.com/liveView/review/585
 "This is one small map with a lot going for it. The layout wraps around itself quickly, thoroughly well connected with a simple and effective aesthetic. The top floor is where you want to hangout and try to control the level from. This is not as easy as it first looks in games with well matched players. There are a number of jumps that speed up the game play and action, like the one to the Railgun over the central pit. For the best results against bots load up two of them on Nightmare.
 Great small map, grab it for sure." lvlworld
 
-http://de.ws.q3df.org/map/jaxtourney1/  
+https://steamcommunity.com/sharedfiles/filedetails/?id=1706214273
 https://ws.q3df.org/map/jaxtourney1/  
 https://lvlworld.com/review/id:1160  
 Live View: https://lvlworld.com/liveView/review/1160  
