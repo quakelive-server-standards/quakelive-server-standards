@@ -1,4 +1,4 @@
-# Standard duel config
+# Standard Duel config
 
 ## Standards
 

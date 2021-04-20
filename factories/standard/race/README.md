@@ -1,0 +1,3 @@
+# Standard Race config
+
+## Standards

@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   ca1:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/ca
     restart: always
     ports:
       - '27960:27960/udp' # game port
@@ -26,7 +26,7 @@ services:
     depends_on: 
       - redis
   ctf1:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/ctf
     restart: always
     ports:
       - '27961:27960/udp' #game port
@@ -51,7 +51,7 @@ services:
     depends_on: 
       - redis
   duel1:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/duel
     restart: always
     ports:
       - '27962:27960/udp' #game port
@@ -76,7 +76,7 @@ services:
     depends_on: 
       - redis
   ffa:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/ffa
     restart: always
     ports:
       - '27963:27960/udp' #game port
@@ -101,7 +101,7 @@ services:
     depends_on: 
       - redis
   race:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/race
     restart: always
     ports:
       - '27964:27960/udp' #game port
@@ -120,7 +120,7 @@ services:
     depends_on: 
       - redis
   tdm:
-    image: quakeliveserverstandards/quakelive-base
+    image: quakeliveserverstandards/tdm
     restart: always
     ports:
       - '27965:27960/udp' #game port

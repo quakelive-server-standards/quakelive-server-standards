@@ -34,10 +34,6 @@ RUN set -x \
 # copy the standard server.cfg into the image
 COPY --chown=steam:steam configs/standard/server.cfg /users/steam/ql/baseq3/
 
-# set standard values which will be overriden by environment variables with higher precedence
-ENV SV_HOSTNAME "Quake Live Standard Server"
-ENV SV_TAGS "ca, ctf, duel, ffa, race, tdm"
-
 # execute the server and allow certain cvars to be set by environment variables
 CMD set -x \
     # start the minqlx extended quake live server

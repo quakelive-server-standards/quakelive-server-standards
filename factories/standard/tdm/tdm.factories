@@ -1,0 +1,9 @@
+{
+    "cvars": {
+    },
+    "author": "Quake Live Server Standards",
+    "description": "",
+    "basegt": "tdm",
+    "id": "stdtdm",
+    "title": "Standard Team Death Match"
+}

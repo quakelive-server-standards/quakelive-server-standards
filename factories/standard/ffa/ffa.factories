@@ -1,0 +1,11 @@
+{
+    "cvars": {
+        "timelimit": "15",
+        "g_overtime": "0"
+    },
+    "author": "Quake Live Server Standards",
+    "description": "",
+    "basegt": "ffa",
+    "id": "stdffa",
+    "title": "Standard Free For All"
+}

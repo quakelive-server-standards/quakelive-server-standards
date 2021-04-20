@@ -1,0 +1,33 @@
+{
+    "cvars": {
+        "pmove_noPlayerClip": "1",
+        "dmflags": "28",
+        "fraglimit": "0",
+        "g_startingWeapons": "145",
+        "g_allowKill": "1",
+        "g_infiniteAmmo": "1",
+        "g_knockback_pg": "1.25",
+        "g_knockback_rl": "1.10",
+        "g_knockback_z": "40",
+        "g_itemHeight": "35",
+        "g_itemTimers": "0",
+        "g_max_knockback": "160",
+        "g_overtime": "0",
+        "g_respawn_delay_max": "3500",
+        "g_respawn_delay_min": "500",
+        "g_splashradius_pg": "32",
+        "g_startingHealthBonus": "0",
+        "g_velocity_gl": "800",
+        "pmove_AirControl": "1",
+        "pmove_JumpTimeDeltaMin": "50",
+        "pmove_RampJump": "1",
+        "pmove_WeaponRaiseTime": "10",
+        "pmove_WeaponDropTime": "10",
+        "timelimit": "8"
+    },
+    "author": "Quake Live Server Standards",
+    "description": "",
+    "basegt": "race",
+    "id": "stdrace",
+    "title": "Standard Race"
+}
