@@ -6,43 +6,13 @@ This is the base configuration which serves as a starting point for any new conf
 
 ### server.cfg
 
-##### Hostname
-
-`set sv_hostname "Quake Live Standard Server"` - Hostname for server.
-
-If somebody uses this configuration it should have a name which references its type. This cvar is commented out so that it can be set in the `docker-compose.yml` of this framework. You find the default in the Docker file `docker/base/Dockerfile`.
-
-##### Tags
-
-`set sv_tags "ca, ctf, duel, ffa, race, tdm"` - Server tags - Tags show up on the in-game server browser. This helps users filter servers.
-
-If somebody uses this configuration it should have a name which references its type. This cvar is commented out so that it can be set in the `docker-compose.yml` of this framework. You find the default in the Docker file `docker/base/Dockerfile`.
-
-##### Allow voting
-
-`set g_allowVote "1"` - Allow Voting.
-
-A server without voting prevents the players on the server to decide which map they want to play next for example.
-
-##### Vote delay
-
-`set g_voteDelay "5000"` - Delay allowing votes for X milliseconds after map load.
-
-To prevent a player with a faster machine to dictate the next map it is useful to prevent voting for some time so that the player with the slower machine has finished loading and is able to vote.
-
-##### Vote limit
-
-`set g_voteLimit "10"` - Limit users to X votes per map.
-
-A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
-
 ##### ZMQ rcon (remote connection)
 
 `set zmq_rcon_enable "1"` - Enable rcon.
 
 Website like QLStats are vital for the Quake Live scene. Every server therefor should have receiving commands enabled to help the community evolve. For easy access the password is a standard one.
 
-##### ZeroMQ Stats
+##### ZMQ Stats
 
 `set zmq_stats_enable "1"` - Enable ZeroMQ stats
 
@@ -85,14 +55,6 @@ It is in general useful for any server configuration.
 `workshop.py` - A plugin that allows the use of custom workshop items that the server might not reference by default, and thus not have the client download them automatically.
 
 It is in general useful for any server configuration.
-
-### mappool.txt
-
-No changes were made to the original Quake Live version.
-
-### workshop.txt
-
-No changes were made to the original Quake Live version which is empty.
 
 ## Technical details regarding this framework
 

@@ -2,23 +2,21 @@
 
 ## Standards
 
-### server.cfg
-
 ##### Allow voting mid game
 
-`set g_allowVoteMidGame "0"` - Only allow votes from mid game.
+`g_allowVoteMidGame "0"` - Only allow votes from mid game.
 
 Voting mid game does not make sense in duel. A duel is played until the end or the person forfeits.
 
 ##### Allow spectator voting
 
-`set g_allowSpecVote "0"`- Allow spectators to call votes
+`g_allowSpecVote "0"`- Allow spectators to call votes
 
 A spectator should not be able to vote otherwise the players wanting to play a game need to wait for the spectators to also vote and hopefully vote yes.
 
 ##### Vote flags
 
-`set g_voteFlags "6142"` - Add together the below values for which callvotes should be DISABLED.
+`g_voteFlags "6142"` - Add together the below values for which callvotes should be DISABLED.
 
 - `1` map - Of course.
 - `2` map_restart - Does not make sense because mid match voting is disabled.
@@ -37,23 +35,22 @@ A spectator should not be able to vote otherwise the players wanting to play a g
 
 ##### Player ratio for starting
 
-`set sv_warmupReadyPercentage "1"` - Ratio of players that must be ready before the match starts.
+`sv_warmupReadyPercentage "1"` - Ratio of players that must be ready before the match starts.
 
 ##### Warmup ready delay
 
-`set g_warmupReadyDelay "60"` - Wait x seconds before allowing match to start to allow all players to connect.
+`g_warmupReadyDelay "60"` - Wait x seconds before allowing match to start to allow all players to connect.
 
 There are no delays which annoys if the other player does not ready up and then leaves anyway. Thus a value here is a highly recommended. A lot of servers do 120 seconds which is a bit stretching. Some do 10 seconds which is a little short. 60 should be a good value.
 
 ##### Warmup ready delay action
 
-`set g_warmupReadyDelayAction "2"` - Set to 1 to force players to spectator after g_warmupReady Delay, 2 to force ready up.
+`g_warmupReadyDelayAction "2"` - to 1 to force players to spectator after g_warmupReady Delay, 2 to force ready up.
 
 If someone joins a server the person should be ready play. If she/he does not want to then she/he should leave.
 
 ##### Inactivity kick
 
-`set g_inactivity "10"` - Kick players who are inactive for X amount of seconds.
+`g_inactivity "600"` - Kick players who are inactive for X amount of seconds.
 
 Some people just idle on servers which is annoying because the server browser gives the impression that someone is waiting which is not true. People should be kicked when inactive. 10 minutes is a good value here. It is enough time to go to toilet, talk to partner or something else. For the other player it might be ok to wait that long.
-

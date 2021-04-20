@@ -2,6 +2,36 @@
 
 [http://www.regurge.at/ql/](http://www.regurge.at/ql/)
 
+## Vote
+
+`g_allowVote "1"` - Allows voting to take place in a server.  
+`g_voteDelay "0"` - Delay allowing votes for X milliseconds after map load.
+`g_voteLimit "0"` - Limit users to X votes per map.
+`g_allowVoteMidGame "0"` - Allows voting to take place during a match.  
+`g_allowSpecVote "0"` - Allows spectators to call or cast votes in a server.  
+
+`g_voteFlags "0"` - Sets which vote commands are disabled on the server.
+
+Add together the below values for which callvotes should be DISABLED e.g to disable map and nextmap 1+4=5. map `1`, map_restart `2`, nextmap `4`, gametype `8` (ex: "/callvote map campgrounds" will be allowed, but "/callvote map campgrounds ca" will fail), kick `16`, timelimit `32`, fraglimit `64`, shuffle `128`, teamsize `256`, cointoss/random `512`, loadouts `1024`, end-game voting `2048`, ammo (global) `4096`, timers (item) `8192`
+
+## Players
+
+`sv_warmupReadyPercentage "0.51"` - Sets the minimum percentile of players of ready status required in a warm up match before the match starts.
+
+`g_warmupDelay "15"` - Sets the amount of time (in seconds) it takes from progressing from warm up round to match start when enough players are ready to begin.
+
+`g_warmupReadyDelay "0"` - Force the game to start after x seconds after someone readies up.
+
+`g_warmupReadyDelayAction "1"` - Set to 1 to force players to spectator after g_warmupReady Delay, 2 to force ready up.
+
+`g_inactivity "0"` - Sets the amount of time a player can be inactive for before being kicked from the server.
+
+`g_timeoutLen "30"` - Sets the length of a timeout.
+
+`g_timeoutCount "3"` - Sets the number of timeouts per player.
+
+`g_alltalk "0"` - Voice Comms. `0` Limit voice comms to teams only during the match. `1` Allow all players to talk to each other.
+
 ## Round
 
 `fraglimit`
@@ -254,7 +284,3 @@
 
 `sv_includeCurrentMapInVote`
 `g_teamForceBalance`
-`g_voteFlags`
-`g_allowvotemidgame`
-`g_timeoutLen`
-`g_timeoutCount`

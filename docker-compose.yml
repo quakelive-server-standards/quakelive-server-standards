@@ -10,11 +10,12 @@ services:
     environment:
       - SV_HOSTNAME=QL Standard CA Server #1
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/ca/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/ca/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/ca/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/ca/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/ca/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/ca:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/ca/ca.factories:/home/steam/ql/baseq3/scripts/ca.factories'
     depends_on: 
       - redis
   ctf1:
@@ -27,11 +28,12 @@ services:
     environment:
       - SV_HOSTNAME=QL Standard CTF Server #1
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/ctf/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/ctf/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/ctf/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/ctf/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/ctf/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/ctf:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/ctf/ctf.factories:/home/steam/ql/baseq3/scripts/ctf.factories'
     depends_on: 
       - redis
   duel1:
@@ -45,11 +47,12 @@ services:
       - SV_HOSTNAME=QL Standard Duel Server #1
       - G_PASSWORD=1234
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
     depends_on: 
       - redis
   ffa:
@@ -62,11 +65,12 @@ services:
     environment:
       - SV_HOSTNAME=QL Standard FFA Server #1
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/ffa/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/ffa/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/ffa/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/ffa/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/ffa/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/ffa:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/ffa/ffa.factories:/home/steam/ql/baseq3/scripts/ffa.factories'
     depends_on: 
       - redis
   race:
@@ -79,11 +83,12 @@ services:
     environment:
       - SV_HOSTNAME=QL Standard Race Server #1
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/race/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/race/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/race/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/race/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/race/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/race:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/race/race.factories:/home/steam/ql/baseq3/scripts/race.factories'
     depends_on: 
       - redis
   tdm:
@@ -96,11 +101,12 @@ services:
     environment:
       - SV_HOSTNAME=QL Standard TDM Server #1
     volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/tdm/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/tdm/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/tdm/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/tdm/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - './mappools/standard/tdm/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - './workshop/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+      - './minqlx-plugins/standard/tdm:/home/steam/ql/minqlx-plugins'
+      - './factories/standard/tdm/tdm.factories:/home/steam/ql/baseq3/scripts/tdm.factories'
     depends_on: 
       - redis
 
