@@ -7,5 +7,3 @@ https://github.com/tynor88/docker-quakelive-server
 
 # Server config
 https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=542966946
-https://github.com/GameServerManagers/Game-Server-Configs/blob/master/QuakeLive/server.cfg
-https://gist.github.com/ozh/d63e8d98fb71fd0987f6

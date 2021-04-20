@@ -9,6 +9,12 @@ services:
       - '28960:28960' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard CA Server #1
+      - SV_TAGS=ca
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
@@ -27,6 +33,12 @@ services:
       - '28961:28960' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard CTF Server #1
+      - SV_TAGS=ctf
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
@@ -45,7 +57,12 @@ services:
       - '28961:28960/tcp' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard Duel Server #1
-      - G_PASSWORD=1234
+      - SV_TAGS=duel
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
@@ -64,6 +81,12 @@ services:
       - '28961:28960' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard FFA Server #1
+      - SV_TAGS=ffa
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
@@ -100,6 +123,12 @@ services:
       - '28961:28960' # rcon port
     environment:
       - SV_HOSTNAME=QL Standard TDM Server #1
+      - SV_TAGS=tdm
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'

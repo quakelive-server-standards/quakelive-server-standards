@@ -20,6 +20,6 @@
     "author": "Quake Live Server Standards",
     "description": "",
     "basegt": "duel",
-    "id": "duel",
-    "title": "Duel"
+    "id": "stdduel",
+    "title": "Standard Duel"
 }

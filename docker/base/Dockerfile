@@ -44,20 +44,9 @@ CMD set -x \
     && ./ql/run_server_x64_minqlx.sh \
     # only attach the parameter if the environment variable is set
     ${SV_HOSTNAME:+"+set sv_hostname ${SV_HOSTNAME}"} \
-    ${G_PASSWORD:+"+set g_password ${G_PASSWORD}"} \
     ${SV_TAGS:+"+set sv_tags ${SV_TAGS}"} \
+    ${G_PASSWORD:+"+set g_password ${G_PASSWORD}"} \
     ${SV_MAXCLIENTS:+"+set sv_maxClients ${SV_MAXCLIENTS}"} \
     ${SV_PRIVATECLIENTS:+"+set sv_privateClients ${SV_PRIVATECLIENTS}"} \
     ${SV_PRIVATEPASSWORD:+"+set sv_privatePassword ${SV_PRIVATEPASSWORD}"} \
-    ${SV_ALLOWVOTE:+"+set g_allowVote ${SV_ALLOWVOTE}"} \
-    ${SV_VOTEDELAY:+"+set g_voteDelay ${SV_VOTEDELAY}"} \
-    ${SV_VOTELIMIT:+"+set g_voteLimit ${SV_VOTELIMIT}"} \
-    ${SV_ALLOWVOTEMIDGAME:+"+set g_allowVoteMidGame ${SV_ALLOWVOTEMIDGAME}"} \
-    ${SV_ALLOWSPECVOTE:+"+set g_allowSpecVote ${SV_ALLOWSPECVOTE}"} \
-    ${SV_VOTEFLAGS:+"+set g_voteFlags ${SV_VOTEFLAGS}"} \
-    ${SV_WARMUPREADYPERCENTAGE:+"+set sv_warmupReadyPercentage ${SV_WARMUPREADYPERCENTAGE}"} \
-    ${SV_WARMUPDELAY:+"+set g_warmupDelay ${SV_WARMUPDELAY}"} \
-    ${SV_WARMUPREADYDELAY:+"+set g_warmupReadyDelay ${SV_WARMUPREADYDELAY}"} \
-    ${SV_WARMUPREADYDELAYACTION:+"+set g_warmupReadyDelayAction ${SV_WARMUPREADYDELAYACTION}"} \
-    ${G_INACTIVITY:+"+set g_inactivity ${G_INACTIVITY}"} \
     ${G_ALLTALK:+"+set g_alltalk ${G_ALLTALK}"}
