@@ -7,7 +7,7 @@
 https://steamcommunity.com/sharedfiles/filedetails/?id=542684362  
 http://ws.q3df.org/map/monsoon/  
 
-![Map image](images/monsoon.jpeg)
+![Map image](_images/monsoon.jpeg)
 
 ### Beatbox
 
@@ -20,7 +20,7 @@ http://ws.q3df.org/map/ztn3dm2/
 https://lvlworld.com/review/id:107  
 LiveView: https://lvlworld.com/liveView/media/107  
 
-![Map image](images/beatbox.jpeg)
+![Map image](_images/beatbox.jpeg)
 
 ### The Proving Grounds II
 
@@ -29,7 +29,7 @@ The Proving Grounds II (pro-q3tourney2) - converted, remixed and optimized for Q
 https://steamcommunity.com/sharedfiles/filedetails/?id=821675354  
 http://ws.q3df.org/map/pro-q3tourney2/  
 
-![Map image](images/pro-q3tourney2.jpeg)
+![Map image](_images/pro-q3tourney2.jpeg)
 
 ### Blood Covenant
 
@@ -43,7 +43,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1691279416
 http://ws.q3df.org/map/blood_covenant/  
 http://ws.q3df.org/map/bloodcovenant/  
 
-![Map image](images/bloodcovenant.jpeg)
+![Map image](_images/bloodcovenant.jpeg)
 
 ### Eldister
 
@@ -56,7 +56,7 @@ There is a little secret you can find only in FFA." Steam
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2020820722  
 
-![Map image](images/eldister.jpeg)
+![Map image](_images/eldister.jpeg)
 
 ### Totally Lost
 
@@ -67,7 +67,7 @@ This map was created by Rich 'swelt' Jacques and Jakab 'Rasputin' Marton in 2003
 https://steamcommunity.com/sharedfiles/filedetails/?id=822833735  
 http://ws.q3df.org/map/nodm9/  
 
-![Map image](images/totallylost.jpeg)
+![Map image](_images/totallylost.jpeg)
 
 ### The Rage
 
@@ -83,7 +83,7 @@ http://ws.q3df.org/map/fora_rage/
 https://lvlworld.com/comments/id:1955  
 Live View: https://lvlworld.com/liveView/media/1955  
 
-![Map image](images/therage.jpeg)
+![Map image](_images/therage.jpeg)
 
 ### Aggressor
 
@@ -92,13 +92,13 @@ Live View: https://lvlworld.com/liveView/media/1955
 https://steamcommunity.com/sharedfiles/filedetails/?id=569873334  
 http://ws.q3df.org/map/aggressor  
 
-![Map image](images/aggressor.jpeg)
+![Map image](_images/aggressor.jpeg)
 
 ### Cage
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=540937824  
 
-![Map image](images/cage.jpeg)
+![Map image](_images/cage.jpeg)
 
 ### Sinister (2012)
 
@@ -106,7 +106,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=540937824
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=648343575  
 
-![Map image](images/sinister2012.jpeg)
+![Map image](_images/sinister2012.jpeg)
 
 ### gomdm3
 
@@ -114,7 +114,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=648343575
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2439697217  
 
-![Map image](images/gomdm3.jpeg)
+![Map image](_images/gomdm3.jpeg)
 
 ### Bastet
 
@@ -130,7 +130,7 @@ Enjoy"
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2099209867  
 
-![Map image](images/bastet.jpeg)
+![Map image](_images/bastet.jpeg)
 
 ### Harder Than Hate
 
@@ -143,7 +143,7 @@ http://ws.q3df.org/map/pjw3tourney2/
 https://lvlworld.com/review/id:1275  
 Live View: https://lvlworld.com/liveView/review/1275  
 
-![Map image](images/harderthanhate.jpeg)
+![Map image](_images/harderthanhate.jpeg)
 
 ### Si'Metrik
 
@@ -156,7 +156,7 @@ http://ws.q3df.org/map/simetrik/
 https://lvlworld.com/review/id:607  
 Live View: https://lvlworld.com/liveView/review/607  
 
-![Map image](images/simetrik.jpeg)
+![Map image](_images/simetrik.jpeg)
 
 ### Aero Blood Run
 
@@ -170,7 +170,7 @@ http://ws.q3df.org/map/oxodm2/
 https://lvlworld.com/review/id:2229  
 Live View: https://lvlworld.com/liveView/review/2229  
 
-![Map image](images/oxodm2.jpeg)
+![Map image](_images/oxodm2.jpeg)
 
 ### 5quid
 
@@ -186,7 +186,7 @@ https://ws.q3df.org/map/charon3dm13/
 https://lvlworld.com/review/id:1606  
 Live View: https://lvlworld.com/liveView/review/1606  
 
-![Map image](images/5quid.jpeg)
+![Map image](_images/5quid.jpeg)
 
 ### Subversive Tendencies
 
@@ -199,7 +199,7 @@ https://ws.q3df.org/map/teqtrny3/
 https://lvlworld.com/review/id:944 
 Live View: https://lvlworld.com/liveView/review/944  
 
-![Map image](images/subversivetendencies.jpeg)
+![Map image](_images/subversivetendencies.jpeg)
 
 ### Catharsis (Alpha 1)
 
@@ -207,7 +207,7 @@ Live View: https://lvlworld.com/liveView/review/944
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1209601964  
 
-![Map image](images/catharsis_a1.jpeg)
+![Map image](_images/catharsis_a1.jpeg)
 
 ### Khaooohs
 
@@ -220,7 +220,7 @@ http://en.ws.q3df.org/map/kaos/
 https://lvlworld.com/review/id:49  
 Live View: https://lvlworld.com/liveView/review/49  
 
-![Map image](images/kaos.jpeg)
+![Map image](_images/kaos.jpeg)
 
 ### Nemesis
 
@@ -228,7 +228,7 @@ Live View: https://lvlworld.com/liveView/review/49
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=774562650  
 
-![Map image](images/nemesis.jpeg)
+![Map image](_images/nemesis.jpeg)
 
 ### Kora
 
@@ -244,7 +244,7 @@ https://ws.q3df.org/map/rota3dm5/
 https://lvlworld.com/review/id:2306  
 Live View: https://lvlworld.com/liveView/review/2306  
 
-![Map image](images/kora.jpeg)
+![Map image](_images/kora.jpeg)
 
 ### Kamasutra
 
@@ -263,13 +263,13 @@ https://ws.q3df.org/map/pukka3tourney6/
 https://lvlworld.com/review/id:2058  
 Live View: https://lvlworld.com/liveView/review/2058  
 
-![Map image](images/kamasutra.jpeg)
+![Map image](_images/kamasutra.jpeg)
 
 ### Placebo Effect
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=641459594  
 
-![Map image](images/placeboeffect.jpeg)
+![Map image](_images/placeboeffect.jpeg)
 
 ### Reloaded
 
@@ -282,7 +282,7 @@ https://ws.q3df.org/map/yog3dm2/
 https://lvlworld.com/review/id:585  
 Live View: https://lvlworld.com/liveView/review/585  
 
-![Map image](images/reloaded.jpeg)
+![Map image](_images/reloaded.jpeg)
 
 ### Stranglehold
 
@@ -296,7 +296,7 @@ https://ws.q3df.org/map/jaxtourney1/
 https://lvlworld.com/review/id:1160  
 Live View: https://lvlworld.com/liveView/review/1160  
 
-![Map image](images/stranglehold.jpeg)
+![Map image](_images/stranglehold.jpeg)
 
 ### Saint Tourney 1
 
@@ -311,7 +311,7 @@ https://ws.q3df.org/map/sainttourney1/
 https://lvlworld.com/review/id:1693  
 Live View: https://lvlworld.com/liveView/review/1693  
 
-![Map image](images/sainttoureny1.jpeg)
+![Map image](_images/sainttoureny1.jpeg)
 
 ### Still Alive
 
@@ -325,19 +325,19 @@ https://ws.q3df.org/map/reqtourney1/
 https://lvlworld.com/media/id:2009  
 Live View https://lvlworld.com/liveView/media/2009  
 
-![Map image](images/stillalive.jpeg)
+![Map image](_images/stillalive.jpeg)
 
 ### Swift
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351050532  
 
-![Map image](images/swift.jpeg)
+![Map image](_images/swift.jpeg)
 
 ### Blue Monk
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351045272  
 
-![Map image](images/bluemonk.jpeg)
+![Map image](_images/bluemonk.jpeg)
 
 ### Blood Run tribute
 
@@ -356,13 +356,13 @@ https://ws.q3df.org/map/obs3dm2/
 https://lvlworld.com/review/id:2028  
 Live View: https://lvlworld.com/liveView/review/2028  
 
-![Map image](images/bloodruntribute.jpeg)
+![Map image](_images/bloodruntribute.jpeg)
 
 ### Diabotical: Frontier
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2056321023  
 
-![Map image](images/frontier.jpeg)
+![Map image](_images/frontier.jpeg)
 
 ### Earth Core Program
 
@@ -378,7 +378,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=579717457 - Map number 8
 https://lvlworld.com/review/id:2425  
 https://lvlworld.com/liveView/review/2425  
 
-![Map image](images/earthcoreprogram.jpeg)
+![Map image](_images/earthcoreprogram.jpeg)
 
 ### megadm4_09
 
@@ -398,7 +398,7 @@ https://ws.q3df.org/map/necro6/
 https://lvlworld.com/review/id:1832  
 Live View: https://lvlworld.com/liveView/review/1832  
 
-![Map image](images/necro6.jpeg)
+![Map image](_images/necro6.jpeg)
 
 ### Never Enough
 
@@ -414,14 +414,14 @@ https://ws.q3df.org/map/ne_duel/
 https://lvlworld.com/review/id:1613  
 Live View: https://lvlworld.com/liveView/review/1613  
 
-![Map image](images/neverenough.jpeg)
+![Map image](_images/neverenough.jpeg)
 
 ### The Chastity Belt Duel
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=579717457 - Map number 12  
 https://ws.q3df.org/map/ospdm8a/  
 
-![Map image](images/thechasitybeltduel.jpeg)
+![Map image](_images/thechasitybeltduel.jpeg)
 
 ### Lithium Flower ver.2
 
@@ -436,7 +436,7 @@ http://ws.q3df.org/map/q3nem06_v2/
 https://lvlworld.com/review/id:1904  
 Live View: https://lvlworld.com/liveView/review/1904  
 
-![Map image](images/lithiumflower.jpeg)
+![Map image](_images/lithiumflower.jpeg)
 
 ### Proving Grounds
 
@@ -454,7 +454,7 @@ https://ws.q3df.org/map/rota3dm1/
 https://lvlworld.com/review/id:1913  
 Live View: https://lvlworld.com/liveView/review/1913  
 
-![Map image](images/lasttrip.jpeg)
+![Map image](_images/lasttrip.jpeg)
 
 ### KARIN
 
@@ -469,7 +469,7 @@ https://ws.q3df.org/map/rota3dm2/
 https://lvlworld.com/review/id:1941  
 Live View: https://lvlworld.com/liveView/review/1941  
 
-![Map image](images/karin.jpeg)
+![Map image](_images/karin.jpeg)
 
 ### Adelline
 
@@ -486,4 +486,4 @@ https://ws.q3df.org/map/rota3tourney1/
 https://lvlworld.com/review/id:2041  
 Live View: https://lvlworld.com/liveView/review/2041  
 
-![Map image](images/adelline.jpeg)
+![Map image](_images/adelline.jpeg)
