@@ -1,9 +1,2 @@
-# General
-https://gist.github.com/cstewart90
-
-# Docker
-https://github.com/dpadgett/ql-docker
-https://github.com/tynor88/docker-quakelive-server
-
 # Server config
 https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=542966946
