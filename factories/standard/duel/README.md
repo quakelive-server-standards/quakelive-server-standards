@@ -16,7 +16,7 @@ A spectator should not be able to vote otherwise the players wanting to play a g
 
 ##### Vote flags
 
-`g_voteFlags "14078"` - Add together the below values for which callvotes should be DISABLED.
+`g_voteFlags "14334"` - Add together the below values for which callvotes should be DISABLED.
 
 - `1` map - Of course.
 - `2` map_restart - Does not make sense because mid match voting is disabled.
