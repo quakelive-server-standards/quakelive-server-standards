@@ -12,7 +12,8 @@
 
 `g_voteFlags "0"` - Sets which vote commands are disabled on the server.
 
-Add together the below values for which callvotes should be DISABLED e.g to disable map and nextmap 1+4=5. map `1`, map_restart `2`, nextmap `4`, gametype `8` (ex: "/callvote map campgrounds" will be allowed, but "/callvote map campgrounds ca" will fail), kick `16`, timelimit `32`, fraglimit `64`, shuffle `128`, teamsize `256`, cointoss/random `512`, loadouts `1024`, end-game voting `2048`, ammo (global) `4096`, timers (item) `8192`, weapon respawn `16382`
+Add together the below values for which callvotes should be DISABLED e.g to disable map and nextmap 1+4=5.
+map `1`, map_restart `2`, nextmap `4` (also hides the map list), gametype `8` (ex: "/callvote map campgrounds" will be allowed, but "/callvote map campgrounds ca" will fail), kick `16`, timelimit `32`, fraglimit `64`, shuffle `128`, teamsize `256`, cointoss/random `512`, loadouts `1024`, end-game voting `2048`, ammo (global) `4096`, timers (item) `8192`, weapon respawn `16382`
 
 ## Players
 
