@@ -1,5 +1,5 @@
 [submodule "minqlx-plugins/library/mino"]
-	path = minqlx-plugins/_library/mino
+	path = minqlx-plugins/_plugins/mino
 	url = https://github.com/MinoMino/minqlx-plugins.git
 [submodule "minqlx-plugins/library/minqlx-plugins"]
 	path = minqlx-plugins/library/minqlx-plugins
@@ -8,40 +8,40 @@
 	path = minqlx-plugins/library/minqlx-plugin-tests
 	url = https://github.com/mgaertne/minqlx-plugin-tests.git
 [submodule "minqlx-plugins/library/iouonegirl"]
-	path = minqlx-plugins/_library/iouonegirl
+	path = minqlx-plugins/_plugins/iouonegirl
 	url = https://github.com/dsverdlo/minqlx-plugins.git
 [submodule "minqlx-plugins/library/mgaertne"]
-	path = minqlx-plugins/_library/mgaertne
+	path = minqlx-plugins/_plugins/mgaertne
 	url = https://github.com/mgaertne/minqlx-plugin-tests.git
 [submodule "minqlx-plugins/library/roasticle"]
-	path = minqlx-plugins/_library/roasticle
+	path = minqlx-plugins/_plugins/roasticle
 	url = https://github.com/roasticle/minqlx-plugins.git
 [submodule "minqlx-plugins/library/ped-ro"]
-	path = minqlx-plugins/_library/ped-ro
+	path = minqlx-plugins/_plugins/ped-ro
 	url = https://github.com/ped-ro/minqlx-plugins.git
 [submodule "minqlx-plugins/library/barelymissed"]
-	path = minqlx-plugins/_library/barelymissed
+	path = minqlx-plugins/_plugins/barelymissed
 	url = https://github.com/BarelyMiSSeD/minqlx-plugins.git
 [submodule "minqlx-plugins/library/x0rnn"]
-	path = minqlx-plugins/_library/x0rnn
+	path = minqlx-plugins/_plugins/x0rnn
 	url = https://github.com/x0rnn/minqlx-plugins.git
 [submodule "minqlx-plugins/library/cstewart90"]
-	path = minqlx-plugins/_library/cstewart90
+	path = minqlx-plugins/_plugins/cstewart90
 	url = https://github.com/cstewart90/minqlx-plugins.git
 [submodule "minqlx-plugins/library/mattized"]
-	path = minqlx-plugins/_library/mattized
+	path = minqlx-plugins/_plugins/mattized
 	url = https://github.com/Melodeiro/minqlx-plugins_mattiZed.git
 [submodule "minqlx-plugins/library/admafi"]
-	path = minqlx-plugins/_library/admafi
+	path = minqlx-plugins/_plugins/admafi
 	url = https://github.com/admafi/Quake-Live-Teamrace.git
 [submodule "minqlx-plugins/library/em92-kamikaze-clanarena"]
-	path = minqlx-plugins/_library/em92-kamikaze-clanarena
+	path = minqlx-plugins/_plugins/em92-kamikaze-clanarena
 	url = https://github.com/em92/kamikaze-clanarena.git
 [submodule "minqlx-plugins/library/em92-dynamicip"]
-	path = minqlx-plugins/_library/em92-dynamicip
+	path = minqlx-plugins/_plugins/em92-dynamicip
 	url = https://github.com/em92/dynamicip.git
 [submodule "minqlx-plugins/library/em92-ad_hacks"]
-	path = minqlx-plugins/_library/em92-ad_hacks
+	path = minqlx-plugins/_plugins/em92-ad_hacks
 	url = https://github.com/em92/ad_hacks.git
 [submodule "minqlx-plugins/_minqlx"]
 	path = minqlx-plugins/_minqlx
