@@ -1,5 +1,5 @@
 # the image is based on the quake live server standards base image
-FROM quakeliveserverstandards/quakelive-base
+FROM quakeliveserverstandards/ql-server-base
 
 COPY --chown=steam:steam factories/standard/duel/duel.factories /users/steam/ql/baseq3/scripts
 COPY --chown=steam:steam mappools/standard/duel/mappool.txt /users/steam/ql/baseq3
