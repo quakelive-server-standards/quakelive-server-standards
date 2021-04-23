@@ -4,7 +4,7 @@
         "fraglimit": "0",
         "g_allowVoteMidGame": "0",
         "g_allowSpecVote": "0",
-        "g_voteFlags": "14330",
+        "g_voteFlags": "30712",
         "sv_warmupReadyPercentage": "1",
         "g_warmupReadyDelay": "60",
         "g_warmupReadyDelayAction": "2",
