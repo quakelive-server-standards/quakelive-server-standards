@@ -43,6 +43,3 @@
 [submodule "minqlx-plugins/library/em92-ad_hacks"]
 	path = minqlx-plugins/_plugins/em92-ad_hacks
 	url = https://github.com/em92/ad_hacks.git
-[submodule "minqlx-plugins/_minqlx"]
-	path = minqlx-plugins/_minqlx
-	url = https://github.com/MinoMino/minqlx.git
