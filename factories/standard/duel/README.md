@@ -16,11 +16,11 @@ A spectator should not be able to vote otherwise the players wanting to play a g
 
 ##### Vote flags
 
-`g_voteFlags "14334"` - Add together the below values for which callvotes should be DISABLED.
+`g_voteFlags "14330"` - Add together the below values for which callvotes should be DISABLED.
 
 - `1` map - Of course.
 - `2` map_restart - Does not make sense because mid match voting is disabled.
-- `4` nextmap - Does not make sense because mid match voting is disabled.
+- `4` nextmap - Cannot by disabled because otherwise the map list in the voting menu disappears.
 - `8` gametype - Do not allow to change game mode. A duel server stays a duel server.
 - `16` kick - Do not allow to kick because it will be abused by friends and feels exluding, harms the community and the game.
 - `32` timelimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
