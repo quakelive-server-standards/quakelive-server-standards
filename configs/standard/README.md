@@ -80,9 +80,9 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 ##### Server Port
 
-`set net_port "27960"` -  Server port (UDP).
+`set net_port ""` -  Server port (UDP).
 
-The Quake Live server runs inside a Docker container. The Docker container exposes its own port but only to other Docker container inside that Docker network. To be able to access a Docker container inside that Docker network you have to define an additional external port. The Docker engine then will map that external port to a Docker containers internal port. Thus the Docker containers which running the Quake Live servers can all expose the same port and thus the Quake Live servers all can run on the same standard port 27960.
+To be able to configure the UDP port of the server through an environment variable in the Docker Compose file, this value must not be set in order to be able to set it via the command line.
 
 ##### ZMQ rcon IP address
 
@@ -92,9 +92,9 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 ##### ZMQ rcon port
 
-`set zmq_rcon_port "28960"` - Rcon port.
+`set zmq_rcon_port ""` - Rcon port.
 
-Same reason like `net_port`.
+To be able to configure the rcon port of the server through an environment variable in the Docker Compose file, this value must not be set in order to be able to set it via the command line.
 
 ##### ZMQ stats IP address
 
@@ -104,9 +104,9 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 ##### ZMQ stats port
 
-`set zmq_stats_port "27960"` - ZeroMQ stats port (TCP).
+`set zmq_stats_port ""` - ZeroMQ stats port (TCP).
 
-Same reason like `net_port`.
+To be able to configure the stats port of the server through an environment variable in the Docker Compose file, this value must not be set in order to be able to set it via the command line.
 
 ##### Access file
 

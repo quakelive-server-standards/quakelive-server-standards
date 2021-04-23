@@ -34,11 +34,20 @@ RUN set -x \
 # copy the standard server.cfg into the image
 COPY --chown=steam:steam configs/standard/server.cfg /users/steam/ql/baseq3/
 
+ENV NET_PORT 27960
+
 # execute the server and allow certain cvars to be set by environment variables
 CMD set -x \
+    # if ZMQ_STATS_PORT is not set then set it to NET_PORT
+    && export ZMQ_STATS_PORT=${ZMQ_STATS_PORT:-$NET_PORT} \
+    # if ZMQ_RCON_PORT is not set then set it to NET_PORT + 1000
+    && export ZMQ_RCON_PORT=${ZMQ_RCON_PORT:-$(($NET_PORT + 1000))} \
     # start the minqlx extended quake live server
     && ./ql/run_server_x64_minqlx.sh \
     # only attach the parameter if the environment variable is set
+    ${NET_IP:+"+set net_ip ${NET_IP}"} \
+    ${ZMQ_RCON_PORT:+"+set zmq_rcon_port ${ZMQ_RCON_PORT}"} \
+    ${ZMQ_STATS_PORT:+"+set zmq_stats_port ${ZMQ_STATS_PORT}"} \
     ${SV_HOSTNAME:+"+set sv_hostname ${SV_HOSTNAME}"} \
     ${SV_TAGS:+"+set sv_tags ${SV_TAGS}"} \
     ${G_PASSWORD:+"+set g_password ${G_PASSWORD}"} \
