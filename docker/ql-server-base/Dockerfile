@@ -41,6 +41,9 @@ CMD set -x \
     && export ZMQ_STATS_PORT=${ZMQ_STATS_PORT:-$NET_PORT} \
     # if ZMQ_RCON_PORT is not set then set it to NET_PORT + 1000
     && export ZMQ_RCON_PORT=${ZMQ_RCON_PORT:-$(($NET_PORT + 1000))} \
+    # if SERVERSTARTUP is not set we need to set it because otherwise the server will
+    # not function properly
+    && export SERVERSTARTUP=${SERVERSTARTUP:-startRandomMap} \
     # start the minqlx extended quake live server
     && ./ql/run_server_x64_minqlx.sh \
     # only attach the parameter if the environment variable is set
