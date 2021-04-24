@@ -5,6 +5,7 @@
 `mino/plugin_manager.py` - Adds commands to load, reload and unload plugins at run-time.
 `mino/docs.py` -  A plugin that generates a command list of all the plugins currently loaded, in the form of a Markdown file.
 `mino/raw.py` -  Adds commands to interact with the Python interpreter directly. Useful for debugging.
+`barelymissed/commands.py` - This script lists the loaded plugins and the commands available for each plugin.
 
 ## Server
 
@@ -32,7 +33,6 @@
 `barelymissed/voteban.py` - Add people to a vote ban list that would keep them from being able to vote on the server at all. The vote ban is set with an expiration time, set a long time if you want it to be effectively permanent.
 `cstewart90/banvote.py` - Adds !banvote command to ban people from voting.
 `iouonegirl/myban.py` - Use the !ban command with a player's name instead of ID.
-`barelymissed/commands.py` - This script lists the loaded plugins and the commands available for each plugin.
 
 ## Players
 
