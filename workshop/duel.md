@@ -395,7 +395,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2351045272
 
 ![Map image](_images/bluemonk.jpeg)
 
-### Blood Run tribute
+### Blood Run Tribute
 
 3.8 out of 5 (28 votes)
 
