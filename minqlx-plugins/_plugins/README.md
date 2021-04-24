@@ -91,6 +91,7 @@
 
 ## Game types
 
+`factory_lock.py` - A minqlx plugin to lock gametype votes to specific factories.
 `mino/solorace.py` - A plugin that starts the game and keeps it running on a race server without requiring a minimum of two players, like you usually do with race.
 `barelymissed/battleroyal.py` - This is a plugin for the minqlx admin bot. It makes a last man standing game style played in FFA with some default weapons.
 `barelymissed/wipeout.py` - This adds a gametype to QL that runs under the Clan Arena mode. To win a round a team has to have the entire enemy team dead at the same time. When a player dies they remain in spectate for a period of time before respawning. The time in spectate increases with each team mate death, so as the round progresses it becomes more likely that the entire enemy team can be dead at the same time.
