@@ -89,6 +89,60 @@
 `roasticle/funstuff.py` - Various fun vote functions.
 `iouonegirl/specprotect.py` - This plugin protects spectators from being targeted by kick callvotes.
 
+## Stats
+
+`barelymissed/kills.py` - This script is meant to give the players a little more fun by having some extra goals to try for in the game.
+`mattized/pummel.py` - It displays "Killer x:y Victim" message when Victim gets killed with gauntlet and stores the information in REDIS DB
+`x0rnn/stats.py` - Show some simple kill stats: kills, deaths, k/d ratio, kills per minute.
+`x0rnn/scores.py` - Shows player/team info such as kills, deaths, damage given, damage received, elos, average team elo, etc.
+`x0rnn/midair.py` - A plugin that keeps score of top X midair rocket kills per map in terms of distance.
+`mgaertne/frag_stats.py` - ?
+`roasticle/uberstats.py` - Various awards and stats added during and endgame.
+
+## Chat
+
+`mino/irc.py` - Has a small built-in IRC client that can relay chat to and from an IRC channel. It can also be used to remotely execute minqlx commands.
+`iouonegirl/myirc.py` - Supports broadcasting to keyed (passworded) channels, shows more colors, and broadcasts live updates to the topic.
+`mgaertne/mydiscordbot.py` - The plugin's main purpose is to create a relay chat between the Quake Live chat and configured discord channels.
+`roasticle/discordbot.py` - Announce server stats to your Discord server!
+`x0rnn/english.py` - English motherfucker, do you speak it?
+`x0rnn/urltitle.py` - Prints the title of a website/youtube link, etc. posted in chat.
+`x0rnn/tts.py` - Primitive TTS (text-to-speech) system based on arpabet.
+`mino/extras/textart.py` - Converts links to images pasted in chat to the same image, but represented in unicode. 
+
+## Messages
+
+`mino/motd.py` - Adds commands to set a message of the day.
+`iouonegirl/centerprint.py` - Provides easy way to broadcast messages on peoples screens, and provides a "last enemy standing" toggle.
+`iouonegirl/railable.py` - Toggle to get a 'railable' message when your health drops too low.
+`mgaertne/thirtysecwarn.py` - A minqlx plugin to play unused VO when a CA game is nearing the round time limit.
+`roasticle/motd.py` - A replacement motd plugin that allows multiple motd/welcome sounds.
+
+## Sounds
+
+`barelymissed/chatfun/chatfun.py` - Allow the server to respond to things said in the server.
+`barelymissed/myfun/myFun.py` - This is my replacement for the minqlx fun.py so if you use this file make sure not to load fun.py. This plugin plays sounds for players on the Quake Live server. It plays the sounds included in fun.py and some from other workshop item sound packs.
+`iouonegirl/funlimit.py` - Automatically disables fun(.py) sounds during a match/rounds.
+`mino/fun.py` - Plays sounds on certain words typed in chat.
+`ped-ro/westcoastcrew.py` - Plays sounds on certain words typed in chat.
+`roasticle/crash.py` - !crash for random crash noob intro sounds :D
+`roasticle/duke.py` - Duke Nukem sound triggers.
+`roasticle/fun.py` - Plays sounds triggered by certain words typed in the chat.
+`roasticle/intermissionplus.py` - Allow players to set custom victory songs.
+`roasticle/winneranthem.py` - Plays anthem for winner's country at end of match!
+`x0rnn/killingspres.py` - Unreal Tournament sound announcements.
+`iouonegirl/intermission.py` - Play 1 song out of a list after every match end.
+
+## Maps
+
+`barelymissed/listmaps.py` - This script lists all the maps loaded on the server.
+`barelymissed/mapLimiter.py` - I created this script to limit the maps that can be voted for on a server.
+`barelymissed/mapmonitor.py` - If the server boots everyone due to a bad map it will change the map to the default map. It can also monitor for the server emptying out and change to the default map.
+`em92-ad_hacks/minqlx-plugins/map_config.py` - Loads config file depending on running map.
+`roasticle/gravityfixer.py` - restores gravity to normal after maps with custom gravity
+`roasticle/nextmap.py` - Announce nextmap and fix nextmap repeats.
+`roasticle/mapoo.py` - Allows multiple mappool files that change automatically based on player number.
+
 ## Game types
 
 `factory_lock.py` - A minqlx plugin to lock gametype votes to specific factories.
@@ -106,60 +160,6 @@
 `x0rnn/midair_only.py` - This plugin changes the gameplay into a rockets-only mode where only midair shots kill.
 `x0rnn/fastrespawn.py` - If you selfkill, you respawn in 1.8 seconds like in Q3 instead of waiting 3 seconds (QL default).
 `roasticle/weaponspawnfixer.py` - Override map-forced weapon spawn times.
-
-## Stats
-
-`barelymissed/kills.py` - This script is meant to give the players a little more fun by having some extra goals to try for in the game.
-`mattized/pummel.py` - It displays "Killer x:y Victim" message when Victim gets killed with gauntlet and stores the information in REDIS DB
-`x0rnn/stats.py` - Show some simple kill stats: kills, deaths, k/d ratio, kills per minute.
-`x0rnn/scores.py` - Shows player/team info such as kills, deaths, damage given, damage received, elos, average team elo, etc.
-`x0rnn/midair.py` - A plugin that keeps score of top X midair rocket kills per map in terms of distance.
-`mgaertne/frag_stats.py` - ?
-`roasticle/uberstats.py` - Various awards and stats added during and endgame.
-
-## Maps
-
-`barelymissed/listmaps.py` - This script lists all the maps loaded on the server.
-`barelymissed/mapLimiter.py` - I created this script to limit the maps that can be voted for on a server.
-`barelymissed/mapmonitor.py` - If the server boots everyone due to a bad map it will change the map to the default map. It can also monitor for the server emptying out and change to the default map.
-`em92-ad_hacks/minqlx-plugins/map_config.py` - Loads config file depending on running map.
-`roasticle/gravityfixer.py` - restores gravity to normal after maps with custom gravity
-`roasticle/nextmap.py` - Announce nextmap and fix nextmap repeats.
-`roasticle/mapoo.py` - Allows multiple mappool files that change automatically based on player number.
-
-## Messages
-
-`mino/motd.py` - Adds commands to set a message of the day.
-`iouonegirl/centerprint.py` - Provides easy way to broadcast messages on peoples screens, and provides a "last enemy standing" toggle.
-`iouonegirl/railable.py` - Toggle to get a 'railable' message when your health drops too low.
-`mgaertne/thirtysecwarn.py` - A minqlx plugin to play unused VO when a CA game is nearing the round time limit.
-`roasticle/motd.py` - A replacement motd plugin that allows multiple motd/welcome sounds.
-
-## Chat
-
-`mino/irc.py` - Has a small built-in IRC client that can relay chat to and from an IRC channel. It can also be used to remotely execute minqlx commands.
-`iouonegirl/myirc.py` - Supports broadcasting to keyed (passworded) channels, shows more colors, and broadcasts live updates to the topic.
-`mgaertne/mydiscordbot.py` - The plugin's main purpose is to create a relay chat between the Quake Live chat and configured discord channels.
-`roasticle/discordbot.py` - Announce server stats to your Discord server!
-`x0rnn/english.py` - English motherfucker, do you speak it?
-`x0rnn/urltitle.py` - Prints the title of a website/youtube link, etc. posted in chat.
-`x0rnn/tts.py` - Primitive TTS (text-to-speech) system based on arpabet.
-`mino/extras/textart.py` - Converts links to images pasted in chat to the same image, but represented in unicode. 
-
-## Sounds
-
-`barelymissed/chatfun/chatfun.py` - Allow the server to respond to things said in the server.
-`barelymissed/myfun/myFun.py` - This is my replacement for the minqlx fun.py so if you use this file make sure not to load fun.py. This plugin plays sounds for players on the Quake Live server. It plays the sounds included in fun.py and some from other workshop item sound packs.
-`iouonegirl/funlimit.py` - Automatically disables fun(.py) sounds during a match/rounds.
-`mino/fun.py` - Plays sounds on certain words typed in chat.
-`ped-ro/westcoastcrew.py` - Plays sounds on certain words typed in chat.
-`roasticle/crash.py` - !crash for random crash noob intro sounds :D
-`roasticle/duke.py` - Duke Nukem sound triggers.
-`roasticle/fun.py` - Plays sounds triggered by certain words typed in the chat.
-`roasticle/intermissionplus.py` - Allow players to set custom victory songs.
-`roasticle/winneranthem.py` - Plays anthem for winner's country at end of match!
-`x0rnn/killingspres.py` - Unreal Tournament sound announcements.
-`iouonegirl/intermission.py` - Play 1 song out of a list after every match end.
 
 ## Other
 
