@@ -407,7 +407,7 @@ The strength comes from the opportunity to do things in a better way. Every map 
 My only problem with the visual design is the black sky. It just does not fit the map, and at some places makes the lighting appear very unnatural. For example, the open ledge with the plasmagun (over the main atrium) is brightly lit without an apparent light source. Adding a proper sky box would significantly enhance the visuals of the map, would make lighting more natural and would produce lots of dramatic shadows to admire.
 In conclusion, this remix of Blood Run is a very nice, professionally constructed level which I can recommend to anyone for download and play. Many will keep it, except maybe diehards who played the original too many times and are not satisfied with anything else. Rating: 8 on the scale of 0 to 10." lvlworld
 
-Ingame name: obs3dm2  
+Ingame name: bloodruntribute  
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2310495629  
 https://ws.q3df.org/map/obs3dm2/  

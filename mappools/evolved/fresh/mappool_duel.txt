@@ -19,7 +19,7 @@ sainttourney1|stdduel
 reqtourney1|stdduel
 swift|stdduel
 bluemonk|stdduel
-obs3dm2|stdduel
+bloodruntribute|stdduel
 fjo3tourney1|stdduel
 megadm4_09|stdduel
 necro6|stdduel
