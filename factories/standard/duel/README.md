@@ -16,7 +16,7 @@ A spectator should not be able to vote otherwise the players wanting to play a g
 
 ##### Vote flags
 
-`g_voteFlags "30712"` - Add together the below values for which callvotes should be DISABLED.
+`g_voteFlags "30200"` - Add together the below values for which callvotes should be DISABLED.
 
 - `1` map - Of course.
 - `2` map_restart - Does not make sense because mid match voting is disabled.
@@ -27,7 +27,7 @@ A spectator should not be able to vote otherwise the players wanting to play a g
 - `64` fraglimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
 - `128` shuffle - Does not make no sense in duel.
 - `256` teamsize - Does not make no sense in duel.
-- `512` cointoss/random - Does not make no sense in duel.
+- `512` cointoss/random - Might be needed in tourneys.
 - `1024` loadouts - Does not make no sense in duel.
 - `2048` end-game voting - End game voting is good to change the map quickly and also to see unkown maps in the map pool.
 - `4096` ammo (global) - Does not make no sense in duel.
