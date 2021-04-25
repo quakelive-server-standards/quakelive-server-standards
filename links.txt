@@ -1,5 +1,0 @@
-# Server config
-https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=542966946
-
-# ZMQ
-https://github.com/carmethene/quakelive-rcon
