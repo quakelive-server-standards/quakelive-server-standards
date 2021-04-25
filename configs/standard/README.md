@@ -22,44 +22,6 @@ Rcon can be used to execute commands on the server remotely. Especially the `say
 
 The Quake Live server sends out information regarding the matches being played, players connected and so on. These information form the foundation of external applications who want to extend the Quake Live experience with new features. QLStats is the most prominent example for this. Every server should have this feature enabled to help the community evolve.
 
-### minqlx plugins
-
-##### Docs
-
-`docs.py` - A plugin that generates a command list of all the plugins currently loaded, in the form of a Markdown file.
-
-It is in general useful for any server configuration.
-
-##### Log
-
-`log.py` - A plugin that logs chat and commands. All logs go to fs_homepath/chatlogs.
-
-It is in general useful for any server configuration.
-
-##### Motd
-
-`motd.py` - Adds commands to set a message of the day.
-
-It is in general useful for any server configuration.
-
-##### Permission
-
-`permission.py` - Adds commands to set player permissions.
-
-It is in general useful for any server configuration.
-
-##### Plugin manager
-
-`plugin_manager.py` - Adds commands to load, reload and unload plugins at run-time.
-
-It is in general useful for any server configuration.
-
-#### Workshop
-
-`workshop.py` - A plugin that allows the use of custom workshop items that the server might not reference by default, and thus not have the client download them automatically.
-
-It is in general useful for any server configuration.
-
 ## Technical details regarding this framework
 
 ### Variables that must not be changed
