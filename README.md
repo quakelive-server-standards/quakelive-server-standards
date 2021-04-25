@@ -21,9 +21,49 @@ A configuration does not only consist of a `server.cfg` and a `mappool.txt`, but
 
 ## Installation
 
+### Git
+
+At first you need  to create your own Git repository. You can either do that by creating a fork on GitHub or by directly cloning this repository. If you do not have experience in working with Git use the GitHub way.
+
+#### Using a GitHub fork
+
+To be able to fork you need to have to log in to your GitHub account. If you do not have one you need to register first. The free plan lets you create as many publically visible repositories as you like.
+
+To create a fork you click on the "Fork" button on the top right corner. This will create new GitHub repository in one of your namespaces.
+
+Now clone this new repository. Cloning a repository can either by done with the official [command line tool](https://git-scm.com/downloads) or one of the many [graphical user interfaces](https://git-scm.com/downloads/guis). In this guide we will refer to the command line tool.
+
+On the command line type `git clone https://github.com/<your-github-name>/<your-repository-name>.git`. You can copy and paste the clone link from the GitHub website. If you do not know how to do it use these [instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+Your repository now resides on two locations. On your harddrive and on GitHub. The GitHub location is known to your local version as the `origin`. It is the main location your repository resides in and you can create arbitrary many clones of it fom there. If you changed something on your local computer you will push these changes to the origin. If something changed in the origin you will pull theses changes to your local computer. That way, arbitrary many people can work on your server.
+
+Now add this repository, which you forked your own repository from, as another location, similar to the origin location. We will call this location `upstream`. If any Quake Live server standard changes, you can pull these changes from the upstream location and merge them into your own server configuration. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`. We will tell you later on how to pull updates.
+
+The last step is to clone all of the Git sub modules which are other repositories which were integrated into that one. One the command line type `git submodule init`.
+
+#### Not using a GitHub fork
+
+If you do not have a GitHub account or if you do not want your repository to be publicly available you can also directly clone this repository with `git clone https://github.com/quakelive-server-standards/quakelive-server-framework.git`.
+
+To make that repository your own you need to delete all the files which are associated to this repository. Delete the hidden directory `.git`.
+
+Initialize a new repository with `git init` and your own origin with `git remote add origin <your-git-url>`.
+
+Add this repository with `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`.
+
+Clone the sub modules with `git submodule init`.
+
+### Docker
+
 This framework uses Docker to compose configurations and to run any amount of server instances. It will also take care of any additional software that the Quake Live server or its rcon client needs. This link https://docs.docker.com/engine/install/ will provide you every information on how to install it.
 
---- GIT ---
+## Quickstart
+
+Here we give you instructions on how to start real quick. You will have your Quake Live servers up and running in about 5 minutes, all of them running on community developed standards providing the best experience for the players.
+
+### Configuring
+
+Look at the `docker-compose.yml` in the servers directory. There 
 
 ## Starting and managing your Quake Live servers
 
