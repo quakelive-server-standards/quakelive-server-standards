@@ -32,7 +32,6 @@ RUN set -x \
     && python3 -m pip install -r minqlx-plugins/requirements.txt
 
 # copy the standard default.cfg and server.cfg into the image
-COPY --chown=steam:steam configs/standard/default.cfg /home/steam/ql/baseq3
 COPY --chown=steam:steam configs/standard/server.cfg /home/steam/ql/baseq3
 
 # execute the server and allow certain cvars to be set by environment variables
