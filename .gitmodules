@@ -46,3 +46,6 @@
 [submodule "scripts/_scripts/carmethene"]
 	path = scripts/_scripts/carmethene
 	url = https://github.com/carmethene/quakelive-rcon.git
+[submodule "scripts/_scripts/quakelive-server-standards"]
+	path = scripts/_scripts/quakelive-server-standards
+	url = https://github.com/quakelive-server-standards/rcon.git

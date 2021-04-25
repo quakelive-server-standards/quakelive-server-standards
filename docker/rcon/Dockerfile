@@ -16,7 +16,7 @@ RUN set -x \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY scripts/standard/rcon.py /root
+COPY scripts/evolved/rcon.py /root
 COPY docker/rcon/rcon.sh /root
 
 WORKDIR /root

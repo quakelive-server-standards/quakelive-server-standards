@@ -8,4 +8,4 @@
 # is running on your machine you have to use the address host.docker.internal
 # instead of localhost.
 
-docker run -i --add-host host.docker.internal:host-gateway quakeliveserverstandards/rcon $1 $2
+docker run --rm -i --add-host host.docker.internal:host-gateway quakeliveserverstandards/rcon $1 $2
