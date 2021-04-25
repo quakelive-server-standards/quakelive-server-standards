@@ -8,19 +8,19 @@ This is the base configuration which serves as a starting point for any new conf
 
 `set qlx_commandPrefix "!"` - The prefix used before command names in order to execute them.
 
-To provide the player with a consistent experience throughout the servers, the minqlx commands should always use the same prefix which should be the standard prefix to provide the best user experience.
+To provide the player with a consistent experience across different servers, the minqlx commands should always use the same prefix. It should also be the standard prefix to not deviate from the minqlx standard.
 
 ##### ZMQ rcon (remote connection)
 
 `set zmq_rcon_enable "1"` - Enable rcon.
 
-Website like QLStats are vital for the Quake Live scene. Every server therefor should have receiving commands enabled to help the community evolve. For easy access the password is a standard one.
+Rcon can be used to execute commands on the server remotely. Especially the `say` command might be a vital part of an external application which wants to provide new features for Quake Live. Every server should have this feature enabled to help the community evolve.
 
 ##### ZMQ Stats
 
 `set zmq_stats_enable "1"` - Enable ZeroMQ stats
 
-Website like QLStats are vital for the Quake Live scene. Every server therefor should have sending stats enabled to help the community evolve.
+The Quake Live server sends out information regarding the matches being played, players connected and so on. These information form the foundation of external applications who want to extend the Quake Live experience with new features. QLStats is the most prominent example for this. Every server should have this feature enabled to help the community evolve.
 
 ### minqlx plugins
 
