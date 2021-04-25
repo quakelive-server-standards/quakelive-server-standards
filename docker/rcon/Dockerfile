@@ -16,8 +16,8 @@ RUN set -x \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY zmq_rcon.py /root
-COPY rcon.sh /root
+COPY scripts/standard/rcon.py /root
+COPY docker/rcon/rcon.sh /root
 
 WORKDIR /root
 

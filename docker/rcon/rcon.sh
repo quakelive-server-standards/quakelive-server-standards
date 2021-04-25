@@ -8,4 +8,5 @@
 # is running on your machine you have to use the address host.docker.internal
 # instead of localhost.
 
-python2 zmq_rcon.py --host=tcp://$1 --password=$2
+set -x
+python2 rcon.py --host=tcp://$1 --password=$2
