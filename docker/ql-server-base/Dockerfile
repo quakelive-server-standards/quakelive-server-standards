@@ -31,8 +31,9 @@ RUN set -x \
     && git clone https://github.com/MinoMino/minqlx-plugins.git \
     && python3 -m pip install -r minqlx-plugins/requirements.txt
 
-# copy the standard server.cfg into the image
-COPY --chown=steam:steam configs/standard/server.cfg /users/steam/ql/baseq3/
+# copy the standard default.cfg and server.cfg into the image
+COPY --chown=steam:steam configs/standard/default.cfg /users/steam/ql/baseq3
+COPY --chown=steam:steam configs/standard/server.cfg /users/steam/ql/baseq3
 
 # execute the server and allow certain cvars to be set by environment variables
 CMD set -x \
@@ -58,4 +59,5 @@ CMD set -x \
     ${SV_PRIVATECLIENTS:++set sv_privateClients ${SV_PRIVATECLIENTS}} \
     ${SV_PRIVATEPASSWORD:++set sv_privatePassword ${SV_PRIVATEPASSWORD}} \
     ${G_ALLTALK:++set g_alltalk ${G_ALLTALK}} \
-    ${COM_HUNKMEGS:++set com_hunkMegs ${COM_HUNKMEGS}}
+    ${COM_HUNKMEGS:++set com_hunkMegs ${COM_HUNKMEGS}} \
+    +set qlx_enforceMappool 1
