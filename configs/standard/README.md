@@ -10,12 +10,6 @@ This is the base configuration which serves as a starting point for any new conf
 
 To provide the player with a consistent experience throughout the servers, the minqlx commands should always use the same prefix which should be the standard prefix to provide the best user experience.
 
-##### minqlx enforce map pool
-
-`set qlx_enforceMappool "1"` - Enforces the map pool set through mappool.txt.
-
-Setting a map pool only applies to the maps presented in the voting menu after a game ends. To make it more consistent this variable also applies it to maps voted through the callvote command.
-
 ##### ZMQ rcon (remote connection)
 
 `set zmq_rcon_enable "1"` - Enable rcon.
