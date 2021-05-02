@@ -35,7 +35,10 @@ RUN set -x \
 COPY --chown=steam:steam configs/standard/server.cfg /home/steam/ql/baseq3
 
 # execute the server and allow certain cvars to be set by environment variables
-CMD set -x \
+CMD \
+    # determine installed plugins - contributed by em92 (https://github.com/MinoMino/minqlx/issues/105)
+    INSTALLED_QLX_PLUGINS=`find minqlx-plugins/*.py | grep -v "__init__" | sed 's!.*/!!' | sed 's!\.py!!' | xargs | tr ' ' ', '` \
+    && set -x \
     && export NET_PORT=${NET_PORT:-27690} \
     # if ZMQ_STATS_PORT is not set then set it to NET_PORT
     && export ZMQ_STATS_PORT=${ZMQ_STATS_PORT:-$NET_PORT} \
@@ -45,6 +48,7 @@ CMD set -x \
     # not function properly
     && export SERVERSTARTUP=${SERVERSTARTUP:-startRandomMap} \
     # start the minqlx extended quake live server
+    && export QLX_PLUGINS=${QLX_PLUGINS:-$INSTALLED_QLX_PLUGINS} \
     && ./ql/run_server_x64_minqlx.sh \
     # only attach the parameter if the environment variable is set
     ${NET_PORT:++set net_port ${NET_PORT}} \
@@ -58,4 +62,5 @@ CMD set -x \
     ${SV_PRIVATECLIENTS:++set sv_privateClients ${SV_PRIVATECLIENTS}} \
     ${SV_PRIVATEPASSWORD:++set sv_privatePassword ${SV_PRIVATEPASSWORD}} \
     ${G_ALLTALK:++set g_alltalk ${G_ALLTALK}} \
-    ${COM_HUNKMEGS:++set com_hunkMegs ${COM_HUNKMEGS}}
+    ${COM_HUNKMEGS:++set com_hunkMegs ${COM_HUNKMEGS}} \
+    ${QLX_PLUGINS:++set qlx_plugins ${QLX_PLUGINS}}
