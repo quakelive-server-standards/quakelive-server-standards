@@ -50,5 +50,5 @@
 	path = scripts/id-rcon-cli
 	url = https://github.com/quakelive-server-standards/rcon.git
 [submodule "scripts/_scripts/ql-cli"]
-	path = scripts/ql-cli
+	path = scripts/ql-console
 	url = https://github.com/quakelive-server-standards/ql-cli.git
