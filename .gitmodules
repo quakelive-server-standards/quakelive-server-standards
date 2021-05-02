@@ -44,8 +44,11 @@
 	path = minqlx-plugins/_plugins/em92-ad_hacks
 	url = https://github.com/em92/ad_hacks.git
 [submodule "scripts/_scripts/carmethene"]
-	path = scripts/_scripts/carmethene
+	path = scripts/carmethene
 	url = https://github.com/carmethene/quakelive-rcon.git
 [submodule "scripts/_scripts/quakelive-server-standards"]
-	path = scripts/_scripts/quakelive-server-standards
+	path = scripts/id-rcon-cli
 	url = https://github.com/quakelive-server-standards/rcon.git
+[submodule "scripts/_scripts/ql-cli"]
+	path = scripts/ql-cli
+	url = https://github.com/quakelive-server-standards/ql-cli.git
