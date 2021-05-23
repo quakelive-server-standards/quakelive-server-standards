@@ -7,3 +7,7 @@ ffa, duel, race, tdm, ca, ctf, oneflag, har, ft, dom, ad, rr
 "cvars" is an object containing key value pairs of the cvar names and values to set.
 
 If a factory is invalid, the reason why will be printed in the console during startup, and the factory will not be available for play.
+
+
+https://steamcommunity.com/app/282440/discussions/0/490125103624446696/
+https://steamcommunity.com/sharedfiles/filedetails/?id=542672458
