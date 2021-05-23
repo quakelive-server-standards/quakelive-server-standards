@@ -30,7 +30,7 @@ services:
     image: quakeliveserverstandards/ctf
     restart: always
     ports:
-      - '27961:27961/udp' #game port
+      - '27961:27961/udp' # game port
       - '27961:27961/tcp' # stats port
       - '28961:28961' # rcon port
     environment:
@@ -56,7 +56,7 @@ services:
     image: quakeliveserverstandards/duel
     restart: always
     ports:
-      - '27962:27962/udp' #game port
+      - '27962:27962/udp' # game port
       - '27962:27962/tcp' # stats port
       - '28962:28962/tcp' # rcon port
     environment:
@@ -82,7 +82,7 @@ services:
     image: quakeliveserverstandards/ffa
     restart: always
     ports:
-      - '27963:27963/udp' #game port
+      - '27963:27963/udp' # game port
       - '27963:27963/tcp' # stats port
       - '28963:28963' # rcon port
     environment:
@@ -108,7 +108,7 @@ services:
     image: quakeliveserverstandards/race
     restart: always
     ports:
-      - '27964:27964/udp' #game port
+      - '27964:27964/udp' # game port
       - '27964:27964/tcp' # stats port
       - '28964:28964' # rcon port
     environment:
@@ -134,7 +134,7 @@ services:
     image: quakeliveserverstandards/tdm
     restart: always
     ports:
-      - '27965:27965/udp' #game port
+      - '27965:27965/udp' # game port
       - '27965:27965/tcp' # stats port
       - '28965:28965' # rcon port
     environment:

@@ -1,11 +1,22 @@
 # Docker-based Quake Live Server Framework
 
-A Docker-based Quake Live server framework with preinstalled minqlx and full configurability. You can use these files as a base for your own Quake Live servers. This respository will be constantly updated with popular server configurations variables, recommendable workshop maps, factories and minqlx plugins. It aims to collect and provide sensible standards.
+This repository is two in one. It is a community-drive collection of Quake Live server configurations which aims to evolve Quake Live in all its different aspects and at the same it is a Docker-based Quake Live server framework with which you can host as many Quake Live servers as you like.
 
 ## Features
 
 - Docker-based server management
-- Download Steam Workshop items
+- Community-driven configuration standards
+- New configurations to evolve Quake Live
+- Factories
+- Map pools
+- Docker images
+- Gathered and documented Minqlx plugins
+- Gathered and documented 3rd party Quake Live applications
+- Command-line Quake Live rcon and stats console
+- Complete and up to date CVAR guide
+- Workshop item lists
+- Download of Steam Workshop items
+- Convert Quake 3 maps to Quake Live maps
 
 ## Overview
 
@@ -24,9 +35,11 @@ A configuration does not only consist of a `server.cfg` and a `mappool.txt`, but
 
 ## Installation
 
+You will need to install Git, clone the Quake Live Server Standards repository and install Docker.
+
 ### Git
 
-At first you need  to create your own Git repository. You can either do that by creating a fork on GitHub or by directly cloning this repository. If you do not have experience in working with Git follow use a GitHub fork.
+At first you need to create your own Git repository. You can do that either by creating a fork on GitHub or by directly cloning this repository. If you do not have experience in working with Git use a GitHub fork.
 
 #### Using a GitHub fork
 
@@ -40,7 +53,7 @@ On the command line type `git clone https://github.com/<your-github-name>/<your-
 
 Your repository now resides on two locations. On your harddrive and on GitHub. The GitHub location is known to your local version as the `origin`. It is the main location your repository resides in and you can create arbitrary many clones from it. If you change something in your local version you will push these changes to the origin. If something changed in the origin you will merge theses changes into your local version. That way, arbitrary many people can work together.
 
-To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. Every time there is something new you can pull these changes from there and merge them into your own Git repository. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`. We will tell you later on how to pull updates.
+To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`. Every time there is something new you now can pull these changes by typing `git pull upstream origin`.
 
 The last step is to clone all of the Git sub modules which are other Git repositories that were integrated into that one. One the command line type `git submodule init`.
 
@@ -60,11 +73,52 @@ This framework uses Docker to compose configurations and to run any amount of se
 
 ## Quickstart
 
-Here we give you instructions on how to start real quick. You will have your Quake Live servers up and running in about 5 minutes, all of them running on community developed standards providing the best experience for the players.
+Here we give you instructions on how to start real quick. You will have your Quake Live servers up and running in about 5 minutes, all of them using community developed standards providing the best experience for the players.
 
 ### Configuring
 
-Take a look into the `docker-compose.yml` file in the servers directory. There 
+Open the `docker-compose.yml` file in the `_myservers` directory. It contains all servers. When freshly cloned, it defines one server for every standard game mode. Delete those that you do not want and duplicate those that you want to have more than one time. For example, if you want to have four duel servers, delete all the other definitions apart from the duel one and duplicate that duel server definition three times.
+
+Here you can see the definition of the duel server.
+
+```yml
+duel1:
+    image: quakeliveserverstandards/duel
+    restart: always
+    ports:
+      - '27962:27962/udp' # game port
+      - '27962:27962/tcp' # stats port
+      - '28962:28962/tcp' # rcon port
+    environment:
+      - NET_PORT=27962
+      - SV_HOSTNAME=QL Standard Duel Server #1
+      - SV_TAGS=duel
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - G_PASSWORD=
+      - G_ALLTALK=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
+      - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+```
+
+The next step is to adjust the ports. Quake Live servers use three ports. The game port which uses UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but uses TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
+
+Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`.
+
+Additionally, setup a name for your server by setting the environment variable `SV_HOSTNAME`.
+
+### Running
+
+To run your freshly defined server, open a terminal, cd into the `_myservers` directory and execute `docker-compose up -d`. Congratulations, you are now successfully hosting your own Quake Live servers.
 
 ## Starting and managing your Quake Live servers
 
