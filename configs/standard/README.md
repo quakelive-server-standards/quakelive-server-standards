@@ -108,6 +108,6 @@ The Redis database is part of the Docker services and configured to work with th
 
 ### Variables that were commented out
 
-The cvars set in the `server.cfg` overwrite the ones given through the command line. This framework uses command line parameters to adjust a configuration for a specific server instance given through environment variables that are denoted on the Quake Live servers Docker Compose file in the root of this repository. 
+This framework uses command line parameters to configure server instance specific settings. Since cvars given in the command line can be overriden by definitions made in the `server.cfg`, they must not be set there. The following cvars are commented out.
 
 `sv_hostname`, `g_password`, `sv_tags`, `sv_maxClients`, `sv_privateClients`, `sv_privatePassword`, `g_allowVoteMidGame`, `g_allowSpecVote`, `g_voteFlags`, `set sv_warmupReadyPercentage`, `g_warmupDelay`, `g_warmupReadyDelay`, `g_warmupReadyDelayAction`, `g_inactivity`, `g_alltalk`
