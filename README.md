@@ -120,114 +120,12 @@ Additionally, setup a name for your server by setting the environment variable `
 
 To run your freshly defined server, open a terminal, cd into the `_myservers` directory and execute `docker-compose up -d`. Congratulations, you are now successfully hosting your own Quake Live servers.
 
-## Starting and managing your Quake Live servers
+### What is next?
 
-To start your servers, start a terminal of your operating system and cd into the root directory of this framework. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
+In the next step you can try to deviate from the standards. For example you can offer some new maps and combine those with your own game mode in which you changed the weapon respawn time or the gravity. You can also play around with the numerous minqlx plugins or look into the apps collection.
 
-To stop every Quake Live server plus the Redis database use `docker-compose stop`. To stop a specific server you can use the same command followed by the Docker Compose service name as specified in the `docker-compose.yml` file like this `docker-compose stop duel1`.
+When you found a configuration which seems to be really successful you can contribute it to the official Quake Live Server Standards repository. It might even become part of one of the standards.
 
-If you want to see the logs of your servers use `docker-compose logs -f` while the parameter `-f` means follow and results in the log output being updated every time a new entry is added.
-
-## Maintaining your Quake Live servers via rcon
-
-To maintain a server you use `./rcon.sh 127.0.0.1:27960 rconpassword` to start an rcon terminal into one of your running servers. Replace the ip address `127.0.0.1` with the one pointing to your Quake Live servers, chose the corresponding port and set the password that you have configured.
-
-## Configuring your Quake Live servers
-
-There are two places you need to take into consideration when configuring your Quake Live servers.
-
-- `docker-compose.yml`: Here you define all of your server instance and compose their configuration.
-- `configs`: A directory containing standardized and your own customized server configurations.
-
-### The Docker Compose file
-
-If you take a look at the `docker-compose.yml` there you will find something like this.
-
-```yml
-version: '3.8'
-services:
-  duel1:
-    image: quakeliveserverstandards/quakelive-base
-    restart: always
-    ports:
-      - '27962:27960/udp' # game port
-      - '27962:27960/tcp' # stats port
-      - '28962:28960' # rcon port
-    environment:
-      - SV_HOSTNAME=QL Standard Duel Server #1
-      - G_PASSWORD=secret
-    volumes:
-      - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-      - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-      - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
-    depends_on: 
-      - redis
-  redis:
-    image: redis
-    restart: always
-    volumes:
-      - redis:/data # uses a Docker volumne by default
-volumes:
-  redis:
-```
-
-This is a yaml file in which information is given in a certain indentation to determine the structure of the contained information. The section `services` defines two services `duel1` and `redis`. The first one is a Quake Live server. The second one is the Redis database used by minqlx plugins. While you leave the Redis service definition untouched, you can fiddle around with the Quake Live server one.
-
-There are three parts in a Quake Live service definition that you want to adjust to meet your needs.
-
-#### Ports
-
-The first one is `ports` where you can determine the ports your server exposes to the public. A Docker service has two ports. An external and an internal port. Take a look at the correspoding Docker Compose file definition.
-
-```yml
-ports:
-# external_port:internal_port/protocol
-  - '27962:27960/udp' # game port
-  - '27962:27960/tcp' # stats port
-  - '28962:28960' # rcon port
-```
-
-To be able to undestand this you need to know that every service defined in a Docker Compose file runs in a Docker network. The internal port is one that is only visible inside that network. Thus if you would try and access it from outside you could not. Thus you also need to define an external port. The Docker engine will then map that external port to the internal one of the corresponding Docker service.
-
-Using that mechanics, every Quake Live server instance runs at the same ports `27960/tcp` for the game, `27960/tcp` for the stats API and `28960` for rcon (remote console) and that never has to change. The only thing that you need to do is to map these internal ports to different external ports. `27962:27960/udp` maps the external port `27962` to the internal `27960` regarding the UPD protocol, for example. These external ports have to differ from each other and must be unique. The internal ones can all be the same.
-
-Also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports).
-
-#### Environment
-
-In the `environment` section of the Docker Compose file you can configure Quake Live server variables like the hostname or the password.
-
-```yml
-environment:
-  - SV_HOSTNAME=QL Standard Duel Server #1
-  - G_PASSWORD=secret
-```
-
-The notion here is that you define variables that are specific to that specific server instance here and variables that are sprcific to a class of servers, like duel servers, in the files found in the `configs` directory. For example a server name is specific to a particular server instance while setting the time limit to 10 is specific for duel servers in general. You need to differentiate between the two and chose the correct locations for the variables.
-
-The following variables are supported: `SV_HOSTNAME`, `G_PASSWORD`, `SV_TAGS`, `SV_MAXCLIENTS`, `SV_PRIVATECLIENTS`, `SV_PRIVATEPASSWORD`, `SV_ALLOWVOTE`, `SV_VOTEDELAY`, `SV_VOTELIMIT`, `SV_ALLOWVOTEMIDGAME`, `SV_ALLOWSPECVOTE`, `SV_VOTEFLAGS`, `SV_WARMUPREADYPERCENTAGE`, `SV_WARMUPDELAY`, `SV_WARMUPREADYDELAY`, `SV_WARMUPREADYDELAYACTION`, `G_INACTIVITY`, `G_ALLTALK`
-
-Another thing you need to take into consideration is that variables declared in `server.cfg` will overwrite the ones given in the `environments` section. For example, you will not be able to set `SV_TAGS` when using our standard server configurations because they already set it the `server.cfg`.
-
-### Volumes
-
-In the `volumes` section you can compose a Quake Live server configuration by either using the provided standardized configrations or by using your own.
-
-```yml
-volumes:
-# file_on_your_computer:file_inside_the_docker_service
-  - './configs/access.txt:/home/steam/ql/baseq3/access.txt'
-  - './configs/standard/duel/server.cfg:/home/steam/ql/baseq3/server.cfg'
-  - './configs/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-  - './configs/standard/duel/minqlx-plugins:/home/steam/ql/minqlx-plugins'
-  - './configs/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
-```
-
-Here you see a mapping from a file or directory on your computer to a location inside the Quake Live server directory which is inside the Docker service. They will appear to the starting Quake Live dedicated server as a natural part of its file system.
-
-Also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes).
 
 ### The configs directory
 
