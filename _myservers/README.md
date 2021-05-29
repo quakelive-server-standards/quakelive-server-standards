@@ -6,7 +6,60 @@ This is your working directory. Anything that is specific to your own servers ca
 
 All your servers are defined inside the `docker-compose.yml` file. Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live servers to another server computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
 
+## Installation
+
+You will need to install Git, clone the Quake Live Server Standards repository and install Docker.
+
+### Git
+
+At first you need to create your own Git repository. You can do that either by creating a fork on GitHub or by directly cloning this repository. If you do not have experience in working with Git use a GitHub fork.
+
+#### Using a GitHub fork
+
+To be able to fork you need to have to log in to your GitHub account. If you do not have one you need to register first. The free plan lets you create as many publically visible repositories as you like.
+
+To create a fork you click on the "Fork" button on the top right corner. This will create new GitHub repository in one of your namespaces.
+
+Now clone your new repository. Cloning a repository can either be done with the official [command line tool](https://git-scm.com/downloads) or one of the many [graphical user interfaces](https://git-scm.com/downloads/guis). In this guide we will refer to the command line tool.
+
+On the command line type `git clone https://github.com/<your-github-name>/<your-repository-name>.git`. You can copy and paste the clone link from the GitHub website. If you do not know how to do this use these [instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+Your repository now resides on two locations. On your harddrive and on GitHub. The GitHub location is known to your local version as the `origin`. It is the main location your repository resides in and you can create arbitrary many clones from it. If you change something in your local version you will push these changes to the origin. If something changed in the origin you will merge theses changes into your local version. That way, arbitrary many people can work together.
+
+To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`. Every time there is something new you now can pull these changes by typing `git pull upstream origin`.
+
+The last step is to clone all of the Git sub modules which are other Git repositories that were integrated into that one. One the command line type `git submodule init`.
+
+#### Not using a GitHub fork
+
+If you do not have a GitHub account or if you do not want your repository to be publicly available you can also directly clone this repository with `git clone https://github.com/quakelive-server-standards/quakelive-server-framework.git`.
+
+After cloning, the official Quake Live Server Standards repository will be listed as the `origin` location. You will want to replace that with a repository location of your own. Since you also want keep the official location you start by renaming it from `origin` to `upstream` by typing `git remote rename origin upstream` into the command line.
+
+Now you can add your own Git repository location as the `origin` by typing `git remote add origin <url-to-your-git-repository>`.
+
+The last step is to clone the sub modules with `git submodule init`.
+
+### Docker
+
+This framework uses Docker to compose configurations and to run any amount of server instances. It will also take care of any additional software that the Quake Live server or its rcon client needs. This [link](https://docs.docker.com/engine/install/) will provide you every information you need to install it.
+
 ## Configuring your Quake Live servers
+
+There are six different means by which you will configure your server.
+
+- Cvars: Config variables which represent most aspects of the game. There are cvars of a technical nature and cvars that alter the experience toward the player.
+- Factories: Factories represent a set of cvars bound to a certain game type like Duel.
+- Player status: In a file called `access.txt` you can assign roles like admin, moderator or simply ban a player.
+- Map pools: You can define map pools but which by default only influence the after match voting screen.
+- Workshop items: You can specify a list of free downloadable content for your server, mostly additional maps.
+- minqlx plugins: There is a Quake Live server extension called minqlx which allows to alter the server's behaviour through plugins.
+
+Before you start and try to figure out which configurations are the best, this server frameworks comes with carefully drafted standards which you can use. Every directory outside `_myservers` engage with one of the above mentioned topics. You will find a standard `server.cfg` which at defines all the technical necessities in the context of the Docker-based framework but also community determined standards. You will find lists of workshop items that are useful and ready-to-use map pools. Just take a look by yourself.
+
+All of those directories contain a `standard` and an `evolved` directory. The first one contains community determined standards and the latter one community contributed variants, which can offer a special or a carefully evolved experience to the players.
+
+When you compose your server configuration you can draw on those resources as a starting point. The next step then is to create your own variants. And then to contributing them back into the official Quake Live Server Standards repository to make them available for all of us.
 
 ### Cvars and their locations
 
@@ -26,11 +79,15 @@ This Docker-based server framework uses the different locations for different pu
 - `autoexec.cfg`: Cvars specific to to all or a group of your servers
 - `*.factories`: Cvars specific to a game mode like the damage of a weapon
 
+In this section we do not cover factories but in the next one.
+
 Your main work horses are command line parameters in the form of Docker environment variables and the `autoexec.cfg`. But of course you can also alter the standards in the `server.cfg` which you will then hopefully contribute to the Quake Live Server Standards repository if you found that they are good. Also feel free to fiddle around with the game mode specific cvars.
 
-Apart from a lot of minqlx cvars, the `autoexec.cfg` for most invites you to set your rcon and stats password, which will then apply to all of your Quake Live servers.
+Apart from a lot of minqlx cvars, the `autoexec.cfg` mostly invites you to set your rcon and stats password.
 
-If you need more than `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and rename the original one.
+If you need more than `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and rename the original one. Feel free to adjust anything as you need it. It is your own working directory.
+
+### factories
 
 ### access.txt
 
@@ -50,9 +107,19 @@ This file contains a list of Steam Workshop Item Ids the server will download on
 
 ### minqlx-plugins
 
-This is a directory containing minqlx plugins. The physical existence of these plugin files has to be paired with a listing of these files in the minqlx cvar `qlx_plugins`. Only those plugins are loaded which are defined in this list. Since this can become tedious this framework provides a mechanism that when you not define that list it will simply load any plugin it finds. If you define that list it will use the list instead.
+minqlx is an extension for the Quake Live server programmed by Mino which can be found on [GitHub](https://github.com/MinoMino/minqlx). He himself describes it the following way.
 
-Apart from that cvar, there are others which you can define in your `autoexec.cfg`.
+<cite>minqlx is a modification to the Quake Live Dedicated Server that extends Quake Live's dedicated server with extra functionality and allows scripting of server behavior through an embedded Python interpreter.</cite>
+
+minqlx itself is extended by plugins which come in the form of Python files. This repository links all known plugin file sources as Git sub modules inside the `minqlx-plugins/_plugins` repository. If you ran the Git command `git submodule init` you will be able to browse through all the files of those repositories.
+
+There is also a [structured overview](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/_plugins/README.md) over all known minqlx plugins sorted by topics.
+
+There is a directory for minqlx plugins in the directoy of the Quake Live server installation. With the help of Docker you can put minqlx plugins in the form of Python files inside of it. The physical existence of these files in that directory paired with a list of the names of these plugins in the minqlx cvar `qlx_plugins` will load them when when the Quake Live server starts. The cvar gives you the possibility to only select a sub set out of the physical present plugin files.
+
+This can become tedious if you just want the plugins inside that directory to be loaded. For that reason, this framework by default provides a mechanism that when you do not define any plugin name in that list it will simply load any plugin it finds in the plugins directory. If you define plugin names in that list it will only load the plugins listed.
+
+Apart from that cvar, there are many others and many others plugin specific which you can define in your `autoexec.cfg`.
 
 ## Composing your server configurations with Docker
 
@@ -156,7 +223,7 @@ The part before the colon denotes a file or directory on your computer and the o
 
 To customize your server, you can replace any file from the left side. You can start by using one of the evolved versions coming with this repository. People created new `server.cfg` variations, new factories, new map pools, new sets of minqlx plugins or lists of workshop items.
 
-If you want to alter any of the files that are outside of the `_myservers` directory or if you want to create your own files, we recommend to put these into the `_myservers` directory, leaving the other directories untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository. For example, if you changed the `configs/standard/server.cfg` directly while receiving such an update, it might result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
+If you want to alter any of the files that are outside of the `_myservers` directory or if you want to create your own files, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository. For example, if you changed the `configs/standard/server.cfg` directly while receiving such an update, it might result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
 
 ## Backup your server configurations with Git
 
@@ -164,7 +231,7 @@ If you want to alter any of the files that are outside of the `_myservers` direc
 
 ## Starting and managing your Quake Live servers
 
-To start your servers, start a terminal of your operating system and cd into this directory `_myservers`. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
+To start your servers, open a terminal of your operating system and cd into the directory `_myservers`. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
 
 To stop every Quake Live server plus the Redis database use `docker-compose stop`. To stop a specific server you can use the same command followed by the Docker Compose service name as specified in the `docker-compose.yml` file like this `docker-compose stop duel1`.
 
@@ -172,12 +239,25 @@ If you want to see the logs of your servers use `docker-compose logs -f` while t
 
 ## Accessing your Quake Live servers with QL Console
 
-If configured so, a Quake Live server provides two APIs, the rcon and the stats API. The first one is like the console that you also have ingame while the second one emits events regarding the game that are being played.
+If configured so, a Quake Live server provides two APIs, the rcon and the stats API. The first one is like the console that you also have ingame while the second one emits events regarding the games that are being played.
 
-There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on [this](https://hub.docker.com/r/quakeliveserverstandards/ql-console) Docker image.
+If you use the standard `server.cfg`, both of the APIs are enabled by default as you can read [here](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/standard/README.md).
 
-To connect to one of your servers, open a terminal and cd into the `_myservers` directory, then type `./connect.sh 127.0.0.1 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards`. Replace the IP, the ports and the passwords accordingly. You can also connect to either only rcon or only stats. Refer to the [QL Console documentation](https://github.com/quakelive-server-standards/ql-console#readme) for more information.
+There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on this [Docker image](https://hub.docker.com/r/quakeliveserverstandards/ql-console), runs it and deletes it afterwards.
+
+To connect to one of your servers, open a terminal and cd into the `_myservers` directory, then type `./connect.sh 127.0.0.1 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards`. Replace the IP, the ports and the passwords accordingly. The passwords are set in your `autoexec.cfg`.
+
+You can also connect to either only rcon or only stats. Refer to the [QL Console documentation](https://github.com/quakelive-server-standards/ql-console#readme) for more information.
 
 ## Joining the Quake Live evolution
 
-The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for us all and therefor might be able to consolidate and grow our community. It might even be worthy to be integrated into the standard.
+The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for us all and therefor might be able to consolidate and grow our community. It might even be worthy to be integrated into a standard.
+
+Take a look at the [root README.md]() to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
+
+- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/README.md)
+- [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker/README.md)
+- [Contribute to factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories/README.md)
+- [Contribute to map pools](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools/README.md)
+- [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/README.md)
+- [Contribute to workshop](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/README.md)
