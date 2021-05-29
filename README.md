@@ -88,7 +88,7 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 
 ### What is next?
 
-The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into the `_myservers` [README.md](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/README.md) file to get learn every aspect.
+The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into the `_myservers` [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to get learn every aspect.
 
 ## Participating
 

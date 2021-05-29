@@ -113,7 +113,7 @@ minqlx is an extension for the Quake Live server programmed by Mino which can be
 
 minqlx itself is extended by plugins which come in the form of Python files. This repository links all known plugin file sources as Git sub modules inside the `minqlx-plugins/_plugins` repository. If you ran the Git command `git submodule init` you will be able to browse through all the files of those repositories.
 
-There is also a [structured overview](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/_plugins/README.md) over all known minqlx plugins sorted by topics.
+There is also a [structured overview](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins sorted by topics.
 
 There is a directory for minqlx plugins in the directoy of the Quake Live server installation. With the help of Docker you can put minqlx plugins in the form of Python files inside of it. The physical existence of these files in that directory paired with a list of the names of these plugins in the minqlx cvar `qlx_plugins` will load them when when the Quake Live server starts. The cvar gives you the possibility to only select a sub set out of the physical present plugin files.
 
@@ -241,7 +241,7 @@ If you want to see the logs of your servers use `docker-compose logs -f` while t
 
 If configured so, a Quake Live server provides two APIs, the rcon and the stats API. The first one is like the console that you also have ingame while the second one emits events regarding the games that are being played.
 
-If you use the standard `server.cfg`, both of the APIs are enabled by default as you can read [here](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/standard/README.md).
+If you use the standard `server.cfg`, both of the APIs are enabled by default as you can read [here](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/standard#readme).
 
 There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on this [Docker image](https://hub.docker.com/r/quakeliveserverstandards/ql-console), runs it and deletes it afterwards.
 
@@ -260,11 +260,11 @@ https://qlstats.net/panel4/servers.html
 
 The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for all of us and therefor it might be able to consolidate and grow our player base. It might even be worthy to be integrated into a standard.
 
-Take a look at the [root README.md]() to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
+Take a look at the [root README.md](https://github.com/quakelive-server-standards/server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
-- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/README.md)
-- [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker/README.md)
-- [Contribute to factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories/README.md)
-- [Contribute to map pools](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools/README.md)
-- [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/README.md)
-- [Contribute to workshop](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/README.md)
+- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/tree/master/configs#readme)
+- [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker#readme)
+- [Contribute to factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories#readme)
+- [Contribute to map pools](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools#readme)
+- [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins#readme)
+- [Contribute to workshop](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop#readme)
