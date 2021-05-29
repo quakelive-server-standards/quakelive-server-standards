@@ -1,10 +1,11 @@
-# CVAR documentation
+# Factory-focused cvar collection
 
-[http://www.regurge.at/ql/](http://www.regurge.at/ql/)
+This is a collection of cvars focused on defining factories.
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=542672458
+You can find a complete pre-Steam area cvar reference here http://www.regurge.at/ql/ and post-Steam area supplements here
+https://steamcommunity.com/sharedfiles/filedetails/?id=542672458.
 
-## Vote
+## Voting
 
 `g_allowVote "1"` - Allows voting to take place in a server.  
 `g_voteDelay "0"` - Delay allowing votes for X milliseconds after map load.
