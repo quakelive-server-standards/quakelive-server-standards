@@ -1,3 +1,5 @@
-# Standard Clan Arena config
+# Standard Team Deathmatch factory
 
 ## Standards
+
+No standards defined.

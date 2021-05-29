@@ -1,6 +1,36 @@
-# Standard Duel config
+# Standard Duel factory
 
 ## Standards
+
+##### Timlimit
+
+`timelimit "10"` - Timelimit of 10 minutes.
+
+This is the official id Software standard.
+
+##### Fraglimit
+
+`fraglimit "10"` - Fraglimit of 10 frags.
+
+This is the official id Software standard.
+
+##### Allow voting
+
+`set g_allowVote "1"` - Voting allowed.
+
+A server without voting prevents the players on the server to decide which map they want to play next for example.
+
+##### Vote delay
+
+`set g_voteDelay "3000"` - Delay allowing votes for 3000 milliseconds after map load.
+
+To prevent a player with a faster machine to dictate the next map it is useful to prevent voting for some time so that the player with the slower machine has finished loading and is able to vote.
+
+##### Vote limit
+
+`set g_voteLimit "10"` - Limit users to 10 votes per map.
+
+A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
 
 ##### Allow voting mid game
 
@@ -10,7 +40,7 @@ Voting mid game does not make sense in duel. A duel is played until the end or t
 
 ##### Allow spectator voting
 
-`g_allowSpecVote "0"`- Allow spectators to call votes
+`g_allowSpecVote "0"`- Allow spectators to call votes.
 
 A spectator should not be able to vote otherwise the players wanting to play a game need to wait for the spectators to also vote and hopefully vote yes.
 
@@ -55,3 +85,45 @@ If someone joins a server the person should be ready play. If she/he does not wa
 `g_inactivity "600"` - Kick players who are inactive for X amount of seconds.
 
 Some people just idle on servers which is annoying because the server browser gives the impression that someone is waiting which is not true. People should be kicked when inactive. 10 minutes is a good value here. It is enough time to go to toilet, talk to partner or something else. For the other player it might be ok to wait that long.
+
+##### Item height
+
+`g_itemHeight "15"` - Item height of 15 units.
+
+This is the official id Software standard.
+
+##### Item timers
+
+`g_itemTimers "0"` - Item timers disabled.
+
+This is the official id Software standard.
+
+##### Bunny hopping
+
+`pmove_BunnyHop "0"` - Bunny hopping disabled.
+
+This is the official id Software standard.
+
+##### Undocumented cvar
+
+`pmove_CrouchStepJump "0"` - Undocumented cvar
+
+This is the official id Software standard.
+
+##### Undocumented cvar
+
+`pmove_JumpTimeDeltaMin "50"` - Undocumented cvar
+
+This is the official id Software standard.
+
+##### Undocumented cvar
+
+`pmove_WaterSwimScale "0.5f"` - Undocumented cvar
+
+This is the official id Software standard.
+
+##### Undocumented cvar
+
+`pmove_WaterWadeScale "0.75f"` - Undocumented cvar
+
+This is the official id Software standard.
