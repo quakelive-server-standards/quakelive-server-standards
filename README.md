@@ -1,6 +1,6 @@
 # Quake Live server standards and Docker-based server framework
 
-This repository is two in one. It is a community-drive collection of Quake Live server configurations which aims to evolve Quake Live in all its different aspects and at the same it is a Docker-based Quake Live server framework with which you can host as many Quake Live servers as you like.
+This repository is two in one. It is a community-driven collection of Quake Live server configurations which aims to evolve Quake Live in all its different aspects and at the same it is a Docker-based Quake Live server framework with which you can host as many Quake Live servers as you like.
 
 ## Features
 
@@ -10,10 +10,10 @@ This repository is two in one. It is a community-drive collection of Quake Live 
 - Factories
 - Map pools
 - Docker images
-- Gathered and documented Minqlx plugins
+- Gathered and documented minqlx plugins
 - Gathered and documented 3rd party Quake Live applications
 - Command-line Quake Live rcon and stats console
-- Complete and up to date CVAR guide
+- Cvar collections
 - Workshop item lists
 - Download of Steam Workshop items
 - Convert Quake 3 maps to Quake Live maps
@@ -88,7 +88,7 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 
 ### What is next?
 
-The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into the `_myservers` [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to get learn every aspect.
+The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to learn about every aspect there is.
 
 ## Participating
 
