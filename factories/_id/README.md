@@ -1,6 +1,6 @@
 # id Factories
 
-These are the original factories created by id software.
+These are the original factories created by id Software.
 
 ## Training
 
