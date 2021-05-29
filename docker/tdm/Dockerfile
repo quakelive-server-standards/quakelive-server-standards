@@ -1,5 +1,5 @@
 # the image is based on the quake live server standards base image
-FROM quakeliveserverstandards/ql-server-base
+FROM quakeliveserverstandards/ql-server
 
 COPY --chown=steam:steam factories/standard/tdm/tdm.factories /home/steam/ql/baseq3/scripts/tdm.factories
 COPY --chown=steam:steam mappools/standard/tdm/mappool.txt /home/steam/ql/baseq3/mappool.txt
