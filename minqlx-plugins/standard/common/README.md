@@ -1,4 +1,6 @@
-# minqlx common plugins
+# Standard common minqlx plugins
+
+Standard minqlx plugins for any Quake Live game type.
 
 ##### Balance
 
