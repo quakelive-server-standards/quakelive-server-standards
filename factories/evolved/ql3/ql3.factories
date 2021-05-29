@@ -19,7 +19,7 @@
         "pmove_WaterWadeScale": "0.75f"
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "A very gentle convergence of Quake 3 and Quake Live.",
     "basegt": "duel",
     "id": "Quake Live 3",
     "title": "Standard Duel"

@@ -2,7 +2,7 @@
     "cvars": {
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "Community determined standard for Team Deathmatch.",
     "basegt": "tdm",
     "id": "stdtdm",
     "title": "Standard Team Death Match"

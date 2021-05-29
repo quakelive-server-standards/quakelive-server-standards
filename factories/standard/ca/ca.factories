@@ -17,7 +17,7 @@
         "g_startingAmmo_gl": "25"
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "Community determined standard for Clan Arena.",
     "basegt": "ca",
     "id": "stdca",
     "title": "Standard Clan Arena"

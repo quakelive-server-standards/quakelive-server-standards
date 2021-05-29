@@ -8,7 +8,7 @@
         "g_overtime": "0"
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "Community determined standard for Capture The Flag.",
     "basegt": "ctf",
     "id": "stdctf",
     "title": "Standard Capture The Flag"

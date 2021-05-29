@@ -4,7 +4,7 @@
         "g_overtime": "0"
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "Community determined standard for Free For All.",
     "basegt": "ffa",
     "id": "stdffa",
     "title": "Standard Free For All"

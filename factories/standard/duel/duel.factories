@@ -21,7 +21,7 @@
         "pmove_WaterWadeScale": "0.75f"
     },
     "author": "Quake Live Server Standards",
-    "description": "",
+    "description": "Community determined standard for Duel.",
     "basegt": "duel",
     "id": "stdduel",
     "title": "Standard Duel"
