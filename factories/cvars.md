@@ -2,6 +2,8 @@
 
 [http://www.regurge.at/ql/](http://www.regurge.at/ql/)
 
+https://steamcommunity.com/sharedfiles/filedetails/?id=542672458
+
 ## Vote
 
 `g_allowVote "1"` - Allows voting to take place in a server.  
