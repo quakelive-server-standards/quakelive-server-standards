@@ -4,6 +4,10 @@ This is a collection of all known community created Quake Live server applicatio
 
 ## Rcon and stats clients
 
+### id-rcon-cli
+
+The official rcon client by id software written in Python.
+
 ### id-rcon-cli-carmethene
 
 This projects contains two rcon client variants based on the official id software rcon client written in Python.
