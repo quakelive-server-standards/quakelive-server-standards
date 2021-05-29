@@ -1,6 +1,6 @@
 # Quake Live apps
 
-This is a collection of all known community created Quake Live applications.
+This is a collection of all known community created Quake Live server applications.
 
 ## Rcon and stats clients
 
