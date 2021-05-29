@@ -249,9 +249,16 @@ To connect to one of your servers, open a terminal and cd into the `_myservers` 
 
 You can also connect to either only rcon or only stats. Refer to the [QL Console documentation](https://github.com/quakelive-server-standards/ql-console#readme) for more information.
 
+## QLStats
+
+https://qlstats.net/panel1/servers.html
+https://qlstats.net/panel2/servers.html
+https://qlstats.net/panel3/servers.html
+https://qlstats.net/panel4/servers.html
+
 ## Joining the Quake Live evolution
 
-The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for us all and therefor might be able to consolidate and grow our community. It might even be worthy to be integrated into a standard.
+The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for all of us and therefor it might be able to consolidate and grow our player base. It might even be worthy to be integrated into a standard.
 
 Take a look at the [root README.md]() to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
