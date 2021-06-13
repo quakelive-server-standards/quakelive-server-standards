@@ -6,7 +6,7 @@ RUN set -x \
         nodejs \
         git \
         ca-certificates \
-    && git clone https://github.com/quakelive-server-standards/ql-cli.git \
+    && git clone https://github.com/quakelive-server-standards/ql-console.git \
     && apt-get remove --purge -y \
         git \
         ca-certificates \

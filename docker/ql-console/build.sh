@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t quakeliveserverstandards/ql-console .
+docker build --no-cache -t quakeliveserverstandards/ql-console .
