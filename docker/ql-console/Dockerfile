@@ -13,6 +13,6 @@ RUN set -x \
 	&& apt-get clean autoclean \
 	&& rm -rf /var/lib/apt/lists/*
 
-WORKDIR /ql-cli
+WORKDIR /ql-console
 
-ENTRYPOINT [ "/ql-cli/connect.sh" ]
+ENTRYPOINT [ "/ql-console/connect.sh" ]
