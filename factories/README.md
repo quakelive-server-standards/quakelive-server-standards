@@ -1,6 +1,6 @@
 # Quake Live factories
 
-A Quake Live factory is a JSON file which contains sets of cvars bound to a certain game type. It lets you create so called game modes which basically are a game type plus cvars. It is a opportunity to set standards for and to evolve the basic game types.
+A Quake Live factory is a set of cvars bound to a certain game type. It is a opportunity to set standards for and to evolve the basic game types.
 
 ## Calling a vote specifying a certain factory
 
@@ -39,7 +39,7 @@ Or a list of definitions.
   },
   {
     "cvars": {
-      "timelimit": "10"
+      "timelimit": "15"
     },
     "author": "Quake Live Server Standards",
     "description": "Some CA game mode",
