@@ -22,17 +22,17 @@ This repository is two in one. It is a community-driven collection of Quake Live
 
 ### Community-driven Quake Live server standards
 
-There are directories regarding the different aspects of a Quake Live server configuration.
+There are directories regarding the different aspects of the community-driven Quake Live server configurations.
 
 - `configs`: Contains variants of the `server.cfg` which is the place for technical cvars
-- `factories`: Contains factories which are a way to bind cvars to a certain gametype.
+- `factories`: Contains factories which are a way to bind cvars to a certain gametype
 - `mappools`: Contains map pool definitions
 - `minqlx-plugins`: Contains all known minqlx plugins and carefully drafted sets of them for different contexts
 - `workshop`: Contains overviews of workshop items and sets of them for different purposes
 
 All of these directories contain an `_id` directory in which the original id Software configuration resides. In the case of the minqlx plugins this directory is called `_mino` because the plugin extension was not created by id Software but by a guy named mino.
 
-Furthermore there are two directories `standard` and `evolved`. The former one containing the carefully drafted Quake Live server standards and the latter one containing evolved configurations which later on might be integrated into the standard.
+Furthermore there are two directories `standard` and `evolved`. The former one containing the carefully drafted and voted upon Quake Live server standards and the latter one containing evolved configurations which later on might be integrated into the standard.
 
 In some cases there are also additional directories which are explained in the corresponding README.md of these.
 
@@ -91,7 +91,7 @@ duel1:
       - redis
 ```
 
-The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live server use three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
+The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
 
 Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other ports will be set accordingly.
 
@@ -106,6 +106,8 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to learn about every aspect there is.
 
 ## Participating
+
+Community-driven Quake Live server standards do not work without the participation 
 
 ### Discuss standards
 
