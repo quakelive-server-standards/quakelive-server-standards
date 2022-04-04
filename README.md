@@ -34,7 +34,7 @@ All of these directories contain an `_id` directory in which the original id Sof
 
 Furthermore there are two directories `standard` and `evolved`. The former one containing the carefully drafted and voted upon Quake Live server standards and the latter one containing evolved configurations which later on might be integrated into the standard.
 
-In some cases there are also additional directories which are explained in the corresponding README.md of these.
+In some cases there are also additional directories which are explained in the corresponding README.md files of these.
 
 ### Docker-driven server framework
 
@@ -58,7 +58,7 @@ Install Git and clone this repository using `git clone https://github.com/quakel
 
 ### Configuring
 
-Open the `docker-compose.yml` file in the `_myservers` directory. It contains all servers. When freshly cloned, it defines one server for every standard game mode. Delete those that you do not want and duplicate those that you want. For example, if you want to have four duel servers, delete all the other definitions apart from the duel one and duplicate that duel server definition three times.
+Open the `docker-compose.yml` file in the `_myservers` directory. It contains all servers. When freshly cloned, it defines one server for every standard game mode. Delete those that you do not want and duplicate those that you want more than one time. For example, if you want to have four duel servers, delete all the other definitions apart from the duel one and duplicate that duel server definition three times.
 
 Here you can see the definition for the duel server.
 
@@ -93,7 +93,7 @@ duel1:
 
 The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
 
-Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other ports will be set accordingly.
+Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other ports configured through the environment variables `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` will be set automatically.
 
 Additionally, setup a name for your servers by setting the environment variable `SV_HOSTNAME`.
 
@@ -103,13 +103,11 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 
 ### What is next?
 
-The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to learn about every aspect there is.
+The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to learn about everything.
 
 ## Participating
 
-Community-driven Quake Live server standards do not work without the participation 
-
-### Discuss standards
+Community-driven Quake Live server standards come to life through the participation of the community.
 
 ### Contribute configs
 
@@ -118,3 +116,7 @@ Community-driven Quake Live server standards do not work without the participati
 ### Contribute minqlx plugins
 
 ### Contribute workshop
+
+### Contribute Docker files
+
+### Contribute apps
