@@ -39,7 +39,8 @@ CMD \
     # determine installed plugins - contributed by em92 (https://github.com/MinoMino/minqlx/issues/105)
     INSTALLED_QLX_PLUGINS=`find minqlx-plugins/*.py | grep -v "__init__" | sed 's!.*/!!' | sed 's!\.py!!' | xargs | tr ' ' ', '` \
     && set -x \
-    && export NET_PORT=${NET_PORT:-27690} \
+    # if NET_PORT is not set then set it to the default port of 27960
+    && export NET_PORT=${NET_PORT:-27960} \
     # if ZMQ_STATS_PORT is not set then set it to NET_PORT
     && export ZMQ_STATS_PORT=${ZMQ_STATS_PORT:-$NET_PORT} \
     # if ZMQ_RCON_PORT is not set then set it to NET_PORT + 1000
@@ -47,10 +48,11 @@ CMD \
     # if SERVERSTARTUP is not set we need to set it because otherwise the server will
     # not function properly
     && export SERVERSTARTUP=${SERVERSTARTUP:-startRandomMap} \
-    # start the minqlx extended quake live server
+    # if QLX_PLUGINS is not set then set it to the list of present plugins in the minqlx-plugins directory
     && export QLX_PLUGINS=${QLX_PLUGINS:-$INSTALLED_QLX_PLUGINS} \
+    # start the minqlx extended quake live server
     && ./ql/run_server_x64_minqlx.sh \
-    # only attach the parameter if the environment variable is set
+    # only attach a cvar parameter if the environment variable is set
     ${NET_PORT:++set net_port ${NET_PORT}} \
     ${ZMQ_RCON_PORT:++set zmq_rcon_port ${ZMQ_RCON_PORT}} \
     ${ZMQ_STATS_PORT:++set zmq_stats_port ${ZMQ_STATS_PORT}} \
