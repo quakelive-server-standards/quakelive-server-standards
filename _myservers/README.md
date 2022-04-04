@@ -48,7 +48,7 @@ This framework uses Docker to compose configurations and to run any amount of se
 
 There are six different means by which you will configure your server.
 
-- Cvars: Config variables which represent most aspects of the game. There are cvars of a technical nature and cvars that alter the experience toward the player.
+- Cvars: Config variables which represent most aspects of the game. There are cvars of a technical nature and cvars that alter the experience towards the player.
 - Factories: Factories represent a set of cvars bound to a certain game type like Duel.
 - Player status: In a file called `access.txt` you can assign roles like admin, moderator or simply ban a player.
 - Map pools: You can define map pools but which by default only influence the after match voting screen.
@@ -202,11 +202,11 @@ environment:
 
 The following variables are supported: `SV_HOSTNAME`, `G_PASSWORD`, `SV_TAGS`, `SV_MAXCLIENTS`, `SV_PRIVATECLIENTS`, `SV_PRIVATEPASSWORD`, `SV_ALLOWVOTE`, `SV_VOTEDELAY`, `SV_VOTELIMIT`, `SV_ALLOWVOTEMIDGAME`, `SV_ALLOWSPECVOTE`, `SV_VOTEFLAGS`, `SV_WARMUPREADYPERCENTAGE`, `SV_WARMUPDELAY`, `SV_WARMUPREADYDELAY`, `SV_WARMUPREADYDELAYACTION`, `G_INACTIVITY`, `G_ALLTALK`
 
-Note that command line parameters have the lowest priority. This means, if you set the `sv_maxClients` in the `server.cfg`, you will not be able to alter it through these environment variables anymore. The definition in the `server.cfg` will always override that of command line parameters. This can be a source for errors and confusion.
+Note that command line parameters have the lowest priority. This means, if you set the `sv_maxClients` in the `autoexec.cfg`, you will not be able to alter it through these environment variables anymore. The definition in the `autoexec.cfg` will always override that of command line parameters. This can be a source for errors and confusion.
 
 ### Volumes
 
-In the `volumes` section you compose a Quake Live server configuration by mounting the configuration files from your computer directly into the correct place of the Quake Live server installation inside the Docker container. Here is a complete list of that mappings.
+In the `volumes` section you compose a Quake Live server configuration by mounting the configuration files from your computer directly into the correct place of the Quake Live server installation inside the Docker container. Here is a complete list of those mappings.
 
 ```yml
 volumes:
@@ -233,7 +233,7 @@ If you want to alter any of the files that are outside of the `_myservers` direc
 
 To start your servers, open a terminal of your operating system and cd into the directory `_myservers`. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
 
-To stop every Quake Live server plus the Redis database use `docker-compose stop`. To stop a specific server you can use the same command followed by the Docker Compose service name as specified in the `docker-compose.yml` file like this `docker-compose stop duel1`.
+To stop every Quake Live server plus the Redis database use `docker-compose stop`. To stop a specific server you can use the same command followed by the Docker Compose service name as specified in the `docker-compose.yml` file like `docker-compose stop duel1`.
 
 If you want to see the logs of your servers use `docker-compose logs -f` while the parameter `-f` means follow and results in the log output being updated every time a new entry is added.
 
@@ -262,7 +262,7 @@ The next part, as a server administrator and Quake Live experience creator, is t
 
 Take a look at the [root README.md](https://github.com/quakelive-server-standards/server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
-- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/tree/master/configs#readme)
+- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/tree/master/configs#participating)
 - [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker#readme)
 - [Contribute to factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories#readme)
 - [Contribute to map pools](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools#readme)
