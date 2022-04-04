@@ -79,15 +79,17 @@ This Docker-based server framework uses the different locations for different pu
 - `autoexec.cfg`: Cvars specific to to all or a group of your servers
 - `*.factories`: Cvars specific to a game mode like the damage of a weapon
 
-In this section we do not cover factories but in the next one.
-
-Your main work horses are command line parameters in the form of Docker environment variables and the `autoexec.cfg`. But of course you can also alter the standards in the `server.cfg` which you will then hopefully contribute to the Quake Live Server Standards repository if you found that they are good. Also feel free to fiddle around with the game mode specific cvars.
+Your main work horses are command line parameters in the form of Docker environment variables and the `autoexec.cfg`. But of course you can also alter the standards in the `server.cfg` which you will then hopefully contribute to the Quake Live Server Standards repository if you found that they are good. Also feel free to fiddle around with the game type specific cvars.
 
 Apart from a lot of minqlx cvars, the `autoexec.cfg` mostly invites you to set your rcon and stats password.
 
-If you need more than `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and rename the original one. Feel free to adjust anything as you need it. It is your own working directory.
+If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one. Later on we will show you how to mount it into your Docker containers.
+
+Feel free to adjust anything as you need it. It is your own working directory.
 
 ### factories
+
+
 
 ### access.txt
 
@@ -95,9 +97,9 @@ This files holds a list of users identified by their Steam Ids, giving them eith
 
 ### mappool.txt
 
-This file contains a list of map|factory combinations. It defines, which maps should be available for which factory, while a factory being a collection of cvars in the context of a specific game type like Duel.
+This file contains a list of `map|factory` combinations. It defines, which maps should be available for which factory, while a factory being a collection of cvars in the context of a specific game type like Duel.
 
-Note that this map pool is not enforced by the game. This means players still can vote for any map either calling the vote through the console or by using the voting menu which still displays all available maps. The definitions made in the `mappool.txt` will only influence the maps the game offers in the voting screen which appears after a match.
+Note that this map pool is not enforced by the game. This means players can still vote for any map either calling the vote through the console or by using the voting menu which still displays all available maps. The definitions made in the `mappool.txt` will only influence the maps the game offers in the voting screen after a match.
 
 If you want to enforce a map pool you can use the minqlx plugin `barelymissed/mapLimiter.py` which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `autoexec.cfg`.
 
@@ -115,9 +117,9 @@ minqlx itself is extended by plugins which come in the form of Python files. Thi
 
 There is also a [structured overview](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins sorted by topics.
 
-There is a directory for minqlx plugins in the directoy of the Quake Live server installation. With the help of Docker you can put minqlx plugins in the form of Python files inside of it. The physical existence of these files in that directory paired with a list of the names of these plugins in the minqlx cvar `qlx_plugins` will load them when when the Quake Live server starts. The cvar gives you the possibility to only select a sub set out of the physical present plugin files.
+There is a directory for minqlx plugins in the directoy of the Quake Live server installation. With the help of Docker you can put minqlx plugins in the form of Python files inside of it. The physical existence of these files in that directory paired with a list of the names of these plugins in the minqlx cvar `qlx_plugins` will load them when the Quake Live server starts. The cvar gives you the possibility to only select a sub set out of the physical present plugin files.
 
-This can become tedious if you just want the plugins inside that directory to be loaded. For that reason, this framework by default provides a mechanism that when you do not define any plugin name in that list it will simply load any plugin it finds in the plugins directory. If you define plugin names in that list it will only load the plugins listed.
+It can become tedious if you just want the plugins inside that directory to be loaded. For that reason, this framework by default provides a mechanism that when you do not state any plugin name it will simply load any plugin it finds in the `plugins` directory. But still, if you state plugin names it will only load those stated.
 
 Apart from that cvar, there are many others and many others plugin specific which you can define in your `autoexec.cfg`.
 
