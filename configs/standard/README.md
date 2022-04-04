@@ -22,7 +22,7 @@ Rcon can be used to execute commands on the server remotely. Especially the `say
 
 The Quake Live server sends out information regarding the matches being played, players connected and so on. These information form the foundation of external applications who want to extend the Quake Live experience with new features. QLStats is the most prominent example for this. Every server should have this feature enabled to help the community evolve.
 
-## Technical details regarding this framework
+## Technical details regarding the server framework
 
 ### Variables that must not be changed
 
