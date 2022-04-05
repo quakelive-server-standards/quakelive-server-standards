@@ -247,7 +247,9 @@ If you use the standard `server.cfg`, both of the APIs are enabled by default as
 
 There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on this [Docker image](https://hub.docker.com/r/quakeliveserverstandards/ql-console), runs it and deletes it afterwards.
 
-To connect to one of your servers, open a terminal and cd into the `_myservers` directory, then type `./connect.sh 127.0.0.1 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards`. Replace the IP, the ports and the passwords accordingly. The passwords are set in your `autoexec.cfg`.
+To connect to one of your servers, open a terminal and cd into the `_myservers` directory, then type `./connect.sh 198.51.100.0 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards`. Replace the IP, the ports and the passwords accordingly. The passwords are set in your `autoexec.cfg`.
+
+If you want to connect to servers running on `localhost`, you have to use the hostname `host.docker.internal` instead. This is because `localhost` will refer to the Docker container which is running the QL Console application, but not the host machine which is running the container and your local Quake Live servers. This is working on Linux, Mac and Windows. If it does not, consider updating your Docker version. You can also refer to this Stack Overflow [thread](https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach) for a deep discussion about the topic.
 
 You can also connect to either only rcon or only stats. Refer to the [QL Console documentation](https://github.com/quakelive-server-standards/ql-console#readme) for more information.
 

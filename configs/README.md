@@ -16,7 +16,7 @@ No evolutions yet.
 
 The directory `_id` contains the original `server.cfg` along with the original `server_readme.txt`.
 
-## Participating
+## Participe
 
 ### Contributing your `server.cfg`
 
