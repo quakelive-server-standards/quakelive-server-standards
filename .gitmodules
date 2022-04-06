@@ -52,3 +52,6 @@
 [submodule "apps/ql-console"]
 	path = apps/ql-console
 	url = https://github.com/quakelive-server-standards/ql-cli.git
+[submodule "apps/bspconv"]
+	path = apps/bspconv
+	url = https://github.com/sbarisic/bspconv
