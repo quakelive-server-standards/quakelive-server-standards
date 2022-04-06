@@ -27,11 +27,11 @@ This is the UDP port of the actual game itself. The default value is 27960.
 
 ### `ZMQ_RCON_PORT`
 
-This is the port for ZeroMQ rcon connections, a remote console into a server. It uses the TCP protocol. If no value is given, it is set to `NET_PORT` + 1000 which is the standard recommended by id software. The [Quake Live Server Standards standard](https://github.com/quakelive-server-standards/server-framework/blob/master/configs/standard/README.md) defines that the rcon feature has to be enabled.
+This is the port for ZeroMQ rcon connections, a remote console into a server. It uses the TCP protocol. If no value is given, it is set to `NET_PORT` + 1000 which is the standard recommended by id Software. The [Quake Live Server Standards standard](https://github.com/quakelive-server-standards/server-framework/blob/master/configs/standard/README.md) defines that the rcon feature has to be enabled.
 
 ### `ZMQ_STATS_PORT`
 
-This is the port for ZeroMQ published stats. The Quake Live server sends out specific events which can be used to track the activity on the server. It uses the TCP protocol. If no value is given, it is set to `NET_PORT` which is the standard recommended by id software. The [Quake Live Server Standards standard](https://github.com/quakelive-server-standards/server-framework/blob/master/configs/standard/README.md) defines that the stats feature has to be enabled.
+This is the port for ZeroMQ published stats. The Quake Live server sends out specific events which can be used to track the activity on the server. It uses the TCP protocol. If no value is given, it is set to `NET_PORT` which is the standard recommended by id Software. The [Quake Live Server Standards standard](https://github.com/quakelive-server-standards/server-framework/blob/master/configs/standard/README.md) defines that the stats feature has to be enabled.
 
 ### `SV_HOSTNAME`
 
