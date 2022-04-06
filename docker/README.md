@@ -2,7 +2,7 @@
 
 This is a collection of ready to use Quake Live server related applications.
 
-All of them are uploaded to the official Quake Live Server Standards [Docker Hub page](https://hub.docker.com/u/quakeliveserverstandards).
+All of them are uploaded to the official Quake Live Server Standards [Docker Hub account](https://hub.docker.com/u/quakeliveserverstandards).
 
 ## Docker images
 
