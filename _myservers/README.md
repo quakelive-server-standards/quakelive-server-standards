@@ -50,7 +50,7 @@ There are six different means by which you will configure your server.
 
 - Cvars: Config variables which represent most aspects of the game. There are cvars of a technical nature and cvars that alter the experience towards the player.
 - Factories: Factories represent a set of cvars bound to a certain game type like Duel.
-- Player status: In a file called `access.txt` you can assign roles like admin, moderator or simply ban a player.
+- Player permissions: In a file called `access.txt` you can assign roles like admin, moderator or simply ban a player.
 - Map pools: You can define map pools but which by default only influence the after match voting screen.
 - Workshop items: You can specify a list of free downloadable content for your server, mostly additional maps.
 - minqlx plugins: There is a Quake Live server extension called minqlx which allows to alter the server's behaviour through plugins.
@@ -125,7 +125,7 @@ Apart from that cvar, there are many others and many others plugin specific whic
 
 ## Composing your server configurations with Docker
 
-The configuration files for a particular Quake Live server are assembled in the `docker-compose.yml` file. Here is an example for a Duel server.
+The configuration files for a particular Quake Live server are assembled in the `docker-compose.yml` file. Here is an example for Duel.
 
 ```yml
 version: '3.8'
@@ -171,11 +171,11 @@ There are three places which are interesting.
 
 A Quake Live server uses three ports.
 
-- Game port: This is the main port which a Quake Live game client will connect to
-- Stats port: The port the stats API emits its events to
-- Rcon port: The port the rcon API will receive commands and sends console output to
+- Game port: This is the main port which a Quake Live game client will connect to using UDP.
+- Rcon port: The port the rcon API will receive commands and sends console output to using TCP. It is usually the same port as the game port.
+- Stats port: The port the stats API emits its events to. It is usually the game port plus 1000.
 
-You will define those ports in the `ports` section of the `docker-compose.yml` file. 
+You will define those ports in the `ports` section of the `docker-compose.yml` file.
 
 A Docker service has two ports. An external and an internal port. Take a look at the correspoding Docker Compose file definition.
 
@@ -188,21 +188,35 @@ ports:
 
 To be able to undestand this you need to know that every service defined in a Docker Compose file runs in a Docker network. The internal port is one that is only visible inside that network. Thus if you would try and access it from outside you could not. Thus you also need to define an external port. The Docker engine will then map that external port to the internal one of the corresponding Docker service. The definition is `external-port:internal-port/protocol`.
 
-In our case, the internal and external ports are the same. Thus, just write the port number two times, separated by a colon.
+In our case, the internal and external ports are the same. Thus, just write the port number two times, separated by a colon. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) if you want to know more.
 
-You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) if you want to know more.
+The next step is to set up the Quake Live dedicated server instance to actually use these ports. Use the environment variables `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` to do so. If you use the value of the game port for the rcon port and the value of the game port plus 1000 for the stats port, then you only have to specify the `NET_PORT` environment variable since the Docker container will set the other two accordingly.
 
 ### Environment
 
-In the `environment` section of the Docker Compose file you can configure Quake Live server variables which internally will be appended as command line parameters to the Quake Live server executable call. Those are the right place for server instance specific settings, like the server name.
+In the `environment` section of the Docker Compose file you can configure Quake Live server variables which internally will be appended as command line parameters to the Quake Live server executable call. Those are the right place for server instance specific settings, like the server name. Beware that you must set `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` to match the ports specified in the ports section of the Docker Compose file.
 
 ```yml
 environment:
+  - NET_PORT=27960
   - SV_HOSTNAME=QL Standard Duel Server #1
   - G_PASSWORD=secret
 ```
 
-The following variables are supported: `SV_HOSTNAME`, `G_PASSWORD`, `SV_TAGS`, `SV_MAXCLIENTS`, `SV_PRIVATECLIENTS`, `SV_PRIVATEPASSWORD`, `SV_ALLOWVOTE`, `SV_VOTEDELAY`, `SV_VOTELIMIT`, `SV_ALLOWVOTEMIDGAME`, `SV_ALLOWSPECVOTE`, `SV_VOTEFLAGS`, `SV_WARMUPREADYPERCENTAGE`, `SV_WARMUPDELAY`, `SV_WARMUPREADYDELAY`, `SV_WARMUPREADYDELAYACTION`, `G_INACTIVITY`, `G_ALLTALK`
+The following variables are supported: 
+
+- `COM_HUNKMEGS`: Sets the amount of memory in mega bytes reserved for the server.
+- `G_PASSWORD`: Password which players have to enter if they want to access the server.
+- `NET_PORT`: The game port. If you do not set it, the Docker container will set it to the default value of `27960`.
+- `QLX_PLUGINS`: A list of comma separated names of minqlx plugins. If no value is given, the Docker container will create one containing all plugins it found in the `minqlx-plugins` directory thus just loading every plugin that is present.
+- `SERVERSTARTUP`: The name of the map that is loaded after the server started up. The Docker container will set it to `startRandomMap` if no value is given.
+- `SV_HOSTNAME`: The name of your server as it appears in the in-game server browser.
+- `SV_MAXCLIENTS`: Number of player slots available.
+- `SV_PRIVATECLIENTS`: Number of reserved player slots, requires `SV_PRIVATEPASSWORD` to be also set.
+- `SV_PRIVATEPASSWORD`: Reserved player slots password.
+- `SV_TAGS`: Tags that show up on the in-game server browser. This enables users to filter servers.
+- `ZMQ_RCON_PORT`: The port of the rcon api. The Docker container will set it to the same value as `NET_PORT` if none was given.
+- `ZMQ_STATS_PORT`: The port of the stats api. The Docker container will set it to the same value as `NET_PORT` plus 1000 if none was given.
 
 Note that command line parameters have the lowest priority. This means, if you set the `sv_maxClients` in the `autoexec.cfg`, you will not be able to alter it through these environment variables anymore. The definition in the `autoexec.cfg` will always override that of command line parameters. This can be a source for errors and confusion.
 
@@ -264,7 +278,7 @@ https://qlstats.net/panel4/servers.html
 
 The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for all of us and therefor it might be able to consolidate and grow our player base. It might even be worthy to be integrated into a standard.
 
-Take a look at the [root README.md](https://github.com/quakelive-server-standards/server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
+Take a look at the root [README.md](https://github.com/quakelive-server-standards/server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
 - [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/tree/master/configs#participating)
 - [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker#readme)
