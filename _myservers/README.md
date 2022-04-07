@@ -186,11 +186,11 @@ ports:
   - '28960:28960' # external-port:internal-port
 ```
 
-To be able to undestand this you need to know that every service defined in a Docker Compose file runs in a Docker network. The internal port is one that is only visible inside that network. Thus if you would try and access it from outside you could not. Thus you also need to define an external port. The Docker engine will then map that external port to the internal one of the corresponding Docker service. The definition is `external-port:internal-port/protocol`.
+To be able to undestand this you need to know that every service defined in a Docker Compose file runs in a Docker network. The internal port is one that is only visible inside that network. Thus if you would try and access it from outside you could not. Thus you also need to define an external port. The Docker engine will then map that external port to the internal one of the corresponding Docker service. The definition is `external-port:internal-port/protocol`. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) if you want to know more.
 
-In our case, the internal and external ports are the same. Thus, just write the port number two times, separated by a colon. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) if you want to know more.
+In our case, the internal and external ports are the same. Thus, just write the port number two times, separated by a colon. 
 
-The next step is to set up the Quake Live dedicated server instance to actually use these ports. Use the environment variables `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` to do so. If you use the value of the game port for the rcon port and the value of the game port plus 1000 for the stats port, then you only have to specify the `NET_PORT` environment variable since the Docker container will set the other two accordingly.
+The next step is to set up the Quake Live dedicated server instance to actually use these ports. Use the environment variables `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` as described in the next section to do so. If you use the value of the game port for the rcon port and the value of the game port plus 1000 for the stats port, then you only have to specify the `NET_PORT` environment variable since the Docker container will set the other two accordingly.
 
 ### Environment
 
@@ -241,10 +241,6 @@ To customize your server, you can replace any file from the left side. You can s
 
 If you want to alter any of the files that are outside of the `_myservers` directory or if you want to create your own files, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository. For example, if you changed the `configs/standard/server.cfg` directly while receiving such an update, it might result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
 
-## Backup your server configurations with Git
-
-## Receiving updates from the official Quake Live Server Standards repository
-
 ## Starting and managing your Quake Live servers
 
 To start your servers, open a terminal of your operating system and cd into the directory `_myservers`. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
@@ -273,6 +269,10 @@ https://qlstats.net/panel1/servers.html
 https://qlstats.net/panel2/servers.html
 https://qlstats.net/panel3/servers.html
 https://qlstats.net/panel4/servers.html
+
+## Backup your server configurations with Git
+
+## Receiving updates from the official Quake Live Server Standards repository
 
 ## Joining the Quake Live evolution
 
