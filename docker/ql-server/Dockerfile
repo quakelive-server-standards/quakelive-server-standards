@@ -58,7 +58,6 @@ CMD \
     ${ZMQ_STATS_PORT:++set zmq_stats_port ${ZMQ_STATS_PORT}} \
     ${SV_HOSTNAME:++set sv_hostname ${SV_HOSTNAME}} \
     ${SV_TAGS:++set sv_tags ${SV_TAGS}} \
-    ${SERVERSTARTUP:++set serverstartup ${SERVERSTARTUP}} \
     ${G_PASSWORD:++set g_password ${G_PASSWORD}} \
     ${SV_MAXCLIENTS:++set sv_maxClients ${SV_MAXCLIENTS}} \
     ${SV_PRIVATECLIENTS:++set sv_privateClients ${SV_PRIVATECLIENTS}} \

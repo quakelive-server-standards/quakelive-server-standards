@@ -41,10 +41,6 @@ The name which is displayed in the Quake Live server browser. The default value 
 
 The tags with which a server can be found in the Quake Live server browser. The default value is `race`.
 
-### `SERVERSTARTUP`
-
-The map the server chooses when starting up. If you set an invalid value, the server will not start properly. The default value is `startRandomMap`.
-
 ### `G_PASSWORD`
 
 A password that is needed when joining the server. The default value is none.
