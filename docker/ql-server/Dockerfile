@@ -63,6 +63,5 @@ CMD \
     ${SV_MAXCLIENTS:++set sv_maxClients ${SV_MAXCLIENTS}} \
     ${SV_PRIVATECLIENTS:++set sv_privateClients ${SV_PRIVATECLIENTS}} \
     ${SV_PRIVATEPASSWORD:++set sv_privatePassword ${SV_PRIVATEPASSWORD}} \
-    ${G_ALLTALK:++set g_alltalk ${G_ALLTALK}} \
     ${COM_HUNKMEGS:++set com_hunkMegs ${COM_HUNKMEGS}} \
     ${QLX_PLUGINS:++set qlx_plugins ${QLX_PLUGINS}}

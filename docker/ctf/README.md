@@ -61,10 +61,6 @@ The number of private slots. Use in conjunction with `SV_PRIVATEPASSWORD`. The d
 
 The password needed to join into a private slot. The default value is none.
 
-### `G_ALLTALK`
-
-Defines if players can talk to each other globally (`1`) or only inside their own team (`0`). The default value is `0`.
-
 ### `COM_HUNKMEGS`
 
 The amount of memory the server is allowed to use. The default value is `60`.
