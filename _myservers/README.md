@@ -61,6 +61,8 @@ All of those directories contain a `standard` and an `evolved` directory. The fi
 
 When you compose your server configuration you can draw on those resources as a starting point. The next step then is to create your own variants. And then to contributing them back into the official Quake Live Server Standards repository to make them available for all of us.
 
+
+
 ### Cvars and their locations
 
 The Quake Live server offers four locations to put cvars into.
@@ -109,19 +111,23 @@ This file contains a list of Steam Workshop Item Ids the server will download on
 
 ### minqlx-plugins
 
-minqlx is an extension for the Quake Live server programmed by Mino which can be found on [GitHub](https://github.com/MinoMino/minqlx). He himself describes it the following way.
+minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was denoted in the `qlx_plugins` cvar. If a denoted plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
 
-<cite>minqlx is a modification to the Quake Live Dedicated Server that extends Quake Live's dedicated server with extra functionality and allows scripting of server behavior through an embedded Python interpreter.</cite>
+Before you create your own list of minqlx plugins, take a look into the [minqlx-plugins](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins) directory. There you will find carfully crafted Quake Live Server Standards standard lists for every game type and also evolved ones, which deviate from the standard. Chose a directory containing the minqlx files and mount them into your Docker container by altering your `docker-compose.yml` file.
 
-minqlx itself is extended by plugins which come in the form of Python files. This repository links all known plugin file sources as Git sub modules inside the `minqlx-plugins/_plugins` repository. If you ran the Git command `git submodule init` you will be able to browse through all the files of those repositories.
+You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it physically finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
 
-There is also a [structured overview](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins sorted by topics.
+If you specifically want to create your own list of minqlx-plugins, set the `qlx_plugins` variable in your `autoexec.cfg`.
 
-There is a directory for minqlx plugins in the directoy of the Quake Live server installation. With the help of Docker you can put minqlx plugins in the form of Python files inside of it. The physical existence of these files in that directory paired with a list of the names of these plugins in the minqlx cvar `qlx_plugins` will load them when the Quake Live server starts. The cvar gives you the possibility to only select a sub set out of the physical present plugin files.
+```
+set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
+```
 
-It can become tedious if you just want the plugins inside that directory to be loaded. For that reason, this framework by default provides a mechanism that when you do not state any plugin name it will simply load any plugin it finds in the `plugins` directory. But still, if you state plugin names it will only load those stated.
+This definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
 
-Apart from that cvar, there are many others and many others plugin specific which you can define in your `autoexec.cfg`.
+In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
+
+Start by adding your list of minqlx plugins to the `autoexec.cfg` and if you are ready, [contribute]() it back to the Quake Live Server Standards repository.
 
 ## Composing your server configurations with Docker
 
@@ -236,7 +242,7 @@ volumes:
 
 The part before the colon denotes a file or directory on your computer and the one after the location inside the Docker container. Files or directories mounted like this will appear to the Quake Live server as a natural part of its file system. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) for more information.
 
-To customize your server, you can replace any file from the left side. You can start by using one of the evolved versions coming with this repository. People created new `server.cfg` variations, new factories, new map pools, new sets of minqlx plugins or lists of workshop items.
+To customize your server, you can replace any file or directory from the left side. You can start by using one of the evolved versions coming with this repository. People created new `server.cfg` variations, new factories, new map pools, new sets of minqlx plugins or lists of workshop items.
 
 If you want to alter any of the files that are outside of the `_myservers` directory or if you want to create your own files, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository. For example, if you changed the `configs/standard/server.cfg` directly while receiving such an update, it might result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
 
