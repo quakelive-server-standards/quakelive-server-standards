@@ -55,3 +55,6 @@
 [submodule "apps/bspconv"]
 	path = apps/bspconv
 	url = https://github.com/sbarisic/bspconv
+[submodule "apps/qlstats"]
+	path = apps/qlstats
+	url = https://github.com/PredatH0r/XonStat.git
