@@ -207,7 +207,16 @@ If you need more than one `autoexec.cfg` file because for example you are hostin
 
 ### Player permissions
 
-This files holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. You will find an empty `access.txt` file and the first thing you might want to do is to put your own Steam Id into it, followed by a `|admin`, which would give yourself the role of an admin on your own servers.
+A file named [`access.txt`](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/access.txt) holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. 
+
+The first thing you might want to do is to put your own Steam Id into it, followed by a `|admin`, which would give yourself the role of an admin on your own servers.
+
+Mount it into the Docker container by using the `volumes` section of a Docker service definition.
+
+```yml
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+```
 
 ### Map pools
 
