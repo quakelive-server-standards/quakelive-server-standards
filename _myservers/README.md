@@ -1,12 +1,14 @@
-# My Servers
+# Docker-based Quake Live dedicated server framework
+
+Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live dedicated servers to another computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
+
+## Overview
+
+All your servers are defined inside the `docker-compose.yml` file. Additionally there is a `docker-compose.source.yml` file. It is a source for Docker service definitions. You can copy and paste content from this file into your own.
 
 This is your working directory. Anything that is specific to your own servers can be put here. Do whatever you like with it. Adjust it exactly to the needs that you are having. Any file in here is just for your convenience and can be altered or deleted if not needed.
 
 If you want to alter any of the files that are outside of the `_myservers` directory or create new ones, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. The other directories deal with the Quake Live server standards and should be left untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository into your own. For example, if there is an update to the official `configs/standard/server.cfg` but you changed it in your repository, pulling the new data from the official repository will result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
-
-## Overview
-
-All your servers are defined inside the `docker-compose.yml` file. Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live servers to another server computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
 
 ## Installation
 
@@ -104,7 +106,6 @@ The section `services` defines two services `duel1` and `redis`. The first one a
 We will explain the `ports` and the `environment` section below.
 
 In the `volumes` section you compose a configuration by mounting configuration files from your computer into the correct place of the Quake Live dedicated server installation inside the Docker container. The part before the colon denotes a file or directory on your computer and the one after the location inside the Docker container. Files or directories mounted like this will appear to the Quake Live server as a natural part of its file system. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) for more information.
-
 
 ### Setup the ports
 
@@ -300,6 +301,7 @@ https://qlstats.net/panel4/servers.html
 ## Backup your server configurations with Git
 
 ## Receiving updates from the official Quake Live Server Standards repository
+
 
 ## Joining the Quake Live evolution
 

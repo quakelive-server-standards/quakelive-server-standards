@@ -1,0 +1,193 @@
+version: '3.8'
+services:
+  ca1:
+    image: quakeliveserverstandards/ca
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard CA Server #1
+      - SV_TAGS=ca
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/ca/ca.factories:/home/steam/ql/baseq3/scripts/ca.factories'
+      - '../mappools/standard/ca/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/ca:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/ca/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  ctf1:
+    image: quakeliveserverstandards/ctf
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard CTF Server #1
+      - SV_TAGS=ctf
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/ctf/ctf.factories:/home/steam/ql/baseq3/scripts/ctf.factories'
+      - '../mappools/standard/ctf/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/ctf:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/ctf/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  duel1:
+    image: quakeliveserverstandards/duel
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960/tcp' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard Duel Server #1
+      - SV_TAGS=duel
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
+      - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  ffa:
+    image: quakeliveserverstandards/ffa
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard FFA Server #1
+      - SV_TAGS=ffa
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/ffa/ffa.factories:/home/steam/ql/baseq3/scripts/ffa.factories'
+      - '../mappools/standard/ffa/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/ffa:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/ffa/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  race:
+    image: quakeliveserverstandards/race
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard Race Server #1
+      - SV_TAGS=race
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/race/race.factories:/home/steam/ql/baseq3/scripts/race.factories'
+      - '../mappools/standard/race/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/race:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/race/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+  tdm:
+    image: quakeliveserverstandards/tdm
+    restart: always
+    ports:
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960' # rcon port
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=
+      - ZMQ_STATS_PORT=
+      - SV_HOSTNAME=Standard TDM Server #1
+      - SV_TAGS=tdm
+      - COM_HUNKMEGS=
+      - G_PASSWORD=
+      - SV_HOSTNAME=
+      - SV_MAXCLIENTS=
+      - SV_PRIVATECLIENTS=
+      - SV_PRIVATEPASSWORD=
+      - QLX_PLUGINS=
+    volumes:
+      - './access.txt:/home/steam/ql/baseq3/access.txt'
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
+      - '../factories/standard/tdm/tdm.factories:/home/steam/ql/baseq3/scripts/tdm.factories'
+      - '../mappools/standard/tdm/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+      - '../minqlx-plugins/standard/tdm:/home/steam/ql/minqlx-plugins'
+      - '../workshop/standard/tdm/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+    depends_on: 
+      - redis
+
+# Redis database needed by minqlx
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - redis:/data # uses a Docker volumne by default
+
+# Docker volumne containing the data of the Redis database
+# You can safely delete the redis service without losing data
+volumes:
+  redis:

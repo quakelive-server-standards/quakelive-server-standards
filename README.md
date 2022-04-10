@@ -58,27 +58,22 @@ Install Git and clone this repository using `git clone https://github.com/quakel
 
 ### Configuring
 
-Open the `docker-compose.yml` file in the `_myservers` directory. It contains all servers. When freshly cloned, it defines one server for every standard game mode. Delete those that you do not want and duplicate those that you want more than one time. For example, if you want to have four duel servers, delete all the other definitions apart from the duel one and duplicate that duel server definition three times.
+Open the `docker-compose.source.yml` file in the `_myservers` directory. It contains reference server definitions for every game type. Copy those that you want into the `docker-compose.yml` file. If you want more than one server for a game type, copy the reference definition multiple times.
 
-Here you can see the definition for the duel server.
+Here you can see the definition for a duel server.
 
 ```yml
 duel1:
     image: quakeliveserverstandards/duel
     restart: always
     ports:
-      - '27962:27962/udp' # game port
-      - '27962:27962/tcp' # stats port
-      - '28962:28962/tcp' # rcon port
+      - '27960:27960/udp' # game port
+      - '27960:27960/tcp' # stats port
+      - '28960:28960/tcp' # rcon port
     environment:
-      - NET_PORT=27962
+      - NET_PORT=27960
       - SV_HOSTNAME=QL Standard Duel Server #1
       - SV_TAGS=duel
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - G_PASSWORD=
-      - G_ALLTALK=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -91,11 +86,13 @@ duel1:
       - redis
 ```
 
-The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
+Change the Docker service names like `duel1` so that every name is unique.
+
+The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live dedicated server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
 
 Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other ports configured through the environment variables `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` will be set automatically.
 
-Additionally, setup a name for your servers by setting the environment variable `SV_HOSTNAME`.
+Additionally, set unique names for your servers by setting the environment variable `SV_HOSTNAME`.
 
 ### Running
 
