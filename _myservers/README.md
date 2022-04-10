@@ -2,6 +2,8 @@
 
 This is your working directory. Anything that is specific to your own servers can be put here. Do whatever you like with it. Adjust it exactly to the needs that you are having. Any file in here is just for your convenience and can be altered or deleted if not needed.
 
+If you want to alter any of the files that are outside of the `_myservers` directory or create new ones, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. The other directories deal with the Quake Live server standards and should be left untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository into your own. For example, if there is an update to the official `configs/standard/server.cfg` but you changed it in your repository, pulling the new data from the official repository will result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
+
 ## Overview
 
 All your servers are defined inside the `docker-compose.yml` file. Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live servers to another server computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
@@ -61,87 +63,7 @@ All of those directories contain a `standard` and an `evolved` directory. The fi
 
 When you compose your server configuration you can draw on those resources as a starting point. The next step then is to create your own variants. And then to contributing them back into the official Quake Live Server Standards repository to make them available for all of us.
 
-
-
-### Cvars and their locations
-
-The Quake Live server offers four locations to put cvars into.
-
-- As command line parameters
-- `server.cfg`
-- `autoexec.cfg`
-- Inside a `*.factories` file
-
-In this order, the command line parameter has the lowest priority while the factories file has the highest, which means that a cvar defined in a factories file will override any other definition of the same cvar in any other of the lower prioritized locations.
-
-This Docker-based server framework uses the different locations for different purposes.
-
-- Command line parameter: Server instance specific cvars like the name of the server
-- `server.cfg`: Technical cvars like the location of the `mappool.txt` file
-- `autoexec.cfg`: Cvars specific to to all or a group of your servers
-- `*.factories`: Cvars specific to a game mode like the damage of a weapon
-
-Your main work horses are command line parameters in the form of Docker environment variables and the `autoexec.cfg`. But of course you can also alter the standards in the `server.cfg` which you will then hopefully contribute to the Quake Live Server Standards repository if you found that they are good. Also feel free to fiddle around with the game type specific cvars.
-
-Apart from a lot of minqlx cvars, the `autoexec.cfg` mostly invites you to set your rcon and stats password.
-
-If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one. Later on we will show you how to mount it into your Docker containers.
-
-Feel free to adjust anything as you need it. It is your own working directory.
-
-### factories
-
-
-
-### access.txt
-
-This files holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. You will find an empty `access.txt` file and the first thing you might want to do is to put your own Steam Id into it, followed by a `|admin`, which would give yourself the role of an admin on your own servers.
-
-### Map pools
-
-You can define a map pool inside a `mappool.txt` file. It defines, which maps should be available for which game type. Beware that a map pool is not enforced by the game. Players can still vote for any map either calling the vote through the console or by using the voting menu which still displays all available maps. The definitions made will only influence the maps offered in the voting screen after a match.
-
-If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
-
-Before creating your own map pools, this repository offers to you carefully crafted [standard map pools](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that deviate from the standard. You can mount a `mappool.txt` file into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
-
-```yml
-    volumes:
-      - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-```
-
-In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#readme).
-
-Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#participating) your map pool back to the official Quake Live Server Standards repository.
-
-### workshop.txt
-
-This file contains a list of Steam Workshop Item Ids the server will download on startup. The most items found in the Steam Workshop are maps. But there are also sounds for the different intermission minqlx plugins.
-
-### minqlx plugins
-
-minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was mentioned in the `qlx_plugins` cvar. If a mentioned plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
-
-Before you create your own list of minqlx plugins this repository offers to you carfully crafted [standard lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file. Replace the path an the left side of the colon with any other path to a directory containing minqlx plugin files.
-
-```yml
-    volumes:
-      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
-```
-
-You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
-
-In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
-
-Start by adding your list of minqlx plugins to the `_myservers/autoexec.cfg`. The definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
-
-```
-set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
-```
-
-If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
-
-## Composing your server configurations with Docker
+### Working with the Docker Compose file
 
 The configuration files for a particular Quake Live server are assembled in the `docker-compose.yml` file. Here is an example for Duel.
 
@@ -172,20 +94,19 @@ services:
     image: redis
     restart: always
     volumes:
-      - redis:/data # uses a Docker volumne by default
+      - redis:/data # uses a Docker volume by default
 volumes:
   redis:
 ```
 
-The section `services` defines two services `duel1` and `redis`. The first one is the Quake Live server. The second one is the Redis database as demanded by minqlx. While you leave the redis service as it is, we will have a deeper look into the Quake Live server definition.
+The section `services` defines two services `duel1` and `redis`. The first one a Quake Live dedicated server. The second one is the Redis database as demanded by minqlx. In such a service definition you compose its configuration by defining ports, setting environment variables and mounting single files or hole directories into the resulting Docker container.
 
-There are three places which are interesting.
+We will explain the `ports` and the `environment` section below.
 
-- `ports`: Definition of the exposed ports
-- `environment`: Definition of server specific values
-- `volumes`: Linking of different configuration files into the Quake Live server's working directory
+In the `volumes` section you compose a configuration by mounting configuration files from your computer into the correct place of the Quake Live dedicated server installation inside the Docker container. The part before the colon denotes a file or directory on your computer and the one after the location inside the Docker container. Files or directories mounted like this will appear to the Quake Live server as a natural part of its file system. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) for more information.
 
-### Ports
+
+### Setup the ports
 
 A Quake Live server uses three ports.
 
@@ -210,7 +131,34 @@ In our case, the internal and external ports are the same. Thus, just write the 
 
 The next step is to set up the Quake Live dedicated server instance to actually use these ports. Use the environment variables `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` as described in the next section to do so. If you use the value of the game port for the rcon port and the value of the game port plus 1000 for the stats port, then you only have to specify the `NET_PORT` environment variable since the Docker container will set the other two accordingly.
 
-### Environment
+```yml
+    environment:
+      - NET_PORT=27960
+      - ZMQ_RCON_PORT=27960 # can be omitted if the same as NET_PORT
+      - ZMQ_STATS_PORT=28960 # can be omitted if the same as NET_PORT + 1000
+```
+
+### Setting cvars
+
+A cvar is a configuration variable. It sets up certain kinds of behaviours of the Quake Live dedicated server. There are four different locations to put cvars into.
+
+- Command line parameters
+- `server.cfg`
+- `autoexec.cfg`
+- Inside a `*.factories` file
+
+In this order, the command line parameter has the lowest priority while the factories file has the highest, which means that a cvar defined in a factories file will override any other definition of the same cvar in any other of the lower prioritized locations.
+
+This Docker-based server framework uses the different locations for different purposes.
+
+- Command line parameter: Server instance specific cvars like the name of the server
+- `server.cfg`: Technical cvars like the location of the `mappool.txt` file
+- `autoexec.cfg`: Cvars specific to to all or a group of your servers
+- `*.factories`: Cvars specific to a game mode like the damage of a weapon
+
+Your main work horses are command line parameters and your `_myservers/autoexec.cfg`.
+
+#### Command line parameters
 
 In the `environment` section of the Docker Compose file you can configure Quake Live server variables which internally will be appended as command line parameters to the Quake Live server executable call. Those are the right place for server instance specific settings, like the server name. Beware that you must set `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` to match the ports specified in the ports section of the Docker Compose file.
 
@@ -237,28 +185,61 @@ The following variables are supported:
 
 Note that command line parameters have the lowest priority. This means, if you set the `sv_maxClients` in the `autoexec.cfg`, you will not be able to alter it through these environment variables anymore. The definition in the `autoexec.cfg` will always override that of command line parameters. This can be a source for errors and confusion.
 
-### Volumes
+#### autoexec.cfg
 
-In the `volumes` section you compose a Quake Live server configuration by mounting the configuration files from your computer directly into the correct place of the Quake Live server installation inside the Docker container. Here is a complete list of those mappings.
+If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one. In general, feel free to adjust anything in the `_myservers` directory as you need it. It is yours.
+
+### Player permissions
+
+This files holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. You will find an empty `access.txt` file and the first thing you might want to do is to put your own Steam Id into it, followed by a `|admin`, which would give yourself the role of an admin on your own servers.
+
+### Map pools
+
+You can define a map pool inside a `mappool.txt` file. It defines, which maps should be available for which game type. Beware that a map pool is not enforced by the game. Players can still vote for any map either calling the vote through the console or by using the voting menu which still displays all available maps. The definitions made will only influence the maps offered in the voting screen after a match.
+
+If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
+
+Before creating your own map pools, this repository offers to you carefully crafted [standard map pools](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that deviate from the standard. You can mount a `mappool.txt` file into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
 
 ```yml
-volumes:
-      - './access.txt:/home/steam/ql/baseq3/access.txt'
-      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
-      - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
-      - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
+    volumes:
       - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
-      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
-      - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
 ```
 
-The part before the colon denotes a file or directory on your computer and the one after the location inside the Docker container. Files or directories mounted like this will appear to the Quake Live server as a natural part of its file system. You can also refer to the [Docker documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) for more information.
+In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#readme).
 
-To customize your server, you can replace any file or directory from the left side. You can start by using one of the evolved versions coming with this repository. People created new `server.cfg` variations, new factories, new map pools, new sets of minqlx plugins or lists of workshop items.
+Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#participating) your map pool back to the official Quake Live Server Standards repository.
 
-If you want to alter any of the files that are outside of the `_myservers` directory or if you want to create your own files, we recommend to put these into your `_myservers` directory, leaving the other directories untouched. This facilitates smooth updates coming from the official Quake Live Server Standards repository. For example, if you changed the `configs/standard/server.cfg` directly while receiving such an update, it might result in merge conflicts which you would have to resolve. This is not an especially hard thing to do but it might be inconvenient.
+### Workshop items
 
-## Starting and managing your Quake Live servers
+This file contains a list of Steam Workshop Item Ids the server will download on startup. The most items found in the Steam Workshop are maps. But there are also sounds for the different intermission minqlx plugins.
+
+### Factories
+
+### minqlx plugins
+
+minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was mentioned in the `qlx_plugins` cvar. If a mentioned plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
+
+Before you create your own list of minqlx plugins this repository offers to you carfully crafted [standard lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file. Replace the path an the left side of the colon with any other path to a directory containing minqlx plugin files.
+
+```yml
+    volumes:
+      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+```
+
+You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
+
+In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
+
+Start by adding your list of minqlx plugins to the `_myservers/autoexec.cfg`. The definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
+
+```
+set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
+```
+
+If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
+
+## Starting and maintaining your Quake Live servers
 
 To start your servers, open a terminal of your operating system and cd into the directory `_myservers`. Now type `docker-compose up -d` which will start every Quake Live server that is defined in the `docker-compose.yml` plus the needed Redis database for the minqlx plugins. The parameter `-d` stands for detached and means that the servers run in the background.
 
