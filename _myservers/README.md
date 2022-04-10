@@ -111,23 +111,26 @@ This file contains a list of Steam Workshop Item Ids the server will download on
 
 ### minqlx-plugins
 
-minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was denoted in the `qlx_plugins` cvar. If a denoted plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
+minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was mentioned in the `qlx_plugins` cvar. If a mentioned plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
 
-Before you create your own list of minqlx plugins, take a look into the [minqlx-plugins](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins) directory. There you will find carfully crafted Quake Live Server Standards standard lists for every game type and also evolved ones, which deviate from the standard. Chose a directory containing the minqlx files and mount them into your Docker container by altering your `docker-compose.yml` file.
+Before you create your own list of minqlx plugins, take a look into the [minqlx-plugins](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins) directory. There you will find carfully crafted [standard lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file.
 
-You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it physically finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
+```yml
+    volumes:
+      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+```
 
-If you specifically want to create your own list of minqlx-plugins, set the `qlx_plugins` variable in your `autoexec.cfg`.
+You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
+
+In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
+
+Start by adding your list of minqlx plugins to the `autoexec.cfg`. The definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
 
 ```
 set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
 ```
 
-This definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
-
-In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
-
-Start by adding your list of minqlx plugins to the `autoexec.cfg` and if you are ready, [contribute]() it back to the Quake Live Server Standards repository.
+If tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
 
 ## Composing your server configurations with Docker
 
