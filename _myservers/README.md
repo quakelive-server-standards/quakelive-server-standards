@@ -63,7 +63,7 @@ All of those directories contain a `standard` and an `evolved` directory. The fi
 
 When you compose your server configuration you can draw on those resources as a starting point. The next step then is to create your own variants. And then to contributing them back into the official Quake Live Server Standards repository to make them available for all of us.
 
-### Working with the Docker Compose file
+### The Docker Compose file
 
 The configuration files for a particular Quake Live server are assembled in the `docker-compose.yml` file. Here is an example for Duel.
 
@@ -187,7 +187,23 @@ Note that command line parameters have the lowest priority. This means, if you s
 
 #### autoexec.cfg
 
-If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one. In general, feel free to adjust anything in the `_myservers` directory as you need it. It is yours.
+The `autoexec.cfg` contains cvar values, each on one line. It overwrites values which were set as command line parameter and in the `server.cfg`. Its values will be overwritten by definitions made in factory files.
+
+```
+set g_allowVote "1"
+set g_voteDelay "0"
+set g_voteLimit "0"
+set g_allowVoteMidGame "0"
+```
+
+The [shipped version](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/autoexec.cfg) in this repository contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
+
+```yml
+    volumes:
+      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+```
+
+If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and mount it into the Docker services as needed. In general, feel free to adjust anything in the `_myservers` directory as you need it. It is yours.
 
 ### Player permissions
 
@@ -199,7 +215,7 @@ You can define a map pool inside a `mappool.txt` file. It defines, which maps sh
 
 If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
 
-Before creating your own map pools, this repository offers to you carefully crafted [standard map pools](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that deviate from the standard. You can mount a `mappool.txt` file into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
+Before creating your own map pools, this repository offers to you carefully crafted [standard map pools](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that deviate from the standard. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
 
 ```yml
     volumes:
@@ -255,7 +271,11 @@ If you use the standard `server.cfg`, both of the APIs are enabled by default as
 
 There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on this [Docker image](https://hub.docker.com/r/quakeliveserverstandards/ql-console), runs it and deletes it afterwards.
 
-To connect to one of your servers, open a terminal and cd into the `_myservers` directory, then type `./connect.sh 198.51.100.0 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards`. Replace the IP, the ports and the passwords accordingly. The passwords are set in your `autoexec.cfg`.
+To connect to one of your servers, open a terminal and cd into the `_myservers` directory and the following command. Replace the IP, the ports and the passwords accordingly. The passwords are set in your `autoexec.cfg`.
+
+```
+./connect.sh 198.51.100.0 --rcon-port 28960 --rcon-password quakeliveserverstandards --stats-port 27960 --stats-password quakeliveserverstandards
+```
 
 If you want to connect to servers running on `localhost`, you have to use the hostname `host.docker.internal` instead. This is because `localhost` will refer to the Docker container which is running the QL Console application, but not the host machine which is running the container and your local Quake Live servers. This is working on Linux, Mac and Windows. If it does not, consider updating your Docker version. You can also refer to this Stack Overflow [thread](https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach) for a deep discussion about the topic.
 
