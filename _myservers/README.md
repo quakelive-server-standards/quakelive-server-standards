@@ -251,7 +251,7 @@ The Steam Workshop item id's are put into a file called `workshop.txt` and which
 
 There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/standard) files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved) ones.
 
-Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) you will Workshop item lists, a script do download an item onto your harddrive and other stuff.
+Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) you will find Workshop item lists, a script do download an item onto your harddrive and other useful things.
 
 When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
 
@@ -304,9 +304,27 @@ If you want to see the logs of your servers use `docker-compose logs -f` while t
 
 ## Backup your server configurations with Git
 
+If you followed the instructions from [above](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#git) you have two remote locations of your Git repository, `origin` and `upstream`, while `origin` is the one which is ready to receive your personal updates.
 
+If you do not have an `origin` remote location which is pointing to a different location then the official Quake Live Server Standards Git repository, then you need to create one. This is most easily done by [signing up to GitHub](https://github.com/signup) and [creating a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) there. Then go back to the above explanations and follow the instructions [there](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#not-using-a-github-fork).
+
+Once your `origin` remote location points to your own Git repository, open a terminal, cd into your local clone of the Quake Live Server Standards repository and enter the following commands.
+
+```
+git add -A
+git commit -m "Describe what you have changed here"
+git push origin master
+```
+
+The first one adds all changed files to the list of files which should belong the new commit. The second one creates that new commit together with a little description of what has changed. The third command uploads every commit which was not uploaded before to the `origin` remote location.
 
 ## Receiving updates from the official Quake Live Server Standards repository
+
+If you followed the instructions from [above](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#git) you have two remote locations of your Git repository, `origin` and `upstream`, while `upstream` is the official Quake Live Server Standards one.
+
+You can receive an update from the `upstream` remote location by opening a terminal, changing the directory to your local clone of the official Quake Live Server Standards repository and by typing `git pull upstream master`.
+
+If you followed the advice from the beginning and you did not alter any files outside of the `_myservers` directory, then the update should pass smoothly. If you did alter files then you might run into merge conflicts which you will need to resolve manually.
 
 ## Accessing your Quake Live servers remotely with QL Console
 
