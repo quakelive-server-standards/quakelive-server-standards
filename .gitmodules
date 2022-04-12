@@ -44,17 +44,20 @@
 	path = minqlx-plugins/_plugins/em92-ad_hacks
 	url = https://github.com/em92/ad_hacks.git
 [submodule "apps/id-rcon-cli-carmethene"]
-	path = apps/id-rcon-cli-carmethene
+	path = apps/carmethene-quakelive-rcon
 	url = https://github.com/carmethene/quakelive-rcon.git
 [submodule "apps/id-rcon-cli-standards"]
-	path = apps/id-rcon-cli-standards
+	path = apps/quakeliveserverstandards-id-rcon-cli
 	url = https://github.com/quakelive-server-standards/id-rcon-cli.git
 [submodule "apps/ql-console"]
-	path = apps/ql-console
+	path = apps/quakeliveserverstandards-ql-console
 	url = https://github.com/quakelive-server-standards/ql-cli.git
 [submodule "apps/bspconv"]
-	path = apps/bspconv
+	path = apps/sbarisic-bspconv
 	url = https://github.com/sbarisic/bspconv
-[submodule "apps/qlstats"]
-	path = apps/qlstats
-	url = https://github.com/PredatH0r/XonStat.git
+[submodule "apps/local-ratings"]
+	path = apps/em92-quakelive-local-ratings
+	url = https://github.com/em92/quakelive-local-ratings
+[submodule "apps/predath0r-qlstats"]
+	path = apps/predath0r-qlstats
+	url = https://github.com/PredatH0r/XonStat
