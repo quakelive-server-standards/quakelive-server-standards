@@ -49,9 +49,6 @@
 [submodule "apps/id-rcon-cli-standards"]
 	path = apps/quakeliveserverstandards-id-rcon-cli
 	url = https://github.com/quakelive-server-standards/id-rcon-cli.git
-[submodule "apps/ql-console"]
-	path = apps/quakeliveserverstandards-ql-console
-	url = https://github.com/quakelive-server-standards/ql-cli.git
 [submodule "apps/bspconv"]
 	path = apps/sbarisic-bspconv
 	url = https://github.com/sbarisic/bspconv
