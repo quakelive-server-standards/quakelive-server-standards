@@ -238,7 +238,20 @@ Once you play tested the new maps and the feedback from your players are positiv
 
 ### Workshop items
 
-This file contains a list of Steam Workshop Item Ids the server will download on startup. The most items found in the Steam Workshop are maps. But there are also sounds for the different intermission minqlx plugins.
+The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/Minqlx.md).
+
+The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container.
+
+```yml
+    volumes:
+      - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+```
+
+There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/standard) `workshop.txt` files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/evolved) ones.
+
+Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop) you will Workshop item lists, a script do download an item onto your harddrive and other stuff.
+
+When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
 
 ### Factories
 
@@ -273,7 +286,7 @@ To stop every Quake Live server plus the Redis database use `docker-compose stop
 
 If you want to see the logs of your servers use `docker-compose logs -f` while the parameter `-f` means follow and results in the log output being updated every time a new entry is added.
 
-## Accessing your Quake Live servers with QL Console
+## Accessing your Quake Live servers remotely with QL Console
 
 If configured so, a Quake Live server provides two APIs, the rcon and the stats API. The first one is like the console that you also have ingame while the second one emits events regarding the games that are being played.
 
@@ -291,7 +304,7 @@ If you want to connect to servers running on `localhost`, you have to use the ho
 
 You can also connect to either only rcon or only stats. Refer to the [QL Console documentation](https://github.com/quakelive-server-standards/ql-console#readme) for more information.
 
-## QLStats
+## QLStats integration
 
 https://qlstats.net/panel1/servers.html
 https://qlstats.net/panel2/servers.html
