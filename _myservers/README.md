@@ -197,12 +197,14 @@ set g_voteLimit "0"
 set g_allowVoteMidGame "0"
 ```
 
-The [shipped version](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/autoexec.cfg) in this repository contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
+The provided [file](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/autoexec.cfg) in your `_myservers` directory contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. Use it as a basis for your own one. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
 
 ```yml
     volumes:
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
 ```
+
+The setting that you want to do at least is to set the `zmq_rcon_password` and `zmq_stats_password` cvars. The default values for both of them is `quakeliveserverstandards`. You can also leave it like this for the stats API to enable other developers to pickup the stats events from your servers and to process them in their [Quake Live app](https://github.com/quakelive-server-standards/server-standards/tree/master/apps).
 
 If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and mount it into the Docker services as needed. In general, feel free to adjust anything in the `_myservers` directory as you need it. It is yours.
 
@@ -225,7 +227,7 @@ You can define a map pool inside a `mappool.txt` file. It defines, which maps sh
 
 If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
 
-Before creating your own map pools, this repository offers to you carefully crafted [standard map pools](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that deviate from the standard. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
+Before creating your own map pools, this repository offers to you carefully crafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) map pools and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that bring the Quake Live experience forward. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
 
 ```yml
     volumes:
@@ -240,20 +242,34 @@ Once you play tested the new maps and the feedback from your players are positiv
 
 The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/Minqlx.md).
 
-The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container.
+The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container. Replace the path on the left side of the colon with any other.
 
 ```yml
     volumes:
       - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
 ```
 
-There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/standard) `workshop.txt` files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/evolved) ones.
+There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/standard) files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/evolved) ones.
 
 Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop) you will Workshop item lists, a script do download an item onto your harddrive and other stuff.
 
 When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
 
 ### Factories
+
+A factory contains sets of cvars which are applied for certain game types. It is a good place to set up voting warmup ready percentage, warmup delay and so on, anything that is game type specific.
+
+Factories are defined in a text file `*.factories`. Inside of is a JSON string. This JSON either contains multiple factory definitions or just one. You can create as many factories files as you like, they are put inside a `scripts` folder inside the Quake Live dedicated server installation.
+
+Before you create your own factory, take a look at the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/factories/standard) factories for every game type and also the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/factories/evolved) ones, which offer experiences apart the vanilla ones that were designed by id Software. Add factory files into the Quake Live dedicated server installation by mounting them in the `volumes` sesction in your `docker-compose.yml`. Replace the path before the colon with a path pointing to any factories file. If you want to add multiple files, you can mount as many files as you need.
+
+```yml
+    volumes:
+      - '../factories/standard/ffa/ffa.factories:/home/steam/ql/baseq3/scripts/ffa.factories'
+      - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
+```
+
+Once you feel the need to evolve a game type, you will create your own [factory](https://github.com/quakelive-server-standards/server-standards/tree/master/factories). Put your `*.factories` file inside your `_myservers` directory first. Test it a while with the players of your servers and then [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/factories#participate) it back to the official Quake Live Server Standards repository.
 
 ### minqlx plugins
 

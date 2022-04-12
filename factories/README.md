@@ -1,10 +1,6 @@
 # Quake Live factories
 
-A Quake Live factory is a set of cvars bound to a certain game type. It is a opportunity to set standards for and to evolve the basic game types.
-
-## Calling a vote specifying a certain factory
-
-In the in-game Quake Live console you can type `callvote map campgrounds ffa`.
+A Quake Live factory is a set of cvars bound to a certain game type. It is a opportunity to set standards for and to evolve the basic game types. Inside of Quake Live you can reference a game type when calling a vote for a map like this `callvote map campgrounds ffa`.
 
 ## Creating your own factory
 
@@ -62,6 +58,8 @@ All of the following fields should be present and of the correct type.
 If a factory is invalid, the reason for it will be printed in the console during startup, and the factory will not be available for play.
 
 For selecting the cvars you want to adjust in your game type, there is a factory-focused cvar collection [here](https://github.com/quakelive-server-standards/server-standards/blob/master/factories/cvars.md).
+
+## Participate
 
 ## Other
 
