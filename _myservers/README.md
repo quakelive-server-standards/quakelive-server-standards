@@ -322,10 +322,13 @@ You can also connect to either only rcon or only stats. Refer to the [QL Console
 
 ## QLStats integration
 
-https://qlstats.net/panel1/servers.html
-https://qlstats.net/panel2/servers.html
-https://qlstats.net/panel3/servers.html
-https://qlstats.net/panel4/servers.html
+[QLStats](https://qlstats.net) is a website which tracks played matches and most notably calculates [elo ratings](https://en.wikipedia.org/wiki/Elo_rating_system) for every player separately for every game type.
+
+You can connect your servers to QLStats by registering them in one of the four so called [panels](https://qlstats.net/panel1/servers.html). To do so, you have to have your stats API enabled, which this server framework by [default](https://github.com/quakelive-server-standards/server-standards/tree/master/configs/standard#zmq-stats) does. Additionally, you need your stats API password, which is `quakeliveserverstandards` if you did not set it in your `autoexec.cfg`.
+
+A panel can receive QL stats events from up to 340 Quake Live dedicated servers, while it is ony possible to add new server owners to a panel if there are not more than 250 servers already registered.
+
+Most of the players like to enter the `!elos` command into the console of the Quake Live client. It will print the elo ratings of every player on the server. This command is provided by the minqlx plugin [`balance.py`](https://github.com/MinoMino/minqlx-plugins/blob/master/balance.py) which is a part of the [standard minqlx lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard/common#balance) of every game type.
 
 ## Backup your server configurations with Git
 
