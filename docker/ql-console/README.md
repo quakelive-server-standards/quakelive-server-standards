@@ -1,6 +1,6 @@
 # QL Console
 
-This Docker image contains a command line client for accessing the rcon and stats apis of a Quake Live dedicated server. The client is based on [this](https://github.com/quakelive-server-standards/ql-console) open source GitHub project. This Docker image is used inside the [Quake Live Server Standards Docker-based server framework](https://github.com/quakelive-server-standards/server-standards). You can consider using it as the base for your own servers. It not only comes with easy server management and configuration, but also with community-driven Quake Live server standards.
+This Docker image contains a command line client for accessing the rcon and stats apis of a Quake Live dedicated server. The client is based on [this](https://github.com/quakelive-server-standards/ql-console) open source GitHub project. This Docker image is used inside the [Quake Live Server Standards Docker-based server framework](https://github.com/quakelive-server-standards/quakelive-server-standards). You can consider using it as the base for your own servers. It not only comes with easy server management and configuration, but also with community-driven Quake Live server standards.
 
 ## How to use this image
 
@@ -30,4 +30,4 @@ Use it like this.
 ./connect.sh host.docker.internal --rcon-port 28960 --rcon-password rconadmin --stats-port 27960 --stats-password statsadmin
 ```
 
-You can also use the [Quake Live Server Standards server framework](https://github.com/quakelive-server-standards/server-standards) as the base for your Quake Live servers which comes with a ready to use [`connect.sh`](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/connect.sh).
+You can also use the [Quake Live Server Standards server framework](https://github.com/quakelive-server-standards/quakelive-server-standards) as the base for your Quake Live servers which comes with a ready to use [`connect.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/connect.sh).

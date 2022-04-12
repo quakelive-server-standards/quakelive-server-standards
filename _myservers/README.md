@@ -30,13 +30,13 @@ On the command line type `git clone https://github.com/<your-github-name>/<your-
 
 Your repository now resides on two locations. On your harddrive and on GitHub. The GitHub location is known to your local version as the `origin`. It is the main location your repository resides in and you can create arbitrary many clones from it. If you change something in your local version you will push these changes to the origin. If something changed in the origin you will merge theses changes into your local version. That way, arbitrary many people can work together.
 
-To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-framework.git`. Every time there is something new you now can pull these changes by typing `git pull upstream origin`.
+To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-standards.git`. Every time there is something new you now can pull these changes by typing `git pull upstream origin`.
 
 The last step is to clone all of the Git sub modules which are other Git repositories that were integrated into that one. One the command line type `git submodule init`.
 
 #### Not using a GitHub fork
 
-If you do not have a GitHub account or if you do not want your repository to be publicly available you can also directly clone this repository with `git clone https://github.com/quakelive-server-standards/quakelive-server-framework.git`.
+If you do not have a GitHub account or if you do not want your repository to be publicly available you can also directly clone this repository with `git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git`.
 
 After cloning, the official Quake Live Server Standards repository will be listed as the `origin` location. You will want to replace that with a repository location of your own. Since you also want keep the official location you start by renaming it from `origin` to `upstream` by typing `git remote rename origin upstream` into the command line.
 
@@ -197,20 +197,20 @@ set g_voteLimit "0"
 set g_allowVoteMidGame "0"
 ```
 
-The provided [file](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/autoexec.cfg) in your `_myservers` directory contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. Use it as a basis for your own one. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
+The provided [file](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/autoexec.cfg) in your `_myservers` directory contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. Use it as a basis for your own one. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
 
 ```yml
     volumes:
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
 ```
 
-The setting that you want to do at least is to set the `zmq_rcon_password` and `zmq_stats_password` cvars. The default values for both of them is `quakeliveserverstandards`. You can also leave it like this for the stats API to enable other developers to pickup the stats events from your servers and to process them in their [Quake Live app](https://github.com/quakelive-server-standards/server-standards/tree/master/apps).
+The setting that you want to do at least is to set the `zmq_rcon_password` and `zmq_stats_password` cvars. The default values for both of them is `quakeliveserverstandards`. You can also leave it like this for the stats API to enable other developers to pickup the stats events from your servers and to process them in their [Quake Live app](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps).
 
 If you need more than one `autoexec.cfg` file because for example you are hosting Free For All and Duel servers, just create a second one and mount it into the Docker services as needed. In general, feel free to adjust anything in the `_myservers` directory as you need it. It is yours.
 
 ### Player permissions
 
-A file named [`access.txt`](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/access.txt) holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. 
+A file named [`access.txt`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/access.txt) holds a list of users identified by their Steam Ids, giving them either the status of an admin, a moderator or of being banned. 
 
 The first thing you might want to do is to put your own Steam Id into it, followed by a `|admin`, which would give yourself the role of an admin on your own servers.
 
@@ -225,22 +225,22 @@ Mount it into the Docker container by using the `volumes` section of a Docker se
 
 You can define a map pool inside a `mappool.txt` file. It defines, which maps should be available for which game type. Beware that a map pool is not enforced by the game. Players can still vote for any map either calling the vote through the console or by using the voting menu which still displays all available maps. The definitions made will only influence the maps offered in the voting screen after a match.
 
-If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
+If you want to enforce a map pool, you can use the minqlx plugin [`barelymissed/mapLimiter.py`](https://github.com/BarelyMiSSeD/minqlx-plugins/blob/master/mapLimiter.py) which provides a variable `qlx_enforceMappool` which you need to set to `1`, preferably in your `_myservers/autoexec.cfg`. You will find the Git repository containing the mentioned file as a [sub module](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/_plugins) inside this repository. If you cannot see it, run `git submodule init`.
 
-Before creating your own map pools, this repository offers to you carefully crafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/standard) map pools and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools/evolved) ones that bring the Quake Live experience forward. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
+Before creating your own map pools, this repository offers to you carefully crafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/standard) map pools and also [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/evolved) ones that bring the Quake Live experience forward. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
 
 ```yml
     volumes:
       - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
 ```
 
-In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#readme).
+In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#readme).
 
-Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/mappools#participating) your map pool back to the official Quake Live Server Standards repository.
+Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#participating) your map pool back to the official Quake Live Server Standards repository.
 
 ### Workshop items
 
-The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/Minqlx.md).
+The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Minqlx.md).
 
 The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container. Replace the path on the left side of the colon with any other.
 
@@ -249,11 +249,11 @@ The Steam Workshop item id's are put into a file called `workshop.txt` and which
       - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
 ```
 
-There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/standard) files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop/evolved) ones.
+There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/standard) files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved) ones.
 
-Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop) you will Workshop item lists, a script do download an item onto your harddrive and other stuff.
+Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) you will Workshop item lists, a script do download an item onto your harddrive and other stuff.
 
-When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
+When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
 
 ### Factories
 
@@ -261,7 +261,7 @@ A factory contains sets of cvars which are applied for certain game types. It is
 
 Factories are defined in a text file `*.factories`. Inside of is a JSON string. This JSON either contains multiple factory definitions or just one. You can create as many factories files as you like, they are put inside a `scripts` folder inside the Quake Live dedicated server installation.
 
-Before you create your own factory, take a look at the carefully drafted [standard](https://github.com/quakelive-server-standards/server-standards/tree/master/factories/standard) factories for every game type and also the [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/factories/evolved) ones, which offer experiences apart the vanilla ones that were designed by id Software. Add factory files into the Quake Live dedicated server installation by mounting them in the `volumes` sesction in your `docker-compose.yml`. Replace the path before the colon with a path pointing to any factories file. If you want to add multiple files, you can mount as many files as you need.
+Before you create your own factory, take a look at the carefully drafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard) factories for every game type and also the [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/evolved) ones, which offer experiences apart the vanilla ones that were designed by id Software. Add factory files into the Quake Live dedicated server installation by mounting them in the `volumes` sesction in your `docker-compose.yml`. Replace the path before the colon with a path pointing to any factories file. If you want to add multiple files, you can mount as many files as you need.
 
 ```yml
     volumes:
@@ -269,13 +269,13 @@ Before you create your own factory, take a look at the carefully drafted [standa
       - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
 ```
 
-Once you feel the need to evolve a game type, you will create your own [factory](https://github.com/quakelive-server-standards/server-standards/tree/master/factories). Put your `*.factories` file inside your `_myservers` directory first. Test it a while with the players of your servers and then [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/factories#participate) it back to the official Quake Live Server Standards repository.
+Once you feel the need to evolve a game type, you will create your own [factory](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories). Put your `*.factories` file inside your `_myservers` directory first. Test it a while with the players of your servers and then [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories#participate) it back to the official Quake Live Server Standards repository.
 
 ### minqlx plugins
 
 minqlx is a Quake Live dedicated server extension which enables to change the behaviour of the Quake Live dedicated server through plugins. Inside of a Quake Live dedicated server Docker container, there is a directory `/home/steam/ql/minqlx-plugins` where minqlx plugin files are put into. When the Quake Live dedicated server starts up, it will load every plugin that was mentioned in the `qlx_plugins` cvar. If a mentioned plugin was not found, an error message will be printed to the log. You can see the logs by opening a terminal, changing into the `_myservers` directory and type in `docker-compose logs -f`.
 
-Before you create your own list of minqlx plugins this repository offers to you carfully crafted [standard lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file. Replace the path an the left side of the colon with any other path to a directory containing minqlx plugin files.
+Before you create your own list of minqlx plugins this repository offers to you carfully crafted [standard lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file. Replace the path an the left side of the colon with any other path to a directory containing minqlx plugin files.
 
 ```yml
     volumes:
@@ -284,7 +284,7 @@ Before you create your own list of minqlx plugins this repository offers to you 
 
 You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
 
-In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
+In the next step, if you want to evolve the Quake Live experience for the players of your servers, you will want to add new minqlx plugins to your server. This repository helps you in doing so by providing an [overview](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/_plugins#readme) over all known minqlx plugins, sorted by categories. It also contains the [Git repositories](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/_plugins) which contain all these known minqlx plugins as Git sub modules. If you cannot see them, you need to run the Git command `git submodule init`.
 
 Start by adding your list of minqlx plugins to the `_myservers/autoexec.cfg`. The definition will overwrite the list of all installed minqlx plugins which is created by the Docker container.
 
@@ -292,7 +292,7 @@ Start by adding your list of minqlx plugins to the `_myservers/autoexec.cfg`. Th
 set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
 ```
 
-If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
+If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
 
 ## Starting and maintaining your Quake Live servers
 
@@ -302,11 +302,17 @@ To stop every Quake Live server plus the Redis database use `docker-compose stop
 
 If you want to see the logs of your servers use `docker-compose logs -f` while the parameter `-f` means follow and results in the log output being updated every time a new entry is added.
 
+## Backup your server configurations with Git
+
+
+
+## Receiving updates from the official Quake Live Server Standards repository
+
 ## Accessing your Quake Live servers remotely with QL Console
 
 If configured so, a Quake Live server provides two APIs, the rcon and the stats API. The first one is like the console that you also have ingame while the second one emits events regarding the games that are being played.
 
-If you use the standard `server.cfg`, both of the APIs are enabled by default as you can read [here](https://github.com/quakelive-server-standards/server-standards/blob/master/configs/standard#readme).
+If you use the standard `server.cfg`, both of the APIs are enabled by default as you can read [here](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/configs/standard#readme).
 
 There is a shell script `connect.sh` which starts a command-line client which can connect to both of these APIs at the same time. It is based on the [QL Console project](https://github.com/quakelive-server-standards/ql-console). To use it, you do not have to install anything apart from Docker. The script creates a Docker container based on this [Docker image](https://hub.docker.com/r/quakeliveserverstandards/ql-console), runs it and deletes it afterwards.
 
@@ -324,26 +330,21 @@ You can also connect to either only rcon or only stats. Refer to the [QL Console
 
 [QLStats](https://qlstats.net) is a website which tracks played matches and most notably calculates [elo ratings](https://en.wikipedia.org/wiki/Elo_rating_system) for every player separately for every game type.
 
-You can connect your servers to QLStats by registering them in one of the four so called [panels](https://qlstats.net/panel1/servers.html). To do so, you have to have your stats API enabled, which this server framework by [default](https://github.com/quakelive-server-standards/server-standards/tree/master/configs/standard#zmq-stats) does. Additionally, you need your stats API password, which is `quakeliveserverstandards` if you did not set it in your `autoexec.cfg`.
+You can connect your servers to QLStats by registering them in one of the four so called [panels](https://qlstats.net/panel1/servers.html). To do so, you have to have your stats API enabled, which this server framework by [default](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs/standard#zmq-stats) does. Additionally, you need your stats API password, which is `quakeliveserverstandards` if you did not set it in your `autoexec.cfg`.
 
 A panel can receive QL stats events from up to 340 Quake Live dedicated servers, while it is ony possible to add new server owners to a panel if there are not more than 250 servers already registered.
 
-Most of the players like to enter the `!elos` command into the console of the Quake Live client. It will print the elo ratings of every player on the server. This command is provided by the minqlx plugin [`balance.py`](https://github.com/MinoMino/minqlx-plugins/blob/master/balance.py) which is a part of the [standard minqlx lists](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/standard/common#balance) of every game type.
-
-## Backup your server configurations with Git
-
-## Receiving updates from the official Quake Live Server Standards repository
-
+Most of the players like to enter the `!elos` command into the console of the Quake Live client. It will print the elo ratings of every player on the server. This command is provided by the minqlx plugin [`balance.py`](https://github.com/MinoMino/minqlx-plugins/blob/master/balance.py) which is a part of the [standard minqlx lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/standard/common#balance) of every game type.
 
 ## Joining the Quake Live evolution
 
 The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for all of us and therefor it might be able to consolidate and grow our player base. It might even be worthy to be integrated into a standard.
 
-Take a look at the root [README.md](https://github.com/quakelive-server-standards/server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
+Take a look at the root [README.md](https://github.com/quakelive-server-standards/quakelive-server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
-- [Contribute to configs](https://github.com/quakelive-server-standards/server-standards/tree/master/configs#participating)
-- [Contribute to Docker images](https://github.com/quakelive-server-standards/server-standards/blob/master/docker#readme)
-- [Contribute to factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories#readme)
-- [Contribute to map pools](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools#readme)
-- [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/server-standards/blob/master/minqlx-plugins#readme)
-- [Contribute to workshop](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop#readme)
+- [Contribute to configs](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs#participating)
+- [Contribute to Docker images](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/docker#readme)
+- [Contribute to factories](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories#readme)
+- [Contribute to map pools](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/mappools#readme)
+- [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/minqlx-plugins#readme)
+- [Contribute to workshop](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop#readme)

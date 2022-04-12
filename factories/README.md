@@ -57,7 +57,7 @@ All of the following fields should be present and of the correct type.
 
 If a factory is invalid, the reason for it will be printed in the console during startup, and the factory will not be available for play.
 
-For selecting the cvars you want to adjust in your game type, there is a factory-focused cvar collection [here](https://github.com/quakelive-server-standards/server-standards/blob/master/factories/cvars.md).
+For selecting the cvars you want to adjust in your game type, there is a factory-focused cvar collection [here](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories/cvars.md).
 
 ## Participate
 

@@ -54,7 +54,7 @@ Here we give you instructions on how to start hosting servers real quick. You wi
 
 ### Installing
 
-Install Git and clone this repository using `git clone https://github.com/quakelive-server-standards/server-standards.git`. Install Docker https://docs.docker.com/engine/install/.
+Install Git and clone this repository using `git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git`. Install Docker https://docs.docker.com/engine/install/.
 
 ### Configuring
 
@@ -100,7 +100,7 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 
 ### What is next?
 
-The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers#readme) file to learn about everything.
+The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#readme) file to learn about everything.
 
 ## Participating
 

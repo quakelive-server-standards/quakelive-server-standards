@@ -10,10 +10,10 @@ Use this image in conjunction with the Docker-based Quake Live Server Standards 
 
 - `/home/steam/ql/baseq3/access.txt` - User Steam ids which are admin, mod or banned
 - `/home/steam/ql/baseq3/server.cfg` - [Quake Live Server Standards standard configuration](https://github.com/quakelive-server-standards/server-framework/blob/master/configs/standard/server.cfg)
-- `/home/steam/ql/baseq3/mappool.txt` - [Official id Software map pool](https://github.com/quakelive-server-standards/server-standards/blob/master/mappools/_id/mappool.txt)
-- `/home/steam/ql/baseq3/workshop.txt`- [Official id Software workshop items](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/_id/workshop.txt)
-- `/home/steam/ql/baseq3/scripts/factories.txt` - [Official id Software factories](https://github.com/quakelive-server-standards/server-standards/blob/master/factories/_id/factories.txt)
-- `/home/steam/ql/minqlx-plugins` - [Mino default plugins](https://github.com/quakelive-server-standards/server-standards/tree/master/minqlx-plugins/_mino)
+- `/home/steam/ql/baseq3/mappool.txt` - [Official id Software map pool](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/mappools/_id/mappool.txt)
+- `/home/steam/ql/baseq3/workshop.txt`- [Official id Software workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/_id/workshop.txt)
+- `/home/steam/ql/baseq3/scripts/factories.txt` - [Official id Software factories](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories/_id/factories.txt)
+- `/home/steam/ql/minqlx-plugins` - [Mino default plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/_mino)
 
 ## Environment variables
 

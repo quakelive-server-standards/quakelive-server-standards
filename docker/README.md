@@ -14,11 +14,11 @@ All of these game type specific images are based on the [ql-server](https://hub.
 
 ### QL Console
 
-A [Docker image](https://hub.docker.com/repository/docker/quakeliveserverstandards/ql-console) containing a command line interface to access the rcon and stats apis of a Quake Live dedicated server. It is based on the Quake Live Server Standards [QL Console](https://github.com/quakelive-server-standards/ql-console) project which is also linked as a Git sub module in the `apps` directory. The image is used by the file [`connect.sh`](https://github.com/quakelive-server-standards/server-standards/blob/master/_myservers/connect.sh) in the [Docker-based Quake Live server framework](https://github.com/quakelive-server-standards/server-standards/tree/master/_myservers) of this repository.
+A [Docker image](https://hub.docker.com/repository/docker/quakeliveserverstandards/ql-console) containing a command line interface to access the rcon and stats apis of a Quake Live dedicated server. It is based on the Quake Live Server Standards [QL Console](https://github.com/quakelive-server-standards/ql-console) project which is also linked as a Git sub module in the `apps` directory. The image is used by the file [`connect.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/connect.sh) in the [Docker-based Quake Live server framework](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) of this repository.
 
 ### Workshop download
 
-A [Docker image](https://hub.docker.com/repository/docker/quakeliveserverstandards/workshop-download) which offers to possibility to download Steam Workshop items. It is used in [`download.sh`](https://github.com/quakelive-server-standards/server-standards/blob/master/workshop/download.sh) of the workshop directory to offer a convenient way to download Steam Workshop items for inspection before deploying the to a Quake Live dedicated server.
+A [Docker image](https://hub.docker.com/repository/docker/quakeliveserverstandards/workshop-download) which offers to possibility to download Steam Workshop items. It is used in [`download.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/download.sh) of the workshop directory to offer a convenient way to download Steam Workshop items for inspection before deploying the to a Quake Live dedicated server.
 
 ## Participating
 
