@@ -6,7 +6,7 @@ This repository is two in one. It is a community-driven collection of Quake Live
 
 - [Docker-based server management](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers)
 - Community-driven configuration standards
-- New configurations to evolve Quake Live
+- Evolved configurations to bring Quake Live forward
 - [Factories](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories)
 - [Map pools](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools)
 - [Docker images](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker)
