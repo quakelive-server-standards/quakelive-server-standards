@@ -133,10 +133,10 @@ In our case, the internal and external ports are the same. Thus, just write the 
 The next step is to set up the Quake Live dedicated server instance to actually use these ports. Use the environment variables `NET_PORT`, `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` as described in the next section to do so. If you use the value of the game port for the rcon port and the value of the game port plus 1000 for the stats port, then you only have to specify the `NET_PORT` environment variable since the Docker container will set the other two accordingly.
 
 ```yml
-    environment:
-      - NET_PORT=27960
-      - ZMQ_RCON_PORT=27960 # can be omitted if the same as NET_PORT
-      - ZMQ_STATS_PORT=28960 # can be omitted if the same as NET_PORT + 1000
+environment:
+  - NET_PORT=27960
+  - ZMQ_RCON_PORT=27960 # can be omitted if the same as NET_PORT
+  - ZMQ_STATS_PORT=28960 # can be omitted if the same as NET_PORT + 1000
 ```
 
 ### Setting cvars
