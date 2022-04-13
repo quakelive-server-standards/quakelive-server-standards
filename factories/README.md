@@ -11,7 +11,7 @@ A `*.factories` file can contain contain the definition of one game mode.
   "cvars": {
     "timelimit": "10"
   },
-  "author": "Quake Live Server Standards",
+  "author": "Some author",
   "description": "Some duel game type",
   "basegt": "duel",
   "id": "someduel",
@@ -27,7 +27,7 @@ Or a list of definitions.
     "cvars": {
       "timelimit": "10"
     },
-    "author": "Quake Live Server Standards",
+    "author": "Some author",
     "description": "Some Duel game type",
     "basegt": "duel",
     "id": "someduel",
