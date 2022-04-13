@@ -14,12 +14,12 @@ Let us see were the journey leads us to. There is room to experiment. We should 
 
 ##### Timelimit
 
-`timelimit "12"` - Timelimit of 12 minutes.
+`timelimit 12` - Timelimit of 12 minutes.
 
 More of a Quake3'ish timelimit. It gives a better chance to come back which with 10 minutes timelimit most of the time is too little time.
 
 ##### Weapon respawn time
 
-`g_weaponrespawn "15"` - Weapon respawn time of 15 seconds.
+`g_weaponrespawn 15` - Weapon respawn time of 15 seconds.
 
 Quake 3 weapon respawn times to allow for weapon denying tactics. It will also reduce the amount of ammunition of the opponent and should lead to less offensive play.
