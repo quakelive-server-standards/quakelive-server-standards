@@ -4,19 +4,19 @@ This repository is two in one. It is a community-driven collection of Quake Live
 
 ## Features
 
-- Docker-based server management
+- [Docker-based server management](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers)
 - Community-driven configuration standards
 - New configurations to evolve Quake Live
-- Factories
-- Map pools
-- Docker images
-- Gathered and documented minqlx plugins
-- Gathered and documented 3rd party Quake Live applications
-- Command-line Quake Live rcon and stats console
-- Cvar collections
-- Workshop item lists
-- Download of Steam Workshop items
-- Convert Quake 3 maps to Quake Live maps
+- [Factories](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories)
+- [Map pools](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools)
+- [Docker images](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker)
+- [Gathered and documented minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/_plugins)
+- [Gathered and documented 3rd party Quake Live applications](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps)
+- [Command-line Quake Live rcon and stats console](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#accessing-your-quake-live-servers-remotely-with-ql-console)
+- [Cvar collections](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories/cvars.md)
+- [Workshop item lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#workshop-item-lists)
+- [Download of Steam Workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#download-a-workshop-item)
+- [Convert Quake 3 maps to Quake Live maps](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#convert-a-quake-3-map-to-a-quake-live-map)
 
 ## Overview
 
@@ -24,11 +24,11 @@ This repository is two in one. It is a community-driven collection of Quake Live
 
 There are directories regarding the different aspects of the community-driven Quake Live server configurations.
 
-- `configs`: Contains variants of the `server.cfg` which is the place for technical cvars
-- `factories`: Contains factories which are a way to bind cvars to a certain gametype
-- `mappools`: Contains map pool definitions
-- `minqlx-plugins`: Contains all known minqlx plugins and carefully drafted sets of them for different contexts
-- `workshop`: Contains overviews of workshop items and sets of them for different purposes
+- [`configs`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs): Contains variants of the `server.cfg` which is the place for technical cvars
+- [`factories`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories): Contains factories which are a way to bind cvars to a certain gametype
+- [`mappools`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools): Contains map pool definitions
+- [`minqlx-plugins`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins): Contains all known minqlx plugins and carefully drafted sets of them for different contexts
+- [`workshop`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop): Contains overviews of workshop items and sets of them for different purposes
 
 All of these directories contain an `_id` directory in which the original id Software configuration resides. In the case of the minqlx plugins this directory is called `_mino` because the plugin extension was not created by id Software but by a guy named mino.
 
@@ -38,15 +38,15 @@ In some cases there are also additional directories which are explained in the c
 
 ### Docker-driven server framework
 
-There is a directory `_myservers` which contains a `docker-compose.yml` which is the heart of the Dockerization. You will also find a `connect.sh` which allows you to connect to your Quake Live servers via the command line.
+There is a directory [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) which contains a `docker-compose.yml` which is the heart of the Dockerization. You will also find a `connect.sh` which allows you to connect to your Quake Live servers via the command line.
 
 ### Apps
 
-There is a directory `apps` which is a collection of all known Quake Live dedicated server related apps. These apps are more from a viewpoint of an admin as opposed to the viewpoint of a player. You will not find apps like custom Quake Live server browsers for example.
+There is a directory [`apps`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps) which is a collection of all known Quake Live dedicated server related apps. These apps are more from a viewpoint of an admin as opposed to the viewpoint of a player. You will not find apps like custom Quake Live server browsers for example.
 
 ### Docker
 
-The directory `docker` contains all of the Docker images used for the Docker-based Quake Live server framework but also for all other apps collected in the `apps` directory.
+The directory [`docker`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker) contains all of the Docker images used for the Docker-based Quake Live server framework but also for all other apps collected in the `apps` directory.
 
 ## Quickstart hosting servers
 
@@ -88,9 +88,9 @@ duel1:
 
 Change the Docker service names like `duel1` so that every name is unique.
 
-The next step is to adjust the ports so that every server uses its own unique set. Every Quake Live dedicated server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
+Change the ports so that every server uses its own unique set. Every Quake Live dedicated server uses three of them. The game port which runs with UDP and starts at `27960`, the stats port which most of the time is the same port as the game port but runs with TCP and the rcon port which is the game port plus 1000. To be quick we use exactly that scheme.
 
-Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other ports configured through the environment variables `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` will be set automatically.
+Adjust the ports in the `ports` section of the Docker Compose file and set the game port in the environment variable `NET_PORT`. Using the above mention scheme, the other two ports configured through the environment variables `ZMQ_RCON_PORT` and `ZMQ_STATS_PORT` will be set automatically.
 
 Additionally, set unique names for your servers by setting the environment variable `SV_HOSTNAME`.
 
