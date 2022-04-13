@@ -20,7 +20,6 @@ bloodcovenant|stdduel
 eldister|stdduel
 totallylost|stdduel
 sinister2012|stdduel
-dbtfrontier|stdduel
 q3tourney2|stdduel
 ospdm8a|stdduel
 placeboeffect|stdduel

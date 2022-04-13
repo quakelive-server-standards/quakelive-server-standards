@@ -13,12 +13,6 @@ A Steam Workshop item is added to a Quake Live dedicated server through a file c
 
 You obtain such an id from the Steam Workshop item URL like this one `https://steamcommunity.com/sharedfiles/filedetails/?id=691078677` by copying the number from the id URL parameter `id=691078677`.
 
-## Workshop item lists
-
-- [Duel maps](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Duel_maps.md)
-- [Minqlx](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Minqlx.md)
-- [Other](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Other.md)
-
 ## Download a Workshop item
 
 You can download a Steam Workshop item for inspection before you deploy it to your Quake Live dedicated servers. Use the contained `download.sh` shell script to do so.

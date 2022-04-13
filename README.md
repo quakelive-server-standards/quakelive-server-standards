@@ -14,7 +14,6 @@ This repository is two in one. It is a community-driven collection of Quake Live
 - [Gathered and documented 3rd party Quake Live applications](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps)
 - [Command-line Quake Live rcon and stats console](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#accessing-your-quake-live-servers-remotely-with-ql-console)
 - [Cvar collections](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories/cvars.md)
-- [Workshop item lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#workshop-item-lists)
 - [Download of Steam Workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#download-a-workshop-item)
 - [Convert Quake 3 maps to Quake Live maps](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#convert-a-quake-3-map-to-a-quake-live-map)
 

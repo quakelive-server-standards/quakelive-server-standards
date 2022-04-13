@@ -11,7 +11,6 @@ teqtrny3|stdduel
 catharsis_a1|stdduel
 kaos|stdduel
 nemisis|stdduel
-rota3dm5|stdduel
 kamasutra|stdduel
 yog3dm2|stdduel
 jaxtourney1|stdduel
@@ -27,4 +26,5 @@ ne_duel|stdduel
 q3nem06_v2|stdduel
 rota3dm1|stdduel
 rota3dm2|stdduel
+rota3dm5|stdduel
 rota3tourney1|stdduel
