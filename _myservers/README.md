@@ -98,7 +98,7 @@ services:
     volumes:
       - redis:/data # uses a Docker volume by default
 volumes:
-  redis:
+redis:
 ```
 
 The section `services` defines two services `duel1` and `redis`. The first one a Quake Live dedicated server. The second one is the Redis database as demanded by minqlx. In such a service definition you compose its configuration by defining ports, setting environment variables and mounting single files or hole directories into the resulting Docker container.
@@ -200,8 +200,8 @@ set g_allowVoteMidGame "0"
 The provided [file](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/autoexec.cfg) in your `_myservers` directory contains the the cvars of the original id Software `server.cfg` which were not standardised through Quake Live Sever Standards. Use it as a basis for your own one. You can mount it into the Docker container by specifying it in the `volumes` section of your Docker service definition.
 
 ```yml
-    volumes:
-      - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
+volumes:
+  - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
 ```
 
 The setting that you want to do at least is to set the `zmq_rcon_password` and `zmq_stats_password` cvars. The default values for both of them is `quakeliveserverstandards`. You can also leave it like this for the stats API to enable other developers to pickup the stats events from your servers and to process them in their [Quake Live app](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps).
@@ -217,8 +217,8 @@ The first thing you might want to do is to put your own Steam Id into it, follow
 Mount it into the Docker container by using the `volumes` section of a Docker service definition.
 
 ```yml
-    volumes:
-      - './access.txt:/home/steam/ql/baseq3/access.txt'
+volumes:
+  - './access.txt:/home/steam/ql/baseq3/access.txt'
 ```
 
 ### Map pools
@@ -230,8 +230,8 @@ If you want to enforce a map pool, you can use the minqlx plugin [`mino/essentia
 Before creating your own map pools, this repository offers to you carefully crafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/standard) map pools and also [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/evolved) ones that bring the Quake Live experience forward. Choose one and mount it into you Docker container in the `volumes` section of a Docker service definition. Replace the path on the left side of the colon with one pointing to another map pool file.
 
 ```yml
-    volumes:
-      - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
+volumes:
+  - '../mappools/standard/duel/mappool.txt:/home/steam/ql/baseq3/mappool.txt'
 ```
 
 In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#readme).
@@ -245,8 +245,8 @@ The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the sou
 The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container. Replace the path on the left side of the colon with any other.
 
 ```yml
-    volumes:
-      - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
+volumes:
+  - '../workshop/standard/duel/workshop.txt:/home/steam/ql/baseq3/workshop.txt'
 ```
 
 There are predefined files which are ready to use which you can choose from before creating your own list. Take a look into the carefully drafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/standard) files which there is one for every game type but also take a look into the [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved) ones.
@@ -264,8 +264,8 @@ Factories are defined in a text file `*.factories`. Inside of is a JSON string. 
 Before you create your own factory, take a look at the carefully drafted [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard) factories for every game type and also the [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/evolved) ones, which offer experiences apart the vanilla ones that were designed by id Software. Add factory files into the Quake Live dedicated server installation by mounting them in the `volumes` sesction in your `docker-compose.yml`. Replace the path before the colon with a path pointing to any factories file. If you want to add multiple files, you can mount as many files as you need.
 
 ```yml
-    volumes:
-      - '../factories/standard/ffa/ffa.factories:/home/steam/ql/baseq3/scripts/ffa.factories'
+volumes:
+  - '../factories/standard/ffa/ffa.factories:/home/steam/ql/baseq3/scripts/ffa.factories'
       - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
 ```
 
@@ -278,8 +278,8 @@ minqlx is a Quake Live dedicated server extension which enables to change the be
 Before you create your own list of minqlx plugins this repository offers to you carfully crafted [standard lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/standard) for every game type and also [evolved](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/evolved) ones, which deviate from the standard. Choose a directory with minqlx plugin files and mount it into your Docker container. It is done in the `volumes` section of a Docker service specification inside the `docker-compose.yml` file. Replace the path an the left side of the colon with any other path to a directory containing minqlx plugin files.
 
 ```yml
-    volumes:
-      - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
+volumes:
+  - '../minqlx-plugins/standard/duel:/home/steam/ql/minqlx-plugins'
 ```
 
 You do not need to specify the list of plugins in the `qlx_plugins` cvar, because the Docker container is configured in a way, that it will load every minqlx plugin it finds in the corresponding directory of the Quake Live dedicated server installation. It creates that list and passes it as a command line parameter.
