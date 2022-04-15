@@ -400,7 +400,7 @@ A good solid map that keeps you on your toes.
 
 In-game name: `beatbox`  
 https://ws.q3df.org/map/ztn3dm2/  
-https://lvlworld.com/review/id:107  
+https://lvlworld.com/overview/id:107  
 
 #### 579717457
 
