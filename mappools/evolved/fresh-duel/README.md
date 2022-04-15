@@ -1,5 +1,7 @@
 # Fresh duel maps
 
+A set of fresh maps. Use in conjunction with the [duel](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved/duel) workshop item list.
+
 ## Based on file
 
 None.
