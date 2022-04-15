@@ -107,7 +107,6 @@ Workshop id: [863262235](https://github.com/quakelive-server-standards/quakelive
 #### megadm4_09
 
 Workshop id: [579717457](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved/duel#579717457)
-https://www.youtube.com/watch?v=yl69wqaIbaM
 
 #### Monsoon
 
