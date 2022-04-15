@@ -240,7 +240,7 @@ Once you play tested the new maps and the feedback from your players are positiv
 
 ### Workshop items
 
-The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Minqlx.md).
+The [Steam Workshop](https://steamcommunity.com/app/282440/workshop/) is the source for free downloadable content for the Quake Live dedicated server. The most items found in there are [maps](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#workshop-item-lists), but also sounds for the different [intermission minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved/minqlx).
 
 The Steam Workshop item id's are put into a file called `workshop.txt` and which is mounted into the Docker container. Replace the path on the left side of the colon with any other.
 
@@ -352,7 +352,7 @@ You can connect your servers to QLStats by registering them in one of the four s
 
 A panel can receive QL stats events from up to 340 Quake Live dedicated servers, while it is ony possible to add new server owners to a panel if there are not more than 250 servers already registered.
 
-Most of the players like to enter the `!elos` command into the console of the Quake Live client. It will print the elo ratings of every player on the server. This command is provided by the minqlx plugin [`balance.py`](https://github.com/MinoMino/minqlx-plugins/blob/master/balance.py) which is a part of the [standard minqlx lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/standard/common#balance) of every game type.
+Most of the players like to enter the `!elos` command into the console of the Quake Live client. It will print the elo ratings of every player which is on the server. This command is provided by the minqlx plugin [`balance.py`](https://github.com/MinoMino/minqlx-plugins/blob/master/balance.py) which is a part of the [standard minqlx lists](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/standard/common#balance) of every game type.
 
 ## Joining the Quake Live evolution
 
