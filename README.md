@@ -37,7 +37,7 @@ In some cases there are also additional directories which are explained in the c
 
 ### Docker-driven server framework
 
-There is a directory [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) which contains a `docker-compose.yml` which is the heart of the [Dockerization](https://www.docker.com). You will also find a [`connect.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/connect.sh) which allows you to connect to your Quake Live servers via the command line.
+There is a directory [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) which contains a [`docker-compose.yml`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/docker-compose.yml) which is the heart of the [Dockerization](https://www.docker.com). You will also find a [`connect.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/connect.sh) which allows you to connect to your Quake Live servers via the command line.
 
 ### Apps
 
