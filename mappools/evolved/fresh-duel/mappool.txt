@@ -1,0 +1,41 @@
+aggressor|stdduel
+bastet|stdduel
+beatbox|stdduel
+bloodcovenant|stdduel
+bloodruntribute|stdduel
+bluemonk|stdduel
+cage|stdduel # check if correct map name
+catharsis_a1|stdduel
+charon3dm13|stdduel
+dbtfrontier|stdduel
+eldister|stdduel
+fjo3tourney1|stdduel
+gmdm3|stdduel # check if correct map name
+jaxtourney1|stdduel
+kamasutra|stdduel
+kaos|stdduel
+megadm4_09|stdduel
+monsoon_converted|stdduel
+ne_duel|stdduel
+necro6|stdduel
+nemisis|stdduel # check if correct map name
+ospdm8a|stdduel
+oxodm2|stdduel
+pjw3tourney2|stdduel
+placeboeffect|stdduel
+prot2|stdduel
+q3nem06_v2|stdduel
+q3tourney2|stdduel
+reqtourney1|stdduel
+rota3dm1|stdduel
+rota3dm2|stdduel
+rota3dm5|stdduel
+rota3tourney1|stdduel
+sainttourney1|stdduel
+simetrik|stdduel
+sinister2012|stdduel
+swift|stdduel
+teqtrny3|stdduel
+therage|stdduel
+totallylost|stdduel
+yog3dm2|stdduel
