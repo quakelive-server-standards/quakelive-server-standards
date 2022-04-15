@@ -37,7 +37,7 @@ In some cases there are also additional directories which are explained in the c
 
 ### Docker-driven server framework
 
-There is a directory [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) which contains a `docker-compose.yml` which is the heart of the Dockerization. You will also find a `connect.sh` which allows you to connect to your Quake Live servers via the command line.
+There is a directory [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) which contains a `docker-compose.yml` which is the heart of the [Dockerization](https://www.docker.com). You will also find a [`connect.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/connect.sh) which allows you to connect to your Quake Live servers via the command line.
 
 ### Apps
 
@@ -45,7 +45,7 @@ There is a directory [`apps`](https://github.com/quakelive-server-standards/quak
 
 ### Docker
 
-The directory [`docker`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker) contains all of the Docker images used for the Docker-based Quake Live server framework but also for all other apps collected in the `apps` directory.
+The directory [`docker`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker) contains all of the Docker images used for the Docker-based Quake Live server framework but also for all other apps collected in the [`apps`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/apps) directory.
 
 ## Quickstart hosting servers
 
@@ -57,7 +57,7 @@ Install Git and clone this repository using `git clone https://github.com/quakel
 
 ### Configuring
 
-Open the `docker-compose.source.yml` file in the `_myservers` directory. It contains reference server definitions for every game type. Copy those that you want into the `docker-compose.yml` file. If you want more than one server for a game type, copy the reference definition multiple times.
+Open the [`docker-compose.source.yml`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/docker-compose.source.yml) file in the [`_myservers`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers) directory. It contains reference server definitions for every game type. Copy those that you want into the [`docker-compose.yml`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/docker-compose.yml) file. If you want more than one server for a game type, copy the reference definition multiple times.
 
 Here you can see the definition for a duel server.
 
@@ -105,14 +105,8 @@ The next step is to start and understand how to configure a Quake Live server in
 
 Community-driven Quake Live server standards come to life through the participation of the community.
 
-### Contribute configs
+### Contribute evolved Quake Live dedicated server configurations
 
-### Contribute factories
+### Discuss what to transfer into the Quake Live server standards
 
-### Contribute minqlx plugins
-
-### Contribute workshop
-
-### Contribute Docker files
-
-### Contribute apps
+### Fix files

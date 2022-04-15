@@ -1,6 +1,6 @@
 # Steam Workshop items
 
-The [Steam Workshop for Quake Live](https://steamcommunity.com/app/282440/workshop/) is a place where you can upload and download free content for Quake Live. It contains mostly maps but also other things like the long absence [gibs](https://steamcommunity.com/sharedfiles/filedetails/?id=691078677) or [different media files](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop/Minqlx.md) for certain minqlx plugins.
+The [Steam Workshop for Quake Live](https://steamcommunity.com/app/282440/workshop/) is a place where you can upload and download free content for Quake Live. It contains mostly maps but also other things like the long absence [gibs](https://steamcommunity.com/sharedfiles/filedetails/?id=691078677) or [different media files](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/evolved/minqlx) for certain minqlx plugins.
 
 ## Add Workshop items to a Quake Live dedicated server
 
