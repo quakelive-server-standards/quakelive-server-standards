@@ -1,3 +1,3 @@
-# Default minqlx plugin list by mino
+# Original minqlx plugin set by mino
 
-This is the default list of minqlx plugins as it is composed in a fresh minqlx installation.
+This is the original set of minqlx plugins of a fresh minqlx installation.
