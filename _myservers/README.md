@@ -2,6 +2,8 @@
 
 Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live dedicated servers to another computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
 
+You can find the original id Software Quake Live dedicated server documentation `server_readme.txt` [here](server_readme.txt).
+
 ## Overview
 
 All your servers are defined inside the `docker-compose.yml` file. Additionally there is a `docker-compose.source.yml` file. It is a source for Docker service definitions. You can copy and paste content from this file into your own.
