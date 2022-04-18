@@ -4,6 +4,10 @@ This directory contains variants of the `server.cfg` as it is intended to be use
 
 ## Overview
 
+### id Software originals
+
+The directory `_id` contains the original `server.cfg` along with the original `server_readme.txt`.
+
 ### Standard
 
 There is a standard `server.cfg` for all server configurations since it does not contain any server instance or game type specific settings. It also contains vital settings for the Docker-based server framework to function. You can read about the standardized values [here](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs/standard#readme).
@@ -12,17 +16,15 @@ There is a standard `server.cfg` for all server configurations since it does not
 
 No evolutions yet.
 
-### id Software originals
+## Evolve Quake Live
 
-The directory `_id` contains the original `server.cfg` along with the original `server_readme.txt`.
+### Contributing an evolved `server.cfg`
 
-## Participe
+Once you started adding cvars to your [`_myservers/autoexec.cfg`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#autoexeccfg) it is possible that you find settings which help to improve the Quake Live experience for the players. If they fit into the category, appliecable to any Quake Live server instance disregarding the game type, create your own `server.cfg` and put your cvars into it. Before you start with an empty file, base your file  either on the [`standard`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs/standard) or on one of the [`evolutions`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs/evolved). In fact, this is a must. Evolved `server.cfg` files which do not base on an existing one will not be accepted.
 
-### Contributing your `server.cfg`
+Here are the instructions on how to contribute your file.
 
-Suppose you found a value for a technical cvar which helps running Quake Live servers more stable. You added it to your own `server.cfg`, which you have based on one of config files either in `configs/standard` or `configs/evolved`. Now you want to contribute that file back to the Quake Live Server Standards repository. Do the following steps.
-
-1. Create a fresh clone of the official Quake Live Server Standards Git repository.
+1. Use a fresh unaltered clone of the official Quake Live Server Standards Git repository.
 2. Create a new directory inside the `configs/evolved` directory. Name it as you like.
 3. Put your `server.cfg` file into it.
 4. Create a README.md file like the one in [`configs/evolved/_example/README.md`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/configs/evolved/_example/README.md).
