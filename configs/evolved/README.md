@@ -1,4 +1,4 @@
-# Evolved Workshop item lists
+# Evolved server configurations
 
 This is where the Quake Live evolution begins.
 
