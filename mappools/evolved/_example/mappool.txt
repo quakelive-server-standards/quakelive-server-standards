@@ -1,0 +1,15 @@
+aerowalk|stdduel
+battleforged|stdduel
+beatbox|stdduel
+bloodrun|stdduel
+campgrounds|stdduel
+cure|stdduel
+dismemberment|stdduel
+elder|stdduel
+furiousheights|stdduel
+hektik|stdduel
+houseofdecay|stdduel
+silence|stdduel
+sinister|stdduel
+toxicity|stdduel
+verticalvengeance|stdduel
