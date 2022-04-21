@@ -14,7 +14,7 @@ There is a standard `server.cfg` for all server configurations since it does not
 
 ### Evolved
 
-No evolutions yet.
+Evolved `server.cfg` files which aim to improve the experience over the standard file. Cvars defined there might be voted upon to be included into the official Quake Live server standard.
 
 ## Evolve Quake Live
 
