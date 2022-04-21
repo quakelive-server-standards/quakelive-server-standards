@@ -10,11 +10,11 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/tree/89
 
 *Note: You need to base your minqlx plugin directory either on the [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugin/standard) or on one of the [evolutions](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins/evolved). Otherwise your pull request will not be accepted.*
 
-*Note: To get this kind of link you need to open the directory on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
+*Note: Refer to the directory by using a link which references a specific git commit. You can get such a link by opening the directory you want to refer to on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
 
 ## minqlx plugins
 
-*Note: List the workshop items you have changed here. Use the correct Markdown headline level 5.*
+*Note: List the cvars that you added or changed in an alphabetical order. Use the correct Markdown headline level 4 by using `####`.*
 
 ##### Clan
 

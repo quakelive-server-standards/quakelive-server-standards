@@ -10,11 +10,11 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/48
 
 *Note: You need to base your `*.factories` file either on the [standard](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard) or on one of the [evolutions](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/evolved). Otherwise your pull request will not be accepted.*
 
-*Note: To get this kind of link you need to open the file on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
+*Note: Refer to the file by using a link which references a specific git commit. You can get such a link by opening the file you want to refer to on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
 
 ## Cvars
 
-*Note: List the cvars you have changed here. Use the correct Markdown headline level 5.*
+*Note: List the cvars that you added or changed in an alphabetical order. Use the correct Markdown headline level 4 by using `####`.*
 
 ##### Time limit
 
