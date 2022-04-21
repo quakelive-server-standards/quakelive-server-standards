@@ -10,16 +10,28 @@ Other things like the shotgun spread, which is different in Q3, are irreparabel.
 
 Let us see were the journey leads us to. There is room to experiment. We should see this approach of evolving the QL formular with Q3 elements. Back to the roots a little but in the end it will not be possible to mirror Q3. This version will be an evolved Quake Live. Quake Live 3.
 
-## Changed cvars
+## Based on
 
-##### Timelimit
+https://github.com/quakelive-server-standards/quakelive-server-standards/blob/482a3e2e5fd9dd106f7221d1f12ae2df168e7610/factories/standard/duel/duel.factories
 
-`timelimit 12` - Timelimit of 12 minutes.
+## Evolutions
+
+#### `g_weaponrespawn 15`
+
+Quake 3 weapon respawn times to allow for weapon denying tactics. It will also reduce the amount of ammunition of the opponent and should lead to less offensive play.
+
+#### `timelimit 12`
 
 More of a Quake3'ish timelimit. It gives a better chance to come back which with 10 minutes timelimit most of the time is too little time.
 
-##### Weapon respawn time
+## History
 
-`g_weaponrespawn 15` - Weapon respawn time of 15 seconds.
+### Version 1
+
+#### Add: `g_weaponrespawn 15`
 
 Quake 3 weapon respawn times to allow for weapon denying tactics. It will also reduce the amount of ammunition of the opponent and should lead to less offensive play.
+
+#### Add: `timelimit 12`
+
+More of a Quake3'ish timelimit. It gives a better chance to come back which with 10 minutes timelimit most of the time is too little time.
