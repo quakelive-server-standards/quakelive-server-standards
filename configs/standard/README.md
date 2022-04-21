@@ -1,6 +1,6 @@
 # Standard server configuration
 
-This is the standard `server.cfg` file. It represents the smallest common denominator for any Quake Live server configuration.
+The community voted upon standard `server.cfg` which replaces the original one from id Software. It represents the smallest common denominator for any Quake Live server configuration.
 
 ## Based on
 
