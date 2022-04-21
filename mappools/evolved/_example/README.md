@@ -10,7 +10,7 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/64
 
 *Note: You do not need to base your `mappool.txt` on any file but you can base it either on one of the [standards](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/standard) or on one of the [evolutions](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools/evolved).*
 
-*Note: If you base you map pool on an existing file then you need to state it here. Refer to that file by using a link which references a specific git commit. You can get such a link by opening the file you want to refer to on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
+*Note: If you base you map pool on an existing file then you need to state it here. Refer to that file by using a link which references a specific Git commit. You can get such a link by opening the file you want to refer to on the GitHub website. Then click on history at the top right side. Find the commit you want to refer to (usually the one on the top) and click the button with that file icon. Its tooltip will display the message "View at this point in the history". Now copy the link from the browser address bar.*
 
 ## Maps
 
