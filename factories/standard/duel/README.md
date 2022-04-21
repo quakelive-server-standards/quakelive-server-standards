@@ -1,129 +1,153 @@
 # Standard Duel factory
 
+The community voted upon standard factory for Duel which replaces the original one from id Software.
+
+## Based on
+
+https://github.com/quakelive-server-standards/quakelive-server-standards/blob/5168be332b7d7e2ae0027c7e7b27a34144cee265/factories/_id/factories.txt
+
 ## Standards
 
-##### Timlimit
+#### `fraglimit "0"`
 
-`timelimit "10"` - Timelimit of 10 minutes.
+The id Software value.
 
-This is the official id Software standard.
-
-##### Fraglimit
-
-`fraglimit "10"` - Fraglimit of 10 frags.
-
-This is the official id Software standard.
-
-##### Allow voting
-
-`set g_allowVote "1"` - Voting allowed.
-
-A server without voting prevents the players on the server to decide which map they want to play next for example.
-
-##### Vote delay
-
-`set g_voteDelay "3000"` - Delay allowing votes for 3000 milliseconds after map load.
-
-To prevent a player with a faster machine to dictate the next map it is useful to prevent voting for some time so that the player with the slower machine has finished loading and is able to vote.
-
-##### Vote limit
-
-`set g_voteLimit "10"` - Limit users to 10 votes per map.
-
-A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
-
-##### Allow voting mid game
-
-`g_allowVoteMidGame "0"` - Only allow votes from mid game.
-
-Voting mid game does not make sense in duel. A duel is played until the end or the person forfeits.
-
-##### Allow spectator voting
-
-`g_allowSpecVote "0"`- Allow spectators to call votes.
+#### `g_allowSpecVote "0"`
 
 A spectator should not be able to vote otherwise the players wanting to play a game need to wait for the spectators to also vote and hopefully vote yes.
 
-##### Vote flags
+#### `g_allowVote "1"`
 
-`g_voteFlags "30200"` - Add together the below values for which callvotes should be DISABLED.
+A server without voting prevents the players on the server to decide which map they want to play next for example.
+
+#### `g_allowVoteMidGame "0"`
+
+Voting mid game does not make sense in Duel. A Duel is played until the end or the person forfeits.
+
+#### `g_inactivity "600"`
+
+Some people just idle on servers which is annoying because the server browser gives the impression that someone is waiting which is not true. People should be kicked when inactive. 10 minutes is a good value here. It is enough time to go to toilet, talk to partner or something else. For the other player it might be ok to wait that long.
+
+#### `g_itemHeight "15"`
+
+The id Software value.
+
+#### `g_itemTimers "0"`
+
+The id Software value.
+
+#### `g_voteDelay "3000"`
+
+To prevent a player with a faster machine to dictate the next map it is useful to prevent voting for some time so that the player with the slower machine has finished loading and is able to vote.
+
+#### `g_voteFlags "30200"`
 
 - `1` map - Of course.
 - `2` map_restart - Does not make sense because mid match voting is disabled.
 - `4` nextmap - Cannot by disabled because otherwise the map list in the voting menu disappears.
-- `8` gametype - Do not allow to change game mode. A duel server stays a duel server.
+- `8` gametype - Do not allow to change game mode. A Duel server stays a Duel server.
 - `16` kick - Do not allow to kick because it will be abused by friends and feels exluding, harms the community and the game.
 - `32` timelimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
 - `64` fraglimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
-- `128` shuffle - Does not make no sense in duel.
-- `256` teamsize - Does not make no sense in duel.
+- `128` shuffle - Does not make sense in Duel.
+- `256` teamsize - Does not make sense in Duel.
 - `512` cointoss/random - Might be needed in tourneys.
-- `1024` loadouts - Does not make no sense in duel.
+- `1024` loadouts - Does not make sense in Duel.
 - `2048` end-game voting - End game voting is good to change the map quickly and also to see unkown maps in the map pool.
-- `4096` ammo (global) - Does not make no sense in duel.
+- `4096` ammo (global) - Does not make sense in Duel.
 - `8192` timers (item) - Might be an option for worse players who try to learn.
 - `16382` weapon respawn - Disable voting for respawn time because this would change the standard which people would not expect.
 
-##### Player ratio for starting
+#### `g_voteLimit "10"`
 
-`sv_warmupReadyPercentage "1"` - Ratio of players that must be ready before the match starts.
+A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
 
-##### Warmup ready delay
-
-`g_warmupReadyDelay "60"` - Wait x seconds before allowing match to start to allow all players to connect.
+#### `g_warmupReadyDelay "60"`
 
 There are no delays which annoys if the other player does not ready up and then leaves anyway. Thus a value here is a highly recommended. A lot of servers do 120 seconds which is a bit stretching. Some do 10 seconds which is a little short. 60 should be a good value.
 
-##### Warmup ready delay action
-
-`g_warmupReadyDelayAction "2"` - to 1 to force players to spectator after g_warmupReady Delay, 2 to force ready up.
+#### `g_warmupReadyDelayAction "2"`
 
 If someone joins a server the person should be ready play. If she/he does not want to then she/he should leave.
 
-##### Inactivity kick
+#### `pmove_BunnyHop "0"`
 
-`g_inactivity "600"` - Kick players who are inactive for X amount of seconds.
+The id Software value.
+
+#### `pmove_CrouchStepJump "0"`
+
+The id Software value.
+
+#### `pmove_JumpTimeDeltaMin "50"`
+
+The id Software value.
+
+#### `pmove_WaterSwimScale "0.5f"`
+
+The id Software value.
+
+#### `pmove_WaterWadeScale "0.75f"`
+
+The id Software value.
+
+#### `sv_warmupReadyPercentage "1"`
+
+`sv_warmupReadyPercentage "1"` - Ratio of players that must be ready before the match starts.
+
+#### `timelimit "10"`
+
+The id Software value.
+
+## History
+
+### Version 1
+
+#### Add: `g_allowSpecVote "0"`
+
+A spectator should not be able to vote otherwise the players wanting to play a game need to wait for the spectators to also vote and hopefully vote yes.
+
+#### Add: `g_allowVote "1"`
+
+A server without voting prevents the players on the server to decide which map they want to play next for example.
+
+#### Add: `g_allowVoteMidGame "0"`
+
+Voting mid game does not make sense in Duel. A Duel is played until the end or the person forfeits.
+
+#### Add: `g_inactivity "600"`
 
 Some people just idle on servers which is annoying because the server browser gives the impression that someone is waiting which is not true. People should be kicked when inactive. 10 minutes is a good value here. It is enough time to go to toilet, talk to partner or something else. For the other player it might be ok to wait that long.
 
-##### Item height
+#### Add: `g_voteDelay "3000"`
 
-`g_itemHeight "15"` - Item height of 15 units.
+To prevent a player with a faster machine to dictate the next map it is useful to prevent voting for some time so that the player with the slower machine has finished loading and is able to vote.
 
-This is the official id Software standard.
+#### Add: `g_voteFlags "30200"`
 
-##### Item timers
+- `1` map - Of course.
+- `2` map_restart - Does not make sense because mid match voting is disabled.
+- `4` nextmap - Cannot by disabled because otherwise the map list in the voting menu disappears.
+- `8` gametype - Do not allow to change game mode. A Duel server stays a Duel server.
+- `16` kick - Do not allow to kick because it will be abused by friends and feels exluding, harms the community and the game.
+- `32` timelimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
+- `64` fraglimit - Do not allow to change the timelimit because it will be used by better players to minimize their game time. Better players should play worse players and also under the same conditions as everybody else.
+- `128` shuffle - Does not make sense in Duel.
+- `256` teamsize - Does not make sense in Duel.
+- `512` cointoss/random - Might be needed in tourneys.
+- `1024` loadouts - Does not make sense in Duel.
+- `2048` end-game voting - End game voting is good to change the map quickly and also to see unkown maps in the map pool.
+- `4096` ammo (global) - Does not make sense in Duel.
+- `8192` timers (item) - Might be an option for worse players who try to learn.
+- `16382` weapon respawn - Disable voting for respawn time because this would change the standard which people would not expect.
 
-`g_itemTimers "0"` - Item timers disabled.
+#### Add: `g_voteLimit "10"`
 
-This is the official id Software standard.
+A player who just does not stop to vote can be annoying. But a server which prevents players from voting enough is also annoying. A good value should not be to small and not be too big.
 
-##### Bunny hopping
+#### Add: `g_warmupReadyDelay "60"`
 
-`pmove_BunnyHop "0"` - Bunny hopping disabled.
+There are no delays which annoys if the other player does not ready up and then leaves anyway. Thus a value here is a highly recommended. A lot of servers do 120 seconds which is a bit stretching. Some do 10 seconds which is a little short. 60 should be a good value.
 
-This is the official id Software standard.
+#### Add: `g_warmupReadyDelayAction "2"`
 
-##### Undocumented cvar
-
-`pmove_CrouchStepJump "0"` - Undocumented cvar
-
-This is the official id Software standard.
-
-##### Undocumented cvar
-
-`pmove_JumpTimeDeltaMin "50"` - Undocumented cvar
-
-This is the official id Software standard.
-
-##### Undocumented cvar
-
-`pmove_WaterSwimScale "0.5f"` - Undocumented cvar
-
-This is the official id Software standard.
-
-##### Undocumented cvar
-
-`pmove_WaterWadeScale "0.75f"` - Undocumented cvar
-
-This is the official id Software standard.
+If someone joins a server the person should be ready play. If she/he does not want to then she/he should leave.
