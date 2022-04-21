@@ -59,7 +59,7 @@ If a factory is invalid, the reason for it will be printed in the console during
 
 For selecting the cvars you want to adjust in your game type, there is a factory-focused cvar collection [here](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories/cvars.md).
 
-## Participate
+## Evolve Quake Live
 
 ## Other
 
