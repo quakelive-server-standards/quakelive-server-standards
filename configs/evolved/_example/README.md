@@ -42,13 +42,13 @@ This value has been tested and improves hitscan weapon hit detection.
 
 To support servers with 16 players this value is set to 120 mega bytes.
 
-*Note: Just repeat the text that you already wrote from above. This repetition is for when the value is removed in which case it will not be existent above anymore*
+*Note: Just repeat the text that you already wrote from above. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
 
 #### Change: `set sv_fps "60"`
 
 This value has been tested and improves hitscan weapon hit detection.
 
-*Note: Just repeat the text that you already wrote from above. This repetition is for when the value is removed in which case it will not be existent above anymore*
+*Note: Just repeat the text that you already wrote from above. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
 
 #### Remove: `set g_floodprot_maxcount "10"`
 
