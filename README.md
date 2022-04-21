@@ -101,7 +101,7 @@ To run your freshly defined server, open a terminal, cd into the `_myservers` di
 
 The next step is to start and understand how to configure a Quake Live server in all of its different aspects. Take a look into this [README.md](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#readme) file to learn about everything.
 
-## Participating
+## Evolve Quake Live
 
 Community-driven Quake Live server standards come to life through the participation of the community.
 

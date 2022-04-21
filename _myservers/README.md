@@ -238,7 +238,7 @@ volumes:
 
 In the next step, if you want to improve the Quake Live experience for the players of your servers, you might want to create your own map pools. This repository helps you in doing so by explaining to you [how to create them](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#readme).
 
-Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#participating) your map pool back to the official Quake Live Server Standards repository.
+Once you play tested the new maps and the feedback from your players are positive, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/mappools#evolve-quake-live) your map pool back to the official Quake Live Server Standards repository.
 
 ### Workshop items
 
@@ -255,7 +255,7 @@ There are predefined files which are ready to use which you can choose from befo
 
 Once you are ready to search the Steam Workshop by yourself, create a `workshop.txt` file inside your `_myservers` directory, fill it with id's and mount it into the container. [Here](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) you will find Workshop item lists, a script do download an item onto your harddrive and other useful things.
 
-When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#participate) it back to the Quake Live Server Standards repository.
+When your choice of Workshop items was a success because your players love it, [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#evolve-quake-live) it back to the Quake Live Server Standards repository.
 
 ### Factories
 
@@ -271,7 +271,7 @@ volumes:
       - '../factories/standard/duel/duel.factories:/home/steam/ql/baseq3/scripts/duel.factories'
 ```
 
-Once you feel the need to evolve a game type, you will create your own [factory](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories). Put your `*.factories` file inside your `_myservers` directory first. Test it a while with the players of your servers and then [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories#participate) it back to the official Quake Live Server Standards repository.
+Once you feel the need to evolve a game type, you will create your own [factory](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories). Put your `*.factories` file inside your `_myservers` directory first. Test it a while with the players of your servers and then [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories#evolve-quake-live) it back to the official Quake Live Server Standards repository.
 
 ### minqlx plugins
 
@@ -294,7 +294,7 @@ Start by adding your list of minqlx plugins to the `_myservers/autoexec.cfg`. Th
 set qlx_plugins "balance, docs, essentials, log, permission, plugin_manager, commands, listmaps"
 ```
 
-If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins#participating) it back to the Quake Live Server Standards repository.
+If you have tested your additional minqlx plugins and think, they are improving the Quake Live experience, you are ready to [contribute](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/minqlx-plugins#evolve-quake-live) it back to the Quake Live Server Standards repository.
 
 ## Starting and maintaining your Quake Live servers
 
@@ -360,9 +360,9 @@ Most of the players like to enter the `!elos` command into the console of the Qu
 
 The next part, as a server administrator and Quake Live experience creator, is to join the Quake Live evolution, where we, the community, try to establish new standards to bring the game forward. Thus, if you have found a setting the players on your servers accept really well, consider to contribute it back to the original Quake Live Server Standards repository. It might be something that improves the experience for all of us and therefor it might be able to consolidate and grow our player base. It might even be worthy to be integrated into a standard.
 
-Take a look at the root [README.md](https://github.com/quakelive-server-standards/quakelive-server-standards#readme) to get an overview over how to participate and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
+Take a look at the root [README.md](https://github.com/quakelive-server-standards/quakelive-server-standards#readme) to get an overview over how to evolve Quake Live and take a look into the different directory's README<span>.md</span> files to get concrete instructions.
 
-- [Contribute to configs](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs#participating)
+- [Contribute to configs](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/configs#evolve-quake-live)
 - [Contribute to Docker images](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/docker#readme)
 - [Contribute to factories](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/factories#readme)
 - [Contribute to map pools](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/mappools#readme)

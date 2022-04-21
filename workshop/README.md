@@ -27,4 +27,4 @@ You will find the downloaded Steam Workshop item inside the `_items` directory. 
 
 ## Convert a Quake 3 map to a Quake Live map
 
-## Participate
+## Evolve Quake Live

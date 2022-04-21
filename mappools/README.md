@@ -36,4 +36,4 @@ blackcathedral|stdca
 
 To incorporate a new map you also need to work with [Steam Workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) which can contain Quake Live maps. Add such an item to your Quake Live dedicated server installation and mention in in the `mappool.txt`.
 
-## Participating
+## Evolve Quake Live

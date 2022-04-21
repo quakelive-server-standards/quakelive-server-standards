@@ -10,4 +10,4 @@ There is also an [overview](https://github.com/quakelive-server-standards/quakel
 
 ## Developing minqlx plugins
 
-## Participating
+## Evolve Quake Live
