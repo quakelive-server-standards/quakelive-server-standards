@@ -18,7 +18,7 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/64
 
 #### Beatbox
 
-![Level shot](../../_images/beatbox.jpeg)
+![Level shot](../../../workshop/_images/beatbox.jpeg)
 
 This map is a solid classic and should belong to a Duel map pool.
 
