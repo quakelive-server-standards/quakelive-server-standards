@@ -1,5 +1,7 @@
 # Q3 Map Converter
 
+This Docker image is not implemented yet. If you have an idea on how to do it, take look at this [GitHub issue](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/18).
+
 ## How to use this image
 
 Create a one time Docker container from the image and pass it a Quake 3 `*.pk3` file.
