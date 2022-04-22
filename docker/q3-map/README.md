@@ -1,9 +1,24 @@
-## Option 1
+# Q3 Map Converter
 
-http://aluigi.org/papers/quakelivedec.zip
+## How to use this image
 
-What about Q3 maps? Yet again, just grab the Q3 pk3 files and encode them for QL using qldec tool. When you're done just place them in local ql baseq3 folder. One bit of advice tho, when converting Q3 ctf maps, open them up in radiant and remove team arena content there and make sure the weapons are properly placed, because 3w map pack includes all the TA holdables + powerups by default to appear on the map. If you're a map maker you can also test your own maps directly on QL, no need to test it with cpma guys anymore.
+Create a one time Docker container from the image and pass it a Quake 3 `*.pk3` file.
 
-## Option 2
+```
+docker run --rm --volume $PWD:/home quakeliveserverstandards/q3-map quake3-map.pk3
+```
 
-https://github.com/sbarisic/bspconv
+You can also create a shell script `convert.sh` to execute the Docker command for running the Docker container. The `$*` part will forward any parameters given to the script to the Docker run command inside that script.
+
+```sh
+#!/bin/sh
+docker run --rm --volume $PWD:/home quakeliveserverstandards/q3-map $*
+```
+
+Use it like this.
+
+```
+./convert.sh quake3-map.pk3
+```
+
+You can also use the [Quake Live Server Standards server framework](https://github.com/quakelive-server-standards/quakelive-server-standards) as the base for your Quake Live servers which comes with a ready to use [`convert.sh`](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/convert.sh).
