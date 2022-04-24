@@ -16,9 +16,11 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/ec
 
 *Note: List the Workshop items that you added or changed in a numerical order.*
 
-### 547937675 - Beatbox
+### `547937675` Beatbox Map (ztn3dm2)
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=539421606
+https://steamcommunity.com/sharedfiles/filedetails/?id=547937675  
+
+*Note: For the headline, state the Steam Workshop id and behind it copy the title of that Workshop item from the Steam website.*
 
 *Note: State the Steam Workshop link to that item. Add an optional description underneath it.*
 
@@ -26,7 +28,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=539421606
 
 #### Beatbox
 
-![Map image](../../_images/beatbox.jpeg)
+![Level shot](../../_images/beatbox.jpg)
 
 Another map by the creator of Bloodrun.
 
@@ -34,7 +36,9 @@ In-game name: `beatbox`
 https://ws.q3df.org/map/ztn3dm2/  
 https://lvlworld.com/overview/id:107  
 
-*Note: Add the so called level shot of that map. You can find it by [downloading](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#download-a-workshop-item) the Workshop item and extracting the `*.pk3` file with [7-Zip](https://www.7-zip.org). Scale it down to 637x358 pixel and add it to the [`_images`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/_images) directory. Reference the image in your `README.md` by using the Markdown code `![Map image](../../_images/beatbox.jpeg)`.*
+*Note: Choose the name of the map as headline.*
+
+*Note: Add the so called level shot of that map. You can find it by [downloading](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop#download-a-workshop-item) the Workshop item and extracting the `*.pk3` file with [7-Zip](https://www.7-zip.org). Scale it down to 637x358 pixel and add it to the [`_images`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop/_images) directory. Reference the image in your `README.md` by using the Markdown code `![Level shot](../../_images/beatbox.jpeg)`.*
 
 *Note: Add a description for the map.*
 
@@ -52,14 +56,7 @@ https://lvlworld.com/overview/id:107
 
 ### Version 1
 
-#### Add: 539421606
+*Note: List the made changes. Reuse the content of the headline from above.*
 
-Provide the players with the option to play on the Intel version of Bloodrun.
-
-*Note: Just repeat the text that you already wrote from above. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
-
-#### Remove: 691078677
-
-Gibs are too brutal and should not be allowed.
-
-*Note: State maps that you removed. Underneath describe why you removed it.*
+#### **Add:** `547937675` Beatbox
+#### **Remove:** `691078677` Gibs

@@ -6,11 +6,9 @@ This Workshop item list collects all duel maps.
 
 https://github.com/quakelive-server-standards/quakelive-server-standards/tree/ece697d788277555bb6f008c18d8734c57faeef4/workshop/standard/duel  
 
-## Version 1
+## Evolutions
 
-### Added
-
-#### 540937824 - Cage
+#### `540937824` Cage
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=540937824  
 
@@ -20,7 +18,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=540937824
 
 In-game name: `cage`  
 
-#### 542684362 - MONSOON_CONVERTED
+#### `542684362` MONSOON_CONVERTED
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=542684362  
 
@@ -33,7 +31,7 @@ Lukin's Monsoon (xtn remix) ported to the new version of QL.
 In-game name: `monsoon_converted`  
 https://ws.q3df.org/map/monsoon/  
 
-#### 547937675 - Beatbox Map (ztn3dm2)
+#### `547937675` Beatbox Map (ztn3dm2)
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=547937675  
 
@@ -47,7 +45,7 @@ In-game name: `beatbox`
 https://ws.q3df.org/map/ztn3dm2/  
 https://lvlworld.com/overview/id:107  
 
-#### 563655427 - The Rage
+#### `563655427` The Rage
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=563655427  
 
@@ -61,7 +59,7 @@ In-game name: `therage`
 https://ws.q3df.org/map/fora_rage/  
 https://lvlworld.com/overview/id:1955  
 
-#### 569873334 - Aggressor
+#### `569873334` Aggressor
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=569873334  
 
@@ -72,7 +70,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=569873334
 In-game name: `aggressor`  
 https://ws.q3df.org/map/aggressor  
 
-#### 571945871 - Reloaded by Yogi
+#### `571945871` Reloaded by Yogi
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=571945871  
 
@@ -86,7 +84,7 @@ In-game name: `yog3dm2`
 https://ws.q3df.org/map/yog3dm2/  
 https://lvlworld.com/overview/id:585  
 
-#### 579717457 - Quake Live Extra Duel Maps
+#### `579717457` Quake Live Extra Duel Maps
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=579717457  
 
@@ -175,7 +173,7 @@ https://lvlworld.com/overview/id:1832
 In-game name: `ospdm8a`  
 https://ws.q3df.org/map/ospdm8a/  
 
-#### 583405286 - Kora
+#### `583405286` Kora
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=583405286  
 
@@ -187,7 +185,7 @@ In-game name: `rota3dm5`
 https://ws.q3df.org/map/rota3dm5/  
 https://lvlworld.com/overview/id:2306  
 
-#### 641459594 - Placebo Effect
+#### `641459594` Placebo Effect
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=641459594  
 
@@ -197,7 +195,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=641459594
 
 In-game name: `placeboeffect`  
 
-#### 648343575 - Sinister (2012)
+#### `648343575` Sinister (2012)
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=648343575  
 
@@ -209,7 +207,7 @@ The first version of "Sinister" out of 2012 (Premium pak 14).
 
 In-game name: `sinister2012`  
 
-#### 774562650 - Duel Map Nemesis
+#### `774562650` Duel Map Nemesis
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=774562650  
 
@@ -220,7 +218,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=774562650
 The Map has its unique style with lots of cool angles and jumps.
 In-game name: `nemesis`  
 
-#### 821675354 - The Proving Grounds II
+#### `821675354` The Proving Grounds II
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=821675354  
 
@@ -233,7 +231,7 @@ The Proving Grounds II (pro-q3tourney2) - converted, remixed and optimized for Q
 In-game name: `prot2`  
 https://ws.q3df.org/map/pro-q3tourney2/  
 
-#### 822833735 - Totally Lost
+#### `822833735` Totally Lost
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=822833735  
 
@@ -246,7 +244,7 @@ Totally Lost (pro-nodm9) - converted from Q3A and optimized for Quake Live.
 In-game name: `totallylost`  
 https://ws.q3df.org/map/nodm9/  
 
-#### 856142431 - Kamasutra
+#### `856142431` Kamasutra
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=856142431  
 
@@ -258,7 +256,7 @@ In-game name: `kamasutra`
 https://ws.q3df.org/map/pukka3tourney6/  
 https://lvlworld.com/overview/id:2058  
 
-#### 863262235 - Khaooohs
+#### `863262235` Khaooohs
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=863262235  
 
@@ -272,7 +270,7 @@ In-game name: `kaos`
 https://en.ws.q3df.org/map/kaos/  
 https://lvlworld.com/overview/id:49  
 
-#### 1209601964 - Catharsis (Alpha 1)
+#### `1209601964` Catharsis (Alpha 1)
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1209601964  
 
@@ -284,7 +282,7 @@ Small-to-medium sized duel-oriented arena, based on an Warsow map.
 
 In-game name: `catharsis_a1`  
 
-#### 1691279416 - Blood Covenant
+#### `1691279416` Blood Covenant
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1691279416  
 
@@ -297,7 +295,7 @@ QC map ported to QL with some additional fixes, and more fixes.
 In-game name: `bloodcovenant`  
 https://ws.q3df.org/map/bloodcovenant/  
 
-#### 1693961293 - sainttourney1 - Saint Tourney 1
+#### `1693961293` sainttourney1 - Saint Tourney 1
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1693961293  
 
@@ -311,7 +309,7 @@ In-game name: `sainttourney1`
 https://ws.q3df.org/map/sainttourney1/  
 https://lvlworld.com/overview/id:1693  
 
-#### 1706161905 - teqtrny3 - subversive tendencies
+#### `1706161905` teqtrny3 - subversive tendencies
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1706161905  
 
@@ -323,7 +321,7 @@ In-game name: `teqtrny3`
 https://ws.q3df.org/map/teqtrny3/  
 https://lvlworld.com/overview/id:944  
 
-#### 1706214273 - jaxtourney1 - Stranglehold
+#### `1706214273` jaxtourney1 - Stranglehold
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1706214273  
 
@@ -337,7 +335,7 @@ In-game name: `jaxtourney1`
 https://ws.q3df.org/map/jaxtourney1/  
 https://lvlworld.com/overview/id:1160  
 
-#### 1827809205 - charon3dm13 - 5quid
+#### `1827809205` charon3dm13 - 5quid
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1827809205  
 
@@ -349,7 +347,7 @@ In-game name: `charon3dm13`
 https://ws.q3df.org/map/charon3dm13/  
 https://lvlworld.com/overview/id:1606  
 
-#### 2009762538 - Aero Blood Run
+#### `2009762538` Aero Blood Run
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2009762538  
 
@@ -361,7 +359,7 @@ In-game name: `oxodm2`
 https://ws.q3df.org/map/oxodm2/  
 https://lvlworld.com/overview/id:2229  
 
-#### 2020820722 - Eldister
+#### `2020820722` Eldister
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2020820722  
 
@@ -373,7 +371,7 @@ Eldister - remake of 'Elder' with 'Sinister' theme.
 
 In-game name: `eldister`  
 
-#### 2047343265 - Si'Metrik
+#### `2047343265` Si'Metrik
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2047343265  
 
@@ -387,7 +385,7 @@ In-game name: `simetrik`
 https://ws.q3df.org/map/simetrik/  
 https://lvlworld.com/overview/id:607  
 
-#### 2056321023 - Diabotical: Frontier
+#### `2056321023` Diabotical: Frontier
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2056321023  
 
@@ -397,7 +395,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2056321023
 
 In-game name: `dbtfrontier`  
 
-#### 2089014512 - Harder Than Hate
+#### `2089014512` Harder Than Hate
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2089014512  
 
@@ -409,7 +407,7 @@ In-game name: `pjw3tourney2`
 https://ws.q3df.org/map/pjw3tourney2/  
 https://lvlworld.com/overview/id:1275  
 
-#### 2099209867 - Bastet (2020 Duel map)
+#### `2099209867` Bastet (2020 Duel map)
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2099209867  
 
@@ -421,7 +419,7 @@ Small/Mid sized duel map.
 
 In-game name: `bastet`  
 
-#### 2310495629 - Blood Run Tribute
+#### `2310495629` Blood Run Tribute
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2310495629  
 
@@ -433,7 +431,7 @@ In-game name: `bloodruntribute`
 https://ws.q3df.org/map/obs3dm2/  
 https://lvlworld.com/overview/id:2028  
 
-#### 2351045272 - bluemonk
+#### `2351045272` bluemonk
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351045272  
 
@@ -443,7 +441,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2351045272
 
 In-game name: `bluemonk`  
 
-#### 2351050532 - swift
+#### `2351050532` swift
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2351050532  
 
@@ -453,7 +451,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2351050532
 
 In-game name: `swift`  
 
-#### 2439697217 - gomdm3
+#### `2439697217` gomdm3
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2439697217  
 
@@ -465,7 +463,7 @@ A ported version of the quake 1 map 'Imaginations from the other side' (gomdm3).
 
 In-game name: `gmdm3`  
 
-#### 1927054766 - BallsDeep
+#### `1927054766` BallsDeep
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1927054766  
 
@@ -475,7 +473,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1927054766
 
 Ingame name: `ballsdeep`
 
-#### 1976370267 - CampKill
+#### `1976370267` CampKill
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1976370267  
 
@@ -484,3 +482,41 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1976370267
 ![Map image](../../_images/campkill.jpg)
 
 Ingame name: `campkill`
+
+## History
+
+### Version 1
+
+- **Add:** `540937824` Cage
+- **Add:** `542684362` MONSOON_CONVERTED
+- **Add:** `547937675` Beatbox Map (ztn3dm2)
+- **Add:** `563655427` The Rage
+- **Add:** `569873334` Aggressor
+- **Add:** `571945871` Reloaded by Yogi
+- **Add:** `579717457` Quake Live Extra Duel Maps
+- **Add:** `583405286` Kora
+- **Add:** `641459594` Placebo Effect
+- **Add:** `648343575` Sinister (2012)
+- **Add:** `774562650` Duel Map Nemesis
+- **Add:** `821675354` The Proving Grounds II
+- **Add:** `822833735` Totally Lost
+- **Add:** `856142431` Kamasutra
+- **Add:** `863262235` Khaooohs
+- **Add:** `1209601964` Catharsis (Alpha 1)
+- **Add:** `1691279416` Blood Covenant
+- **Add:** `1693961293` sainttourney1 - Saint Tourney 1
+- **Add:** `1706161905` teqtrny3 - subversive tendencies
+- **Add:** `1706214273` jaxtourney1 - Stranglehold
+- **Add:** `1827809205` charon3dm13 - 5quid
+- **Add:** `2009762538` Aero Blood Run
+- **Add:** `2020820722` Eldister
+- **Add:** `2047343265` Si'Metrik
+- **Add:** `2056321023` Diabotical: Frontier
+- **Add:** `2089014512` Harder Than Hate
+- **Add:** `2099209867` Bastet (2020 Duel map)
+- **Add:** `2310495629` Blood Run Tribute
+- **Add:** `2351045272` bluemonk
+- **Add:** `2351050532` swift
+- **Add:** `2439697217` gomdm3
+- **Add:** `1927054766` BallsDeep
+- **Add:** `1976370267` CampKill
