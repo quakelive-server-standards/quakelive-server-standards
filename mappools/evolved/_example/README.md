@@ -40,16 +40,7 @@ Workshop id: [539421606](https://github.com/quakelive-server-standards/quakelive
 
 ### Version 1
 
-#### Add: Beatbox
+*Note: List the made changes. Reuse the content of the headline from above.*
 
-This map is a solid classic and should belong to a Duel map pool.
-
-Workshop id: [539421606](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/b5d3892e657e27139c4dd6f35ea6d8043271b7dc/workshop/evolved/_example/workshop.txt)
-
-*Note: Just repeat the information from above but leave out the level shot. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
-
-#### Remove: Bloodrun
-
-If they can play on Beatbox by ztn there is no need to play on Bloodrun by ztn anymore.
-
-*Note: State maps that you removed. Underneath describe why you removed it.*
+- **Add:** Beatbox
+- **Remove:** Bloodrun
