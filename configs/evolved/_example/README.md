@@ -16,17 +16,17 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/a5
 
 *Note: List the cvars that you added or changed in an alphabetical order. Use the correct Markdown headline level 4 by using `####`.*
 
-#### `set com_hunkMegs "120"`
+#### `com_hunkMegs 120`
 
 To support servers with 16 players this value is set to 120 mega bytes.
 
-*Note: State the cvar and its value in the format `set <cvar> <value>`. Underneath describe why you set the variable to that specific value.*
+*Note: State the cvar and its value in the format `<cvar> <value>`. Underneath describe why you set the variable to that specific value.*
 
-#### `set sv_fps "60"`
+#### `sv_fps 60`
 
 This value has been tested and improves hitscan weapon hit detection.
 
-*Note: State the cvar and its value in the format `set <cvar> <value>`. Underneath describe why you set the variable to that specific value.*
+*Note: State the cvar and its value in the format `<cvar> <value>`. Underneath describe why you set the variable to that specific value.*
 
 ## History
 
@@ -38,19 +38,19 @@ This value has been tested and improves hitscan weapon hit detection.
 
 ### Version 1
 
-#### Add: `set com_hunkMegs "120"`
+#### Add: `com_hunkMegs 120`
 
 To support servers with 16 players this value is set to 120 mega bytes.
 
 *Note: Just repeat the text that you already wrote from above. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
 
-#### Change: `set sv_fps "60"`
+#### Change: `sv_fps 60`
 
 This value has been tested and improves hitscan weapon hit detection.
 
 *Note: Just repeat the text that you already wrote from above. This repetition is for documenting the value and the reason for it because it might be changed or removed in the future.*
 
-#### Remove: `set g_floodprot_maxcount "10"`
+#### Remove: `g_floodprot_maxcount 10`
 
 This value can now be set in the Docker Compose file using [this](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/89ca0a79371017677a12dda7f28bc4db50c677c7/docker/ql-server) Docker image.
 
