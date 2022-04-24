@@ -3,10 +3,16 @@
 # Gibs
 691078677
 
-### Additions
+### Evolutions
 
 # Cage
 540937824
+
+# MONSOON_CONVERTED
+542684362
+
+# Beatbox Map (ztn3dm2)
+547937675
 
 # The Rage
 563655427
@@ -14,17 +20,29 @@
 # Aggressor
 569873334
 
-# Reloaded
+# Reloaded by Yogi
 571945871
 
-# Still Alive, Earth Core Program, megadm4_09, Story to tell, Never Enough, Lithium Flower ver.2, Last Trip, KARIN, Adelline
+# Quake Live Extra Duel Maps
 579717457
 
 # Kora
 583405286
 
-# Nemesis
+# Placebo Effect
+641459594
+
+# Sinister (2012)
+648343575
+
+# Duel Map Nemesis
 774562650
+
+# The Proving Gounds II
+821675354
+
+# Totally Lost
+822833735
 
 # Kamasutra
 856142431
@@ -38,16 +56,16 @@
 # Blood Covenant
 1691279416
 
-# Saint Tourney 1
+# sainttourney1 - Saint Tourney 1
 1693961293
 
-# Subversive Tendencies
+# teqtrny3 - subversive tendencies
 1706161905
 
-# Stranglehold
+# jaxtourney1 - Stranglehold
 1706214273
 
-# 5quid
+# charon3dm13 - 5quid
 1827809205
 
 # Aero Blood Run
@@ -65,41 +83,20 @@
 # Harder Than Hate
 2089014512
 
-# Bastet
+# Bastet (2020 Duel map)
 2099209867
 
 # Blood Run Tribute
 2310495629
 
-# Blue Monk
+# bluemonk
 2351045272
 
-# Swift
+# swift
 2351050532
 
-# Imaginations from the other side
+# gomdm3
 2439697217
-
-# Monsoon
-542684362
-
-# Beatbox
-547937675
-
-# Proving Grounds, The Chastity Belt Duel
-579717457
-
-# Placebo Effect
-641459594
-
-# Sinister 2012
-648343575
-
-# The Proving Gounds II
-821675354
-
-# Totally Lost
-822833735
 
 # BallsDeep
 1927054766
