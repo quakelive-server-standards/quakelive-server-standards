@@ -20,6 +20,8 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/ec
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=547937675  
 
+This Workshop item just contains the map, nothing else.
+
 *Note: For the headline, state the Steam Workshop id and behind it copy the title of that Workshop item from the Steam website.*
 
 *Note: State the Steam Workshop link to that item. Add an optional description underneath it.*
@@ -58,5 +60,5 @@ https://lvlworld.com/overview/id:107
 
 *Note: List the made changes. Reuse the content of the headline from above.*
 
-#### **Add:** `547937675` Beatbox
-#### **Remove:** `691078677` Gibs
+- **Add:** `547937675` Beatbox
+- **Remove:** `691078677` Gibs
