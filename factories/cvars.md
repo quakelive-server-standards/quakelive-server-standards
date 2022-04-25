@@ -5,13 +5,19 @@ This is a collection of cvars focused on defining factories.
 You can find a complete pre-Steam area cvar reference here http://www.regurge.at/ql/ and post-Steam area supplements here
 https://steamcommunity.com/sharedfiles/filedetails/?id=542672458.
 
+This list is not complete. If you are good with cvars, take a look at this [GitHub issues](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/19). It call for adding missing descriptions and more cvars.
+
 ## Voting
 
-`g_allowVote "1"` - Allows voting to take place in a server.  
+`g_allowVote "1"` - Allows voting to take place in a server.
+
 `g_voteDelay "0"` - Delay allowing votes for X milliseconds after map load.
+
 `g_voteLimit "0"` - Limit users to X votes per map.
-`g_allowVoteMidGame "0"` - Allows voting to take place during a match.  
-`g_allowSpecVote "0"` - Allows spectators to call or cast votes in a server.  
+
+`g_allowVoteMidGame "0"` - Allows voting to take place during a match.
+
+`g_allowSpecVote "0"` - Allows spectators to call or cast votes in a server.
 
 `g_voteFlags "0"` - Sets which vote commands are disabled on the server.
 
