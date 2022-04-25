@@ -21,7 +21,7 @@ Valid gametypes are `ffa`, `duel`, `race`, `tdm`, `ca`, `ctf`, `oneflag`, `har`,
 
 Additional gametypes can be added through [factories](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories#readme). Quake Live Server Standards uses this possibility to define standardised versions of the most popular gametypes [`stdffa`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/ffa), [`stdduel`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/duel), [`stdrace`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/race), [`stdtdm`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/tdm), [`stdca`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/ca) and [`stdctf`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/factories/standard/ctf).
 
-Since those factory files are at the heart of the Quake Live Server Standards idea, they were copied into every gametype related Quake Live dedicated server Docker image. Use those gametypes instead of the original ones when creating map pools.
+When you create a map pool use those instead of the original ones. They are also present in Quake Live dedicated server [Docker image](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/docker).
 
 ```
 aerowalk|stdduel
@@ -34,6 +34,6 @@ blackcathedral|stdca
 
 ## Incorporating new maps
 
-To incorporate a new map you also need to work with [Steam Workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) which can contain Quake Live maps. Add such an item to your Quake Live dedicated server installation and mention in in the `mappool.txt`.
+To incorporate a new map you also need to work with [Steam Workshop items](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/workshop) which can contain Quake Live maps. Add such an item to your Quake Live dedicated server installation and mention the in-game map name together with a game type in the `mappool.txt`.
 
 ## Evolve Quake Live
