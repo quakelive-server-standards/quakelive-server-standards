@@ -2,6 +2,12 @@
 
 This directory contains files which copyright might be owned by a different person or legal entity than Quake Live Server Standards. Those file might have been altered in terms of file format and image dimensions to fit this repository.
 
+## Resizing images
+
+```
+magick mogrify -resize 637x358! *.jpg
+```
+
 ## Content
 
 ### Level shots
