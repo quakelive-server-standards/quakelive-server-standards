@@ -2,8 +2,6 @@
 
 Docker allows for easy server management. You do not need to install anything and everything runs out of the box. Combined with Git it is a perfect backup and recreation tool. If you want to move your Quake Live dedicated servers to another computer, the only things you need to do is to install Git and Docker and to clone your own fork of the Quake Live Server Standards repository.
 
-You can find the original id Software Quake Live dedicated server documentation `server_readme.txt` [here](server_readme.txt).
-
 ## Overview
 
 All your servers are defined inside the `docker-compose.yml` file. Additionally there is a `docker-compose.source.yml` file. It is a source for Docker service definitions. You can copy and paste content from this file into your own.
@@ -24,7 +22,7 @@ You only need to install Git and Docker.
 git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git
 ```
 
-Git now created a copy or a clone of the complete official Quake Live Server Standards repository onto your computer. You can access any file and you can access any prior version of the file.
+Git now created a copy or a clone of the complete official Quake Live Server Standards repository onto your computer. You can access any file and you can access any prior version of any file.
 
 ### Docker
 
@@ -404,3 +402,7 @@ Take a look at the root [README.md](https://github.com/quakelive-server-standard
 - [Contribute to map pools](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/mappools#readme)
 - [Contribute to minqlx plugins](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/minqlx-plugins#readme)
 - [Contribute to workshop](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/workshop#readme)
+
+## The original Quake Live dedicated server documentation
+
+[Here](https://github.com/quakelive-server-standards/quakelive-server-standards/blob/master/_myservers/server_readme.txt) you will find the original documentation created by id Software.
