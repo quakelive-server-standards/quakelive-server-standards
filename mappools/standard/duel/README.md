@@ -1,5 +1,7 @@
 # Standard Caputure The Flag map pool
 
+There are still level shots missing. If you know how to extract these from the original Quake Live dedicated server installation, you can help [here](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/21).
+
 ## Based on
 
 https://github.com/quakelive-server-standards/quakelive-server-standards/blob/5168be332b7d7e2ae0027c7e7b27a34144cee265/mappools/_id/mappool_duel.txt
