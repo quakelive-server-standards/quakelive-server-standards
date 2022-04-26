@@ -14,41 +14,21 @@ If you want to alter any of the files that are outside of the `_myservers` direc
 
 ## Installation
 
-You will need to install Git, clone the Quake Live Server Standards repository and install Docker.
+You only need to install Git and Docker.
 
 ### Git
 
-At first you need to create your own Git repository. You can do that either by creating a fork on GitHub or by directly cloning this repository. If you do not have experience in working with Git use a GitHub fork.
+[Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for your platform. We strongly encourage you to use the command line tool which we will also base our examples on. After installation, enter the following command.
 
-#### Using a GitHub fork
+```
+git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git
+```
 
-To be able to fork you need to have to log in to your GitHub account. If you do not have one you need to register first. The free plan lets you create as many publically visible repositories as you like.
-
-To create a fork you click on the "Fork" button on the top right corner. This will create new GitHub repository in one of your namespaces.
-
-Now clone your new repository. Cloning a repository can either be done with the official [command line tool](https://git-scm.com/downloads) or one of the many [graphical user interfaces](https://git-scm.com/downloads/guis). In this guide we will refer to the command line tool.
-
-On the command line type `git clone https://github.com/<your-github-name>/<your-repository-name>.git`. You can copy and paste the clone link from the GitHub website. If you do not know how to do this use these [instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
-
-Your repository now resides on two locations. On your harddrive and on GitHub. The GitHub location is known to your local version as the `origin`. It is the main location your repository resides in and you can create arbitrary many clones from it. If you change something in your local version you will push these changes to the origin. If something changed in the origin you will merge theses changes into your local version. That way, arbitrary many people can work together.
-
-To be able to stay up to date regarding the latest server trends, you need to add the official Quake Live Server Standards Git repository as an additional location next to `origin`. On the command line type `git remote add upstream https://github.com/quakelive-server-standards/quakelive-server-standards.git`. Every time there is something new you now can pull these changes by typing `git pull upstream origin`.
-
-The last step is to clone all of the Git sub modules which are other Git repositories that were integrated into that one. One the command line type `git submodule init`.
-
-#### Not using a GitHub fork
-
-If you do not have a GitHub account or if you do not want your repository to be publicly available you can also directly clone this repository with `git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git`.
-
-After cloning, the official Quake Live Server Standards repository will be listed as the `origin` location. You will want to replace that with a repository location of your own. Since you also want keep the official location you start by renaming it from `origin` to `upstream` by typing `git remote rename origin upstream` into the command line.
-
-Now you can add your own Git repository location as the `origin` by typing `git remote add origin <url-to-your-git-repository>`.
-
-The last step is to clone the sub modules with `git submodule init`.
+Git now created a copy or a clone of the complete official Quake Live Server Standards repository onto your computer. You can access any file and you can access any prior version of the file.
 
 ### Docker
 
-This framework uses Docker to compose configurations and to run any amount of server instances. It will also take care of any additional software that the Quake Live server or its rcon client needs. This [link](https://docs.docker.com/engine/install/) will provide you every information you need to install it.
+This framework uses Docker to [compose](https://docs.docker.com/compose/) configurations and to run any amount of server instances. It will also take care of any additional software that the Quake Live server or its rcon client needs. This [link](https://docs.docker.com/engine/install/) will provide you every information you need to install it.
 
 ## Configuring your Quake Live servers
 
@@ -306,25 +286,81 @@ If you want to see the logs of your servers use `docker-compose logs -f` while t
 
 ## Backup your server configurations with Git
 
-If you followed the instructions from [above](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#git) you have two remote locations of your Git repository, `origin` and `upstream`, while `origin` is the one which is ready to receive your personal updates.
+If you want to backup your Quake Live server configuration you can use Git to do so. Git is a versioning system which can track all the changes you have made over the time. Such a set of changes is called a commit. A commit can contain changes to the content of files, but also state new and deleted files. A Git repository basically is a chain of commits. That allows you to go back in time by restoring a certain version of your repository.
 
-If you do not have an `origin` remote location which is pointing to a different location then the official Quake Live Server Standards Git repository, then you need to create one. This is most easily done by [signing up to GitHub](https://github.com/signup) and [creating a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) there. Then go back to the above explanations and follow the instructions [there](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#not-using-a-github-fork).
+Before you can start to use Git as a backup solution, you have to work through these [first-time setup steps](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
 
-Once your `origin` remote location points to your own Git repository, open a terminal, cd into your local clone of the Quake Live Server Standards repository and enter the following commands.
+Once you have set up everything you are ready to create your first commit. If you installed the command line tool, you can follow the upcoming instructions. Open a terminal and change into the directory containing your clone of the Quake Live Server Standards repository. At first we look at the changes that have been made. Enter the following command.
+
+```
+git status
+```
+
+This will give you an overview of the files that have changed, have been removed or are new. The next step is to pick the files that you want to be part of your commit. You can either add everything that has changed.
 
 ```
 git add -A
-git commit -m "Describe what you have changed here"
-git push origin master
 ```
 
-The first one adds all changed files to the list of files which should belong the new commit. The second one creates that new commit together with a little description of what has changed. The third command uploads every commit which was not uploaded before to the `origin` remote location.
+Or just a specific file.
+
+```
+git add _myservers/autoexec.cfg
+```
+
+Once you composed the changes for your commit you are ready to create that commit.
+
+```
+git commit -m "Enter a descriptive commit message. It will help you later on."
+```
+
+Congratulations, you have created your first commit.
+
+The next step is to store your own version of the Quake Live Server Standards repository to a remote location that you own. Take a look at [BitBucket](https://bitbucket.org) or [GitLab](https://about.gitlab.com). Both of them have free plans and your repository can only be seen by you. Once you have created that remote repository location, it is time to copy your repository there.
+
+Before you can do that, you have to add this new remote location to the list of remote locations of your local Git repository. Let us find out which are already there.
+
+```
+> git remote -v
+origin	https://github.com/quakelive-server-standards/quakelive-server-standards.git (fetch)
+origin	https://github.com/quakelive-server-standards/quakelive-server-standards.git (push)
+```
+
+As you can see, there is already a remote location with the name `origin`. It points to the official Quake Live Server Standards repository.
+
+Since you want your own remote location to be named `origin` and since you will still need to work with the Quake Live Server Standards repository in the future, rename it.
+
+```
+git remote rename origin upstream
+```
+
+Now it is called `upstream` which is a common name for a remote location which you are basing your own work on.
+
+Now that the name `origin` is available, add your own remote location under that name. To do so you will need the Git URL of your remote Git repository. Here are guides for [BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/clone-a-repository/) and [GitLab](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#clone-a-repository) on how to obtain it.
+
+```
+git remote add origin <your-remote-location-url>
+```
+
+Now you are ready to create your backup by pushing your new commit to your own remote location.
+
+```
+git push origin main
+```
+
+It might be the case, that instead of `main` you have to use `master`, which was the standard before.
 
 ## Receiving updates from the official Quake Live Server Standards repository
 
-If you followed the instructions from [above](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#git) you have two remote locations of your Git repository, `origin` and `upstream`, while `upstream` is the official Quake Live Server Standards one.
+If you followed the instructions from [above](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#backup-your-server-configurations-with-git) you have two remote locations of your Git repository, `origin` and `upstream`, while `upstream` is the one pointing to the official Quake Live Server Standards GitHub repository.
 
-You can receive an update from the `upstream` remote location by opening a terminal, changing the directory to your local clone of the official Quake Live Server Standards repository and by typing `git pull upstream master`.
+You can receive an update from the `upstream` remote location by opening a terminal, changing the directory to your local clone of the official Quake Live Server Standards repository and by typing.
+
+```
+git pull upstream master
+```
+
+It will download the changes and integrate them into your own copy of the Quake Live Server Standards repository.
 
 If you followed the advice from the beginning and you did not alter any files outside of the `_myservers` directory, then the update should pass smoothly. If you did alter files then you might run into merge conflicts which you will need to resolve manually.
 
