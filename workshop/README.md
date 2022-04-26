@@ -23,6 +23,8 @@ You can download a Steam Workshop item for inspection before you deploy it to yo
 
 You will find the downloaded Steam Workshop item inside the `_items` directory. It will be a new directory which name is the Steam Workshop item id. Inside of it you will find the belonging files.
 
+In an improved version, the script would also extract the contained `*.pk3` files. This is not implemented yet. If you would know how to add that feature, take a look into this [GitHub issue](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/20).
+
 ## Upload a Workshop item
 
 This is still work in progress. If you know how to do it, take a look into this [GitHub issue](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/22).
