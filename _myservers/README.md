@@ -83,7 +83,7 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - SV_HOSTNAME=QL Standard Duel Server #1
+      - SV_HOSTNAME='Standard Duel Server #1'
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -168,7 +168,7 @@ In the `environment` section of the Docker Compose file you can configure Quake 
 ```yml
 environment:
   - NET_PORT=27960
-  - SV_HOSTNAME=QL Standard Duel Server #1
+  - SV_HOSTNAME='Standard Duel Server #1'
   - G_PASSWORD=secret
 ```
 
