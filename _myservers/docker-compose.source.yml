@@ -11,8 +11,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard CA Server #1
-      - SV_TAGS=ca
+      - SV_HOSTNAME='Standard CA Server #1'
+      - SV_TAGS=ca std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
@@ -40,8 +40,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard CTF Server #1
-      - SV_TAGS=ctf
+      - SV_HOSTNAME='Standard CTF Server #1'
+      - SV_TAGS=ctf std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
@@ -70,8 +70,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard Duel Server #1
-      - SV_TAGS=duel
+      - SV_HOSTNAME='Standard Duel Server #1'
+      - SV_TAGS=duel std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
@@ -100,8 +100,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard FFA Server #1
-      - SV_TAGS=ffa
+      - SV_HOSTNAME='Standard FFA Server #1'
+      - SV_TAGS=ffa std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
@@ -130,8 +130,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard Race Server #1
-      - SV_TAGS=race
+      - SV_HOSTNAME='Standard Race Server #1'
+      - SV_TAGS=race std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
@@ -160,8 +160,8 @@ services:
       - NET_PORT=27960
       - ZMQ_RCON_PORT=
       - ZMQ_STATS_PORT=
-      - SV_HOSTNAME=Standard TDM Server #1
-      - SV_TAGS=tdm
+      - SV_HOSTNAME='Standard TDM Server #1'
+      - SV_TAGS=tdm std
       - COM_HUNKMEGS=
       - G_PASSWORD=
       - SV_HOSTNAME=
