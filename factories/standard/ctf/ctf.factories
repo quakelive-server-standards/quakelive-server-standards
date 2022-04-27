@@ -2,10 +2,10 @@
     "cvars": {
         "g_ammoPack": "1",
         "g_ammoRespawn": "10",
-        "g_suddenDeathRespawn": "1",
-        "timelimit": "15",
         "g_battleSuitDampen": ".33",
-        "g_overtime": "0"
+        "g_suddenDeathRespawn": "1",
+        "g_overtime": "0",
+        "timelimit": "15"
     },
     "author": "Quake Live Server Standards",
     "description": "Community determined standard for Capture The Flag.",

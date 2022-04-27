@@ -10,63 +10,63 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 #### `dmflags "28"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_allowKill "0"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_overtime "0"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_gl "25"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_hmg "150"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_lg "150"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_mg "100"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_pg "100"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_rg "25"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_rl "50"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingAmmo_sg "50"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingArmor "100"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingHealth "200"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingHealthBonus "0"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `g_startingWeapons "8447"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 ## History
 

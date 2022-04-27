@@ -10,8 +10,8 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 #### `g_overtime "0"`
 
-This is the official id Software standard.
+Adopted from id Software.
 
 #### `timelimit "15"`
 
-This is the official id Software standard.
+Adopted from id Software.

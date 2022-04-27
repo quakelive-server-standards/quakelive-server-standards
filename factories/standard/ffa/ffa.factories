@@ -1,7 +1,7 @@
 {
     "cvars": {
-        "timelimit": "15",
-        "g_overtime": "0"
+        "g_overtime": "0",
+        "timelimit": "15"
     },
     "author": "Quake Live Server Standards",
     "description": "Community determined standard for Free For All.",

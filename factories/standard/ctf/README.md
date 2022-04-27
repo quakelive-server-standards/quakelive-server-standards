@@ -10,24 +10,24 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 #### `g_ammoPack "1"`
 
-This is the official id Software default.
+Adopted from id Software.
 
 #### `g_ammoRespawn "10"`
 
-This is the official id Software default.
+Adopted from id Software.
 
 #### `g_battleSuitDampen ".33"`
 
-This is the official id Software default.
+Adopted from id Software.
 
 #### `g_overtime "0"`
 
-This is the official id Software default.
+Adopted from id Software.
 
 #### `g_suddenDeathRespawn "1"`
 
-This is the official id Software default.
+Adopted from id Software.
 
 #### `timelimit "15"`
 
-This is the official id Software default.
+Adopted from id Software.

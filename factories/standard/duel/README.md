@@ -10,7 +10,7 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 #### `fraglimit "0"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `g_allowSpecVote "0"`
 
@@ -30,11 +30,11 @@ Some people just idle on servers which is annoying because the server browser gi
 
 #### `g_itemHeight "15"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `g_itemTimers "0"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `g_voteDelay "3000"`
 
@@ -72,23 +72,23 @@ If someone joins a server the person should be ready play. If she/he does not wa
 
 #### `pmove_BunnyHop "0"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `pmove_CrouchStepJump "0"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `pmove_JumpTimeDeltaMin "50"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `pmove_WaterSwimScale "0.5f"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `pmove_WaterWadeScale "0.75f"`
 
-The id Software value.
+Adopted from id Software.
 
 #### `sv_warmupReadyPercentage "1"`
 
@@ -96,7 +96,7 @@ The id Software value.
 
 #### `timelimit "10"`
 
-The id Software value.
+Adopted from id Software.
 
 ## History
 

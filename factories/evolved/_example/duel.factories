@@ -1,13 +1,11 @@
 {
     "cvars": {
-        "timelimit": "15",
         "g_allowVote": "1",
-        "g_voteDelay": "5000",
-        "g_voteLimit": "10",
         "g_allowVoteMidGame": "0",
         "g_allowSpecVote": "0",
+        "g_voteDelay": "5000",
         "g_voteFlags": "30200",
-        "sv_warmupReadyPercentage": "1",
+        "g_voteLimit": "10",
         "g_warmupReadyDelay": "60",
         "g_warmupReadyDelayAction": "2",
         "g_inactivity": "600",
@@ -18,7 +16,9 @@
         "pmove_CrouchStepJump": "0",
         "pmove_JumpTimeDeltaMin": "50",
         "pmove_WaterSwimScale": "0.5f",
-        "pmove_WaterWadeScale": "0.75f"
+        "pmove_WaterWadeScale": "0.75f",
+        "sv_warmupReadyPercentage": "1",
+        "timelimit": "15"
     },
     "author": "Example author",
     "description": "Faster duel with more time",
