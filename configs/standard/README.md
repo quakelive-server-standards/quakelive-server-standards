@@ -118,7 +118,7 @@ This cvar is either specific to a certain server instance or to a certain game t
 
 #### Remove: `g_password ""`
 
-[The Quake Live server framework](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#command-line-parameters) intends the user to set it through an environment variable. Since the environment variable is forwarded to the Quake Live dedicated server executable as a command line parameter, it must not be set in the `server.cfg` which would overwrite it.
+This cvar is either specific to a certain server instance. It should be either set as a [command line parameter](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#command-line-parameters) if possible or in the [`autoexec.cfg`](https://github.com/quakelive-server-standards/quakelive-server-standards/tree/master/_myservers#autoexeccfg).
 
 #### Remove: `g_voteFlags "0"`
 
