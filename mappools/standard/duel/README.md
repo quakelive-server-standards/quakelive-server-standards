@@ -12,157 +12,157 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 ![Level shot](../../../workshop/_images/aerowalk.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Battleforged
 
 ![Level shot](../../../workshop/_images/battleforged.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Bloodrun
 
 ![Level shot](../../../workshop/_images/bloodrun.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Campgrounds
 
 ![Level shot](../../../workshop/_images/campgrounds.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Concrete Palace
 
 ![Level shot](../../../workshop/_images/concretepalace.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Cure
 
 ![Level shot](../../../workshop/_images/cure.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Delirium
 
 ![Level shot](../../../workshop/_images/delirium.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Dismemberment
 
 ![Level shot](../../../workshop/_images/dismemberment.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Elder
 
 ![Level shot](../../../workshop/_images/elder.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Furiousheights
 
 ![Level shot](../../../workshop/_images/furiousheights.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Fuse
 
 ![Level shot](../../../workshop/_images/fuse.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Hektik
 
 ![Level shot](../../../workshop/_images/hektik.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### House Of Decay
 
 ![Level shot](../../../workshop/_images/houseofdecay.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Mc Sarges
 
 ![Level shot](../../../workshop/_images/mcsarges.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Phrantic
 
 ![Level shot](../../../workshop/_images/phrantic.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Refinery
 
 ![Level shot](../../../workshop/_images/refinery.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Silence
 
 ![Level shot](../../../workshop/_images/silence.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Sinister
 
 ![Level shot](../../../workshop/_images/sinister.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Solarium
 
 ![Level shot](../../../workshop/_images/solarium.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Sorrow
 
 ![Level shot](../../../workshop/_images/sorrow.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### The Edge
 
 ![Level shot](../../../workshop/_images/theedge.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### The Epicenter
 
 ![Level shot](../../../workshop/_images/theepicenter.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Toxicity
 
 ![Level shot](../../../workshop/_images/toxicity.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Use And Abuse
 
 ![Level shot](../../../workshop/_images/useandabuse.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Vertical Vengeance
 
 ![Level shot](../../../workshop/_images/verticalvengeance.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Wicked
 
 ![Level shot](../../../workshop/_images/wicked.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 ## History
 

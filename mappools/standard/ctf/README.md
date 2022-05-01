@@ -12,259 +12,259 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 ![Level shot](../../../workshop/_images/basesiege.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Beyond Reality
 
 ![Level shot](../../../workshop/_images/beyondreality.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Bloodlust
 
 ![Level shot](../../../workshop/_images/bloodlust.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Camper Crossings
 
 ![Level shot](../../../workshop/_images/campercrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### City Crossings
 
 ![Level shot](../../../workshop/_images/citycrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Cold Cathode
 
 ![Level shot](../../../workshop/_images/coldcathode.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Courtyard
 
 ![Level shot](../../../workshop/_images/courtyard.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Cursed
 
 ![Level shot](../../../workshop/_images/cursed.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Divided Crossings
 
 ![Level shot](../../../workshop/_images/dividedcrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Double Impact
 
 ![Level shot](../../../workshop/_images/doubleimpact.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Dueling Keeps
 
 ![Level shot](../../../workshop/_images/duelingkeeps.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Electrocution
 
 ![Level shot](../../../workshop/_images/electrocution.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Fallout Bunker
 
 ![Level shot](../../../workshop/_images/falloutbunker.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Finnegans
 
 ![Level shot](../../../workshop/_images/finnegans.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Fluorescent
 
 ![Level shot](../../../workshop/_images/fluorescent.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Future Crossings
 
 ![Level shot](../../../workshop/_images/futurecrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Gospel Crossings
 
 ![Level shot](../../../workshop/_images/gospelcrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Industrial Revolution
 
 ![Level shot](../../../workshop/_images/industrialrevolution.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Infinity
 
 ![Level shot](../../../workshop/_images/infinity.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Inner Sanctums
 
 ![Level shot](../../../workshop/_images/innersanctums.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Ironworks
 
 ![Level shot](../../../workshop/_images/ironworks.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Japanese Castles
 
 ![Level shot](../../../workshop/_images/japanesecastles.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Jumpwerkz
 
 ![Level shot](../../../workshop/_images/jumpwerkz.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Lost Paradise
 
 ![Level shot](../../../workshop/_images/lostparadise.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### New Cerberon
 
 ![Level shot](../../../workshop/_images/newcerberon.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Overgrowth
 
 ![Level shot](../../../workshop/_images/overgrowth.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Pillbox
 
 ![Level shot](../../../workshop/_images/pillbox.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Pulp Friction
 
 ![Level shot](../../../workshop/_images/pulpfriction.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Railyard
 
 ![Level shot](../../../workshop/_images/railyard.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Rebound
 
 ![Level shot](../../../workshop/_images/rebound.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Reflux
 
 ![Level shot](../../../workshop/_images/reflux.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Scornforge
 
 ![Level shot](../../../workshop/_images/scornforge.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Shining Forces
 
 ![Level shot](../../../workshop/_images/shiningforces.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Siberia
 
 ![Level shot](../../../workshop/_images/siberia.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Skyward
 
 ![Level shot](../../../workshop/_images/skyward.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Space CTF
 
 ![Level shot](../../../workshop/_images/spacectf.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Spider Crossings
 
 ![Level shot](../../../workshop/_images/spidercrossings.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Stonekeep
 
 ![Level shot](../../../workshop/_images/stonekeep.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Stronghold
 
 ![Level shot](../../../workshop/_images/stronghold.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### The Dukes Garden
 
 ![Level shot](../../../workshop/_images/thedukesgarden.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Troubled Waters
 
 ![Level shot](../../../workshop/_images/troubledwaters.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Vortex Portal
 
 ![Level shot](../../../workshop/_images/vortexportal.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Zen
 
 ![Level shot](../../../workshop/_images/zen.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 ## History
 

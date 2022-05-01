@@ -12,145 +12,145 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 
 ![Level shot](../../../workshop/_images/arcanecitadel.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Arkinholm
 
 ![Level shot](../../../workshop/_images/arkinholm.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Deep Inside
 
 ![Level shot](../../../workshop/_images/deepinside.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Devilish
 
 ![Level shot](../../../workshop/_images/devilish.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Dies Irae
 
 ![Level shot](../../../workshop/_images/diesirae.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Dredwerkz
 
 ![Level shot](../../../workshop/_images/dredwerkz.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Foolish Legacy
 
 ![Level shot](../../../workshop/_images/foolishlegacy.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Grim Dungeons
 
 ![Level shot](../../../workshop/_images/grimdungeons.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Hidden Fortress
 
 ![Level shot](../../../workshop/_images/hiddenfortress.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Left Behind
 
 ![Level shot](../../../workshop/_images/leftbehind.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Leviathan
 
 ![Level shot](../../../workshop/_images/leviathan.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Limbus
 
 ![Level shot](../../../workshop/_images/limbus.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Purgatory
 
 ![Level shot](../../../workshop/_images/purgatory.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Ragnarok
 
 ![Level shot](../../../workshop/_images/ragnarok.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Realm Of Steel Rats
 
 ![Level shot](../../../workshop/_images/realmofsteelrats.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Retribution
 
 ![Level shot](../../../workshop/_images/retribution.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Solid
 
 ![Level shot](../../../workshop/_images/solid.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Terminatria
 
 ![Level shot](../../../workshop/_images/terminatria.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Terminus
 
 ![Level shot](../../../workshop/_images/terminus.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### The Edge
 
 ![Level shot](../../../workshop/_images/theedge.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### The Olden Domain
 
 ![Level shot](../../../workshop/_images/theoldendomain.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Tornado
 
 ![Level shot](../../../workshop/_images/tornado.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Warehouse
 
 ![Level shot](../../../workshop/_images/warehouse.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 #### Wargrounds
 
 ![Level shot](../../../workshop/_images/wargrounds.jpg)
 
-This is the id Software default.
+Adopted from id Software.
 
 ## History
 
