@@ -81,7 +81,7 @@ volumes:
 redis:
 ```
 
-The section `services` defines two services `duel1` and `redis`. The first one a Quake Live dedicated server. The second one is the Redis database as demanded by minqlx. In such a service definition you compose its configuration by defining ports, setting environment variables and mounting single files or hole directories into the resulting Docker container.
+The section `services` defines two services `duel1` and `redis`. The first one a Quake Live dedicated server. The second one is the Redis database as demanded by minqlx. In such a service definition you compose its configuration by defining ports, setting environment variables and mounting single files or whole directories into the resulting Docker container.
 
 We will explain the `ports` and the `environment` section below.
 

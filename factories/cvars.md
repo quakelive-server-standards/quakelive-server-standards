@@ -5,7 +5,7 @@ This is a collection of cvars focused on defining factories.
 You can find a complete pre-Steam area cvar reference here http://www.regurge.at/ql/ and post-Steam area supplements here
 https://steamcommunity.com/sharedfiles/filedetails/?id=542672458.
 
-This list is not complete. If you are good with cvars, take a look at this [GitHub issues](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/19). It call for adding missing descriptions and more cvars.
+This list is not complete. If you are good with cvars, take a look at this [GitHub issue](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/19). It call for adding missing descriptions and more cvars.
 
 ## Voting
 

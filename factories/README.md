@@ -4,7 +4,7 @@ A Quake Live factory is a set of cvars bound to a certain game type. It is a opp
 
 ## Creating your own factory
 
-A `*.factories` file can contain contain the definition of one game mode.
+A `*.factories` file can contain the definition of one game type.
 
 ```json
 {
