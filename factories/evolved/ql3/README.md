@@ -12,7 +12,7 @@ Let us see were the journey leads us to. There is room to experiment. We should 
 
 ## Based on
 
-https://github.com/quakelive-server-standards/quakelive-server-standards/blob/482a3e2e5fd9dd106f7221d1f12ae2df168e7610/factories/standard/duel/duel.factories
+https://github.com/quakelive-server-standards/quakelive-server-standards/blob/24710394d4f35d875bf8eb3a8d272ef9b008aa14/factories/evolved/duel-settings/duel.factories
 
 ## Evolutions
 

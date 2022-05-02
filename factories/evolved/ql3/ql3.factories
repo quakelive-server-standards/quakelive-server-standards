@@ -1,22 +1,22 @@
 {
     "cvars": {
-        "timelimit": "12",
-        "g_weaponrespawn": "15"
         "fraglimit": "0",
         "g_allowVoteMidGame": "0",
         "g_allowSpecVote": "0",
-        "g_voteFlags": "6142",
-        "sv_warmupReadyPercentage": "1",
-        "g_warmupReadyDelay": "60",
-        "g_warmupReadyDelayAction": "2",
         "g_inactivity": "600",
         "g_itemHeight": "15",
         "g_itemTimers": "0",
+        "g_voteFlags": "6142",
+        "g_warmupReadyDelay": "60",
+        "g_warmupReadyDelayAction": "2",
+        "g_weaponrespawn": "15",
         "pmove_BunnyHop": "0",
         "pmove_CrouchStepJump": "0",
         "pmove_JumpTimeDeltaMin": "50",
         "pmove_WaterSwimScale": "0.5f",
-        "pmove_WaterWadeScale": "0.75f"
+        "pmove_WaterWadeScale": "0.75f",
+        "sv_warmupReadyPercentage": "1",
+        "timelimit": "12"
     },
     "author": "garz",
     "description": "A very gentle convergence of Quake 3 and Quake Live.",
