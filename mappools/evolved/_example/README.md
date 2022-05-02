@@ -42,5 +42,10 @@ Workshop id: [539421606](https://github.com/quakelive-server-standards/quakelive
 
 *Note: List the made changes. Reuse the content of the headline from above.*
 
-- **Add:** Beatbox
-- **Remove:** Bloodrun
+#### Add: Beatbox
+
+This map is a solid classic and should belong to a Duel map pool.
+
+#### Remove: Bloodrun
+
+Bloodrun is not needed anymore because players now can play Beatbox instead.

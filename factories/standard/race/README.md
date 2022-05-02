@@ -104,3 +104,8 @@ Adopted from id Software.
 
 Adopted from id Software.
 
+## History
+
+### Version 1
+
+Nothing was added, changed or deleted.

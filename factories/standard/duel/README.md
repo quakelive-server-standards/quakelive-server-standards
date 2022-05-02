@@ -48,3 +48,4 @@ Adopted from id Software.
 
 ### Version 1
 
+Nothing was added, changed or deleted.

@@ -9,3 +9,9 @@ https://github.com/quakelive-server-standards/quakelive-server-standards/blob/51
 ## Standards
 
 No standards defined.
+
+## History
+
+### Version 1
+
+Nothing was added, changed or deleted.

@@ -15,3 +15,9 @@ Adopted from id Software.
 #### `timelimit "15"`
 
 Adopted from id Software.
+
+## History
+
+### Version 1
+
+Nothing was added, changed or deleted.

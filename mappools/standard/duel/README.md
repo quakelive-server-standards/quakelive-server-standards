@@ -1,4 +1,4 @@
-# Standard Caputure The Flag map pool
+# Standard Duel map pool
 
 There are still level shots missing. If you know how to extract these from the original Quake Live dedicated server installation, you can help [here](https://github.com/quakelive-server-standards/quakelive-server-standards/issues/21).
 
@@ -62,7 +62,7 @@ Adopted from id Software.
 
 Adopted from id Software.
 
-#### Furiousheights
+#### Furious Heights
 
 ![Level shot](../../../workshop/_images/furiousheights.jpg)
 

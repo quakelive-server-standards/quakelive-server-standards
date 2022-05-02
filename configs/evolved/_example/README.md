@@ -30,7 +30,7 @@ This value has been tested and improves hitscan weapon hit detection.
 
 ## History
 
-*Note: Work in versions which increment with every change. Start at version 1. State what you have added and what you have removed.*
+*Note: Work in versions which increment with every change. Start at version 1. State what you have added, changed or or removed. A change also subsumes a changed reason for a specific value of a cvar.*
 
 ### Version 2
 
