@@ -20,6 +20,7 @@ services:
       - SV_PRIVATECLIENTS=
       - SV_PRIVATEPASSWORD=
       - QLX_PLUGINS=
+    volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
       - '../configs/standard/server.cfg:/home/steam/ql/baseq3/server.cfg'
