@@ -41,6 +41,10 @@ The name which is displayed in the Quake Live server browser. The default value 
 
 The tags with which a server can be found in the Quake Live server browser. The default value is `ffa`.
 
+### `SERVERSTARTUP`
+
+Can be used to setup the map which the server should run after startup. Its default value is `startRandomMap`. Set a specific map by using a value like `map bloodrun stdduel`.
+
 ### `G_PASSWORD`
 
 A password that is needed when joining the server. The default value is none.
@@ -60,6 +64,7 @@ The password needed to join into a private slot. The default value is none.
 ### `COM_HUNKMEGS`
 
 The amount of memory the server is allowed to use. The default value is `60`.
+
 
 ## Use the container without the Quake Live Server Standards server framework
 

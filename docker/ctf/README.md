@@ -41,6 +41,10 @@ The name which is displayed in the Quake Live server browser. The default value 
 
 The tags with which a server can be found in the Quake Live server browser. The default value is `ctf`.
 
+### `SERVERSTARTUP`
+
+Can be used to setup the map which the server should run after startup. Its default value is `startRandomMap`. Set a specific map by using a value like `map spidercrossings stdctf`.
+
 ### `G_PASSWORD`
 
 A password that is needed when joining the server. The default value is none.

@@ -13,6 +13,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard CA Server #1'
       - SV_TAGS=ca std
+      # - SERVERSTARTUP=map thunderstruck stdca
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=
@@ -43,6 +44,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard CTF Server #1'
       - SV_TAGS=ctf std
+      # - SERVERSTARTUP=map spidercrossings stdctf
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=
@@ -73,6 +75,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard Duel Server #1'
       - SV_TAGS=duel std
+      # - SERVERSTARTUP=map bloodrun stdduel
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=
@@ -103,6 +106,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard FFA Server #1'
       - SV_TAGS=ffa std
+      # - SERVERSTARTUP=map campgrounds stdffa
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=
@@ -133,6 +137,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard Race Server #1'
       - SV_TAGS=race std
+      # - SERVERSTARTUP=map qzpractice1 stdrace
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=
@@ -163,6 +168,7 @@ services:
       # - ZMQ_STATS_PORT=
       - 'SV_HOSTNAME=Standard TDM Server #1'
       - SV_TAGS=tdm std
+      # - SERVERSTARTUP=map deepinside stdtdm
       # - COM_HUNKMEGS=
       # - G_PASSWORD=
       # - SV_HOSTNAME=

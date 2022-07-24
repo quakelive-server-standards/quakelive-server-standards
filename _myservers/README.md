@@ -156,6 +156,7 @@ The following variables are supported:
 - `G_PASSWORD`: Password which players have to enter if they want to access the server.
 - `NET_PORT`: The game port. If you do not set it, the Docker container will set it to the default value of `27960`.
 - `QLX_PLUGINS`: A list of comma separated names of minqlx plugins. If no value is given, the Docker container will create one containing all plugins it found in the `minqlx-plugins` directory thus just loading every plugin that is present.
+- `SERVERSTARTUP`: Can be used to setup the map which the server should run after startup. Its default value is `startRandomMap`. Set a specific map by using a value like `map bloodrun stdduel`.
 - `SV_HOSTNAME`: The name of your server as it appears in the in-game server browser.
 - `SV_MAXCLIENTS`: Number of player slots available.
 - `SV_PRIVATECLIENTS`: Number of reserved player slots, requires `SV_PRIVATEPASSWORD` to be also set.

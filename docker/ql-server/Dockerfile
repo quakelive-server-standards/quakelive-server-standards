@@ -46,8 +46,8 @@ CMD \
     # if ZMQ_RCON_PORT is not set then set it to NET_PORT + 1000
     && export ZMQ_RCON_PORT=${ZMQ_RCON_PORT:-$(($NET_PORT + 1000))} \
     # if SERVERSTARTUP is not set we need to set it because otherwise the server will
-    # not function properly
-    && export SERVERSTARTUP=${SERVERSTARTUP:-startRandomMap} \
+    # not start properly
+    && export SERVERSTARTUP="${SERVERSTARTUP:-startRandomMap}" \
     # if QLX_PLUGINS is not set then set it to the list of present plugins in the minqlx-plugins directory
     && export QLX_PLUGINS=${QLX_PLUGINS:-$INSTALLED_QLX_PLUGINS} \
     # start the minqlx extended quake live server
@@ -56,6 +56,7 @@ CMD \
     ${NET_PORT:++set net_port ${NET_PORT}} \
     ${ZMQ_RCON_PORT:++set zmq_rcon_port ${ZMQ_RCON_PORT}} \
     ${ZMQ_STATS_PORT:++set zmq_stats_port ${ZMQ_STATS_PORT}} \
+    ${SERVERSTARTUP:++set serverstartup ${SERVERSTARTUP}} \
     ${SV_HOSTNAME:++set sv_hostname ${SV_HOSTNAME}} \
     ${SV_TAGS:++set sv_tags ${SV_TAGS}} \
     ${G_PASSWORD:++set g_password ${G_PASSWORD}} \
