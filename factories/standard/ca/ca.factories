@@ -4,7 +4,7 @@
         "g_allowKill": "0",
         "g_overtime": "0",
         "g_startingAmmo_hmg": "150",
-        "g_startingAmmo_gl": "25"
+        "g_startingAmmo_gl": "25",
         "g_startingAmmo_lg": "150",
         "g_startingAmmo_mg": "100",
         "g_startingAmmo_pg": "100",
@@ -14,7 +14,7 @@
         "g_startingArmor": "100",
         "g_startingHealth": "200",
         "g_startingHealthBonus": "0",
-        "g_startingWeapons": "8447",
+        "g_startingWeapons": "8447"
     },
     "author": "Quake Live Server Standards",
     "description": "Community determined standard for Clan Arena.",
