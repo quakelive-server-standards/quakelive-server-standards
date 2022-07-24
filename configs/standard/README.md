@@ -100,7 +100,7 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 This file is mounted into the specific Docker container as denoted in the Quake Live servers Docker Compose file. It needs to have a standard location so that the usage of the Docker Compose file remains predictable.
 
-#### Change: `net_ip ""`
+#### Change: `net_ip "0.0.0.0"`
 
 The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
 
@@ -136,7 +136,7 @@ The Redis database is part of the Docker services and configured to work with th
 
 The redis database is part of the Docker network. It is not a Unix socket. This value must not change.
 
-#### Change: `zmq_rcon_ip ""`
+#### Change: `zmq_rcon_ip "0.0.0.0"`
 
 The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
 
@@ -144,7 +144,7 @@ The Quake Live server runs in a Docker container which has exactly one IP addres
 
 The Quake Live server sends out information regarding the matches being played, players connected and so on. These information form the foundation of external applications who want to extend the Quake Live experience with new features. QLStats is the most prominent example for this. Every server should have this feature enabled to help the community evolve.
 
-#### Change: `zmq_stats_ip ""`
+#### Change: `zmq_stats_ip "0.0.0.0"`
 
 The Quake Live server runs in a Docker container which has exactly one IP address which is given to it by the Docker engine. This value must not change.
 
