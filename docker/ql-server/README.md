@@ -65,6 +65,9 @@ The password needed to join into a private slot. The default value is none.
 
 The amount of memory the server is allowed to use. The default value is `60`.
 
+### `QLX_PLUGINS`
+
+A list of comma separated names of minqlx plugin file names without their `.py` extension. If no value is given, the Docker container will create one containing all plugins it finds in the `minqlx-plugins` directory thus loading every plugin that is present.
 
 ## Use the container without the Quake Live Server Standards server framework
 
