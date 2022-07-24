@@ -37,7 +37,7 @@ COPY --chown=steam:steam configs/standard/server.cfg /home/steam/ql/baseq3
 # execute the server and allow certain cvars to be set by environment variables
 CMD \
     # determine installed plugins - contributed by em92 (https://github.com/MinoMino/minqlx/issues/105)
-    INSTALLED_QLX_PLUGINS=`find minqlx-plugins/*.py | grep -v "__init__" | sed 's!.*/!!' | sed 's!\.py!!' | xargs | tr ' ' ', '` \
+    INSTALLED_QLX_PLUGINS=`find ql/minqlx-plugins/*.py | grep -v "__init__" | sed 's!.*/!!' | sed 's!\.py!!' | xargs | tr ' ' ', '` \
     && set -x \
     # if NET_PORT is not set then set it to the default port of 27960
     && export NET_PORT=${NET_PORT:-27960} \
