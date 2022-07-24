@@ -9,17 +9,17 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard CA Server #1'
       - SV_TAGS=ca std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -39,17 +39,17 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard CTF Server #1'
       - SV_TAGS=ctf std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -69,17 +69,17 @@ services:
       - '28960:28960/tcp' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard Duel Server #1'
       - SV_TAGS=duel std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -99,17 +99,17 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard FFA Server #1'
       - SV_TAGS=ffa std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -129,17 +129,17 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard Race Server #1'
       - SV_TAGS=race std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
@@ -159,17 +159,17 @@ services:
       - '28960:28960' # rcon port
     environment:
       - NET_PORT=27960
-      - ZMQ_RCON_PORT=
-      - ZMQ_STATS_PORT=
+      # - ZMQ_RCON_PORT=
+      # - ZMQ_STATS_PORT=
       - SV_HOSTNAME='Standard TDM Server #1'
       - SV_TAGS=tdm std
-      - COM_HUNKMEGS=
-      - G_PASSWORD=
-      - SV_HOSTNAME=
-      - SV_MAXCLIENTS=
-      - SV_PRIVATECLIENTS=
-      - SV_PRIVATEPASSWORD=
-      - QLX_PLUGINS=
+      # - COM_HUNKMEGS=
+      # - G_PASSWORD=
+      # - SV_HOSTNAME=
+      # - SV_MAXCLIENTS=
+      # - SV_PRIVATECLIENTS=
+      # - SV_PRIVATEPASSWORD=
+      # - QLX_PLUGINS=
     volumes:
       - './access.txt:/home/steam/ql/baseq3/access.txt'
       - './autoexec.cfg:/home/steam/ql/baseq3/autoexec.cfg'
