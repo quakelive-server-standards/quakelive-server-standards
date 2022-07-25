@@ -7,5 +7,5 @@ COPY --chown=steam:steam minqlx-plugins/standard/ca /home/steam/ql/minqlx-plugin
 COPY --chown=steam:steam workshop/standard/ca/workshop.txt /home/steam/ql/baseq3/workshop.txt
 
 # set standard values which will be overriden by environment variables with higher precedence
-ENV SV_HOSTNAME "Quake Live Server Standards - CA"
+ENV SV_HOSTNAME "Standard CA"
 ENV SV_TAGS "ca std"

@@ -7,5 +7,5 @@ COPY --chown=steam:steam minqlx-plugins/standard/ctf /home/steam/ql/minqlx-plugi
 COPY --chown=steam:steam workshop/standard/ctf/workshop.txt /home/steam/ql/baseq3/workshop.txt
 
 # set standard values which will be overriden by environment variables with higher precedence
-ENV SV_HOSTNAME "Quake Live Server Standards - CTF"
+ENV SV_HOSTNAME "Standard CTF"
 ENV SV_TAGS "ctf std"

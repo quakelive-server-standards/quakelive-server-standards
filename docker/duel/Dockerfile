@@ -7,5 +7,5 @@ COPY --chown=steam:steam minqlx-plugins/standard/duel /home/steam/ql/minqlx-plug
 COPY --chown=steam:steam workshop/standard/duel/workshop.txt /home/steam/ql/baseq3/workshop.txt
 
 # set standard values which will be overriden by environment variables with higher precedence
-ENV SV_HOSTNAME "Quake Live Server Standards - Duel"
+ENV SV_HOSTNAME "Standard Duel"
 ENV SV_TAGS "duel std"

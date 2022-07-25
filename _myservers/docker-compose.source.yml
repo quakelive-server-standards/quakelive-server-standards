@@ -11,7 +11,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard CA Server #1'
+      - 'SV_HOSTNAME=Standard CA #1'
       - SV_TAGS=ca std
       # - SERVERSTARTUP=map thunderstruck stdca
       # - COM_HUNKMEGS=
@@ -42,7 +42,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard CTF Server #1'
+      - 'SV_HOSTNAME=Standard CTF #1'
       - SV_TAGS=ctf std
       # - SERVERSTARTUP=map spidercrossings stdctf
       # - COM_HUNKMEGS=
@@ -73,7 +73,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard Duel Server #1'
+      - 'SV_HOSTNAME=Standard Duel #1'
       - SV_TAGS=duel std
       # - SERVERSTARTUP=map bloodrun stdduel
       # - COM_HUNKMEGS=
@@ -104,7 +104,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard FFA Server #1'
+      - 'SV_HOSTNAME=Standard FFA #1'
       - SV_TAGS=ffa std
       # - SERVERSTARTUP=map campgrounds stdffa
       # - COM_HUNKMEGS=
@@ -135,7 +135,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard Race Server #1'
+      - 'SV_HOSTNAME=Standard Race #1'
       - SV_TAGS=race std
       # - SERVERSTARTUP=map qzpractice1 stdrace
       # - COM_HUNKMEGS=
@@ -166,7 +166,7 @@ services:
       - NET_PORT=27960
       # - ZMQ_RCON_PORT=
       # - ZMQ_STATS_PORT=
-      - 'SV_HOSTNAME=Standard TDM Server #1'
+      - 'SV_HOSTNAME=Standard TDM #1'
       - SV_TAGS=tdm std
       # - SERVERSTARTUP=map deepinside stdtdm
       # - COM_HUNKMEGS=

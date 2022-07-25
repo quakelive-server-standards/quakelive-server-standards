@@ -7,5 +7,5 @@ COPY --chown=steam:steam minqlx-plugins/standard/race /home/steam/ql/minqlx-plug
 COPY --chown=steam:steam workshop/standard/race/workshop.txt /home/steam/ql/baseq3/workshop.txt
 
 # set standard values which will be overriden by environment variables with higher precedence
-ENV SV_HOSTNAME "Quake Live Server Standards - Race"
+ENV SV_HOSTNAME "Standard Race"
 ENV SV_TAGS "race std"
