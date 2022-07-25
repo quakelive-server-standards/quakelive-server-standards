@@ -1,9 +1,8 @@
-FROM ubuntu:22.04
+FROM quakeliveserverstandards/ql-api
 
 RUN set -x \
     && apt update \
     && apt install -y --no-install-recommends --no-install-suggests \
-        nodejs \
         git \
         ca-certificates \
     && git clone https://github.com/quakelive-server-standards/ql-console.git \
